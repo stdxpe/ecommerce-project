@@ -1,8 +1,8 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
 import 'package:ecommerce_project/ui/screens/onboarding_screen.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-
 import 'package:ecommerce_project/ui/widgets/button_main.dart';
 import 'package:ecommerce_project/utilities/k_strings.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
@@ -34,12 +34,12 @@ class SplashScreen extends StatelessWidget {
               children: [
                 Text(
                   Constants.kStringAppTitle,
-                  style: kTitleHelveticaTextStyle,
+                  style: kTitleHelveticaLightTextStyle,
                 ),
                 const SizedBox(height: 10),
                 Text(
                   Constants.kStringAppSubtitle,
-                  style: kSubtitleHelveticaTextStyle,
+                  style: kSubtitleHelveticaLightTextStyle,
                 ),
               ],
             ),

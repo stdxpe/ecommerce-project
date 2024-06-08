@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 var kTitleTextStyle = GoogleFonts.roboto(
   textStyle: TextStyle(
     color: Colors.white,
-    shadows: [kBoxShadowDarkText],
+    shadows: [kBoxShadowLightText],
     fontSize: 60,
     fontWeight: FontWeight.bold,
     letterSpacing: 10,
@@ -15,7 +15,7 @@ var kTitleTextStyle = GoogleFonts.roboto(
 var kSubtitleTextStyle = GoogleFonts.roboto(
   textStyle: TextStyle(
     color: Colors.white,
-    shadows: [kBoxShadowDarkText],
+    shadows: [kBoxShadowLightText],
     fontSize: 14,
     fontWeight: FontWeight.w600,
     letterSpacing: 0.7,
@@ -23,33 +23,48 @@ var kSubtitleTextStyle = GoogleFonts.roboto(
 );
 
 /// Text Styles w/ Helvetica
-var kTitleHelveticaTextStyle = TextStyle(
+var kTitleHelveticaLightTextStyle = TextStyle(
   color: Colors.white,
-  shadows: [kBoxShadowDarkText],
+  shadows: [kBoxShadowLightText],
   fontSize: 60,
   fontWeight: FontWeight.bold,
   letterSpacing: 10,
 );
 
-var kSubtitleHelveticaTextStyle = TextStyle(
+var kSubtitleHelveticaLightTextStyle = TextStyle(
   color: Colors.white,
-  shadows: [kBoxShadowDarkText],
+  shadows: [kBoxShadowLightText],
   fontSize: 14,
   fontWeight: FontWeight.w600,
   letterSpacing: 0.7,
 );
+var kTitleMidSizeHelveticaDarkTextStyle = TextStyle(
+  color: Colors.black,
+  shadows: [kBoxShadowLightText],
+  fontSize: 25,
+  fontWeight: FontWeight.bold,
+  letterSpacing: 0.1,
+);
+
+var kSubtitleHelveticaDarkTextStyle = TextStyle(
+  color: Colors.black,
+  shadows: [kBoxShadowLightText],
+  fontSize: 13,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 0.3,
+);
 
 /// Box Shadows
-var kBoxShadowDarkText = BoxShadow(
-  color: Colors.black54.withOpacity(0.70),
+var kBoxShadowLightText = BoxShadow(
+  color: Colors.black54.withOpacity(0.1),
   spreadRadius: 0.1,
   blurRadius: 10,
   offset: const Offset(0, 3.5),
 );
 
-var kBoxShadowLightText = BoxShadow(
+var kBoxShadowDarkText = BoxShadow(
   color: Colors.white60.withOpacity(1),
   spreadRadius: 0.1,
-  blurRadius: 15,
-  offset: const Offset(0, 1),
+  blurRadius: 10,
+  offset: const Offset(0, 3.5),
 );

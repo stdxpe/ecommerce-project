@@ -7,4 +7,8 @@ class Constants {
   static var kStringDontHaveAnAccount = 'Don\'t have an account?';
   static var kStringSignUp = 'Sign Up';
   static var kStringSignIn = 'Sign In';
+  static var kStringBrowseTitle = 'Swipe to browse';
+  static var kStringBrowseSubtitle =
+      'Discover products easily by swiping from\none category to another';
+  static var kStringButtonStartShopping = 'Start Shopping';
 }
