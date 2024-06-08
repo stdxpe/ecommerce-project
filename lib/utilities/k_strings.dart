@@ -11,4 +11,5 @@ class Constants {
   static var kStringBrowseSubtitle =
       'Discover products easily by swiping from\none category to another';
   static var kStringButtonStartShopping = 'Start Shopping';
+  static var kStringSignIntoYourAccount = 'Sign into\nyour account';
 }

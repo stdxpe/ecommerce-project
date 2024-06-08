@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ButtonAlreadyHaveAccount extends StatelessWidget {
-  final Function function;
+  final Function onPressed;
   final String? textStatic;
   final String buttonText;
   final Color? textStaticColor;
@@ -9,7 +9,7 @@ class ButtonAlreadyHaveAccount extends StatelessWidget {
   final double? textSize;
 
   const ButtonAlreadyHaveAccount({
-    required this.function,
+    required this.onPressed,
     this.textStatic = '',
     required this.buttonText,
     this.textStaticColor,
@@ -28,10 +28,10 @@ class ButtonAlreadyHaveAccount extends StatelessWidget {
         Text(
           textStatic!,
           style: TextStyle(
-            color: textStaticColor ?? Colors.black87,
+            color: textStaticColor ?? Colors.black54,
             fontSize: textSize ?? 13,
             fontWeight: FontWeight.w600,
-            letterSpacing: 0.2,
+            letterSpacing: 0.1,
           ),
           textAlign: TextAlign.center,
         ),

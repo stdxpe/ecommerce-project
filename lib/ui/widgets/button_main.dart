@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class ButtonMain extends StatelessWidget {
@@ -11,10 +12,13 @@ class ButtonMain extends StatelessWidget {
   final double? width;
   final bool? useShadow;
   final double? paddingHorizontal;
+  final double? paddingLeft;
+  final double? paddingRight;
   final double? paddingVertical;
   final double? borderWidth;
 
   const ButtonMain({
+    super.key,
     required this.onPressed,
     this.text,
     this.textColor,
@@ -24,26 +28,28 @@ class ButtonMain extends StatelessWidget {
     this.height,
     this.width,
     this.useShadow = true,
-    this.paddingHorizontal,
-    this.paddingVertical,
+    this.paddingHorizontal = 35,
+    this.paddingLeft,
+    this.paddingRight,
+    this.paddingVertical = 0,
     this.borderWidth,
-    super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return InkWell(
       onTap: () {
         onPressed();
       },
       child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: paddingHorizontal ?? 30,
-          vertical: paddingVertical ?? 0,
+        padding: EdgeInsets.fromLTRB(
+          paddingLeft ?? paddingHorizontal!,
+          paddingVertical!,
+          paddingRight ?? paddingHorizontal!,
+          paddingVertical!,
         ),
         child: Container(
-          width: width ?? size.width,
+          width: width,
           height: height ?? 50,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
@@ -67,6 +73,7 @@ class ButtonMain extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
               children: [
                 if (icon != null) icon!,
                 if (icon != null && text != null) const SizedBox(width: 8),

@@ -48,6 +48,7 @@ class SplashScreen extends StatelessWidget {
             bottom: 70,
             width: size.width,
             child: Column(
+              // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ButtonMain(
                   text: Constants.kStringEmailButtonText,
@@ -81,7 +82,7 @@ class SplashScreen extends StatelessWidget {
             top: 50,
             right: 20,
             child: ButtonAlreadyHaveAccount(
-              function: () {},
+              onPressed: () {},
               buttonText: Constants.kStringSignIn,
             ),
           ),
