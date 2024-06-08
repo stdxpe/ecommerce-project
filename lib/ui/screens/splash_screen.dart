@@ -1,9 +1,12 @@
+import 'package:ecommerce_project/ui/screens/onboarding_screen.dart';
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/ui/widgets/button_main.dart';
 import 'package:ecommerce_project/utilities/k_strings.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
+import 'package:ecommerce_project/ui/widgets/button_already_have_account.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -19,7 +22,7 @@ class SplashScreen extends StatelessWidget {
             height: size.height,
             color: Colors.white.withOpacity(0.2),
             child: Image.asset(
-              '/Users/dxpe/projects/ecommerce-project/assets/images/pose${1}.jpg',
+              '/Users/dxpe/projects/ecommerce-project/assets/images/pose${0}.jpg',
               filterQuality: FilterQuality.high,
               fit: BoxFit.cover,
             ),
@@ -65,9 +68,21 @@ class SplashScreen extends StatelessWidget {
                     size: 16,
                     color: Colors.white,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    PlatformAdaptiveNavigator()
+                        .push(context, OnboardingScreen());
+                  },
                 ),
+                const SizedBox(height: 20),
               ],
+            ),
+          ),
+          Positioned(
+            top: 50,
+            right: 20,
+            child: ButtonAlreadyHaveAccount(
+              function: () {},
+              buttonText: Constants.kStringSignIn,
             ),
           ),
         ],

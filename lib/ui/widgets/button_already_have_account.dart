@@ -10,7 +10,7 @@ class ButtonAlreadyHaveAccount extends StatelessWidget {
 
   const ButtonAlreadyHaveAccount({
     required this.function,
-    this.textStatic,
+    this.textStatic = '',
     required this.buttonText,
     this.textStaticColor,
     this.buttonTextColor,
@@ -23,9 +23,10 @@ class ButtonAlreadyHaveAccount extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          textStatic ?? '',
+          textStatic!,
           style: TextStyle(
             color: textStaticColor ?? Colors.black87,
             fontSize: textSize ?? 13,
