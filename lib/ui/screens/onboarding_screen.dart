@@ -17,73 +17,77 @@ class OnboardingScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 80, 0, 40),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            // const SizedBox(height: 60),
-            Column(
-              children: [
-                Text(
-                  Constants.kStringBrowseTitle,
-                  style: kTitleMidSizeHelveticaDarkTextStyle,
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  Constants.kStringBrowseSubtitle,
-                  style: kSubtitleHelveticaDarkTextStyle,
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-            // const SizedBox(height: 20),
-            CarouselSlider.builder(
-              itemCount: 15,
-              options: CarouselOptions(
-                autoPlay: true,
-                enlargeCenterPage: true,
-                viewportFraction: 0.7,
-                enableInfiniteScroll: true,
-                enlargeStrategy: CenterPageEnlargeStrategy.height,
-                aspectRatio: 1.05,
-                autoPlayInterval: const Duration(seconds: 4),
-                autoPlayAnimationDuration: const Duration(milliseconds: 800),
-                autoPlayCurve: Curves.fastOutSlowIn,
-                enlargeFactor: 0.4,
-                scrollDirection: Axis.horizontal,
+      body: SingleChildScrollView(
+        physics: const ClampingScrollPhysics(),
+        child: Container(
+          height: size.height,
+          width: size.width,
+          padding: const EdgeInsets.fromLTRB(0, 80, 0, 40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Column(
+                children: [
+                  Text(
+                    Constants.kSkStringOnboardingTitle,
+                    style: kTitleMidSizeHelveticaDarkTextStyle,
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    Constants.kStringOnboardingSubtitle,
+                    style: kSubtitleHelveticaDarkTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
-              itemBuilder:
-                  (BuildContext context, int itemIndex, int pageViewIndex) =>
-                      Container(
-                margin: const EdgeInsetsDirectional.all(20),
-                height: size.height * 0.35,
-                width: size.width * 0.65,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.red,
-                  boxShadow: [kBoxShadowContainer],
+              // const SizedBox(height: 20),
+              CarouselSlider.builder(
+                itemCount: 15,
+                options: CarouselOptions(
+                  autoPlay: true,
+                  enlargeCenterPage: true,
+                  viewportFraction: 0.7,
+                  enableInfiniteScroll: true,
+                  enlargeStrategy: CenterPageEnlargeStrategy.height,
+                  aspectRatio: 1.05,
+                  autoPlayInterval: const Duration(seconds: 4),
+                  autoPlayAnimationDuration: const Duration(milliseconds: 800),
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enlargeFactor: 0.4,
+                  scrollDirection: Axis.horizontal,
+                ),
+                itemBuilder:
+                    (BuildContext context, int itemIndex, int pageViewIndex) =>
+                        Container(
+                  margin: const EdgeInsetsDirectional.all(20),
+                  height: size.height * 0.35,
+                  width: size.width * 0.65,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.red,
+                    boxShadow: [kBoxShadowContainer],
+                  ),
                 ),
               ),
-            ),
-            const SwitchIndexerDots(listItemCount: 6, currentIndex: 3),
-            const SizedBox(height: 0),
-            ButtonMain(
-              onPressed: () {
-                PlatformAdaptiveNavigator().push(context, SignInScreen());
-              },
-              textColor: Colors.white,
-              buttonColor: const Color(0xFF22252A),
-              text: Constants.kStringButtonStartShopping,
-            ),
-            ButtonAlreadyHaveAccount(
-              onPressed: () {},
-              textStatic: Constants.kStringAlreadyHaveAnAccount,
-              buttonText: Constants.kStringSignIn,
-            ),
-          ],
+              const SwitchIndexerDots(listItemCount: 6, currentIndex: 3),
+              const SizedBox(height: 0),
+              ButtonMain(
+                onPressed: () {
+                  PlatformAdaptiveNavigator()
+                      .push(context, const SignInScreen());
+                },
+                textColor: Colors.white,
+                buttonColor: const Color(0xFF22252A),
+                text: Constants.kStringButtonOnboarding,
+              ),
+              ButtonAlreadyHaveAccount(
+                onPressed: () {},
+                textStatic: Constants.kStringAlreadyHaveAnAccount,
+                buttonText: Constants.kStringSignIn,
+              ),
+            ],
+          ),
         ),
       ),
     );

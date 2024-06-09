@@ -17,73 +17,96 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            width: size.width,
+          Positioned(
             height: size.height,
-            color: Colors.white.withOpacity(0.2),
+            width: size.width,
             child: Image.asset(
-              '/Users/dxpe/projects/ecommerce-project/assets/images/pose${0}.jpg',
+              '/Users/dxpe/projects/ecommerce-project/assets/images/pose${1}.jpg',
               filterQuality: FilterQuality.high,
               fit: BoxFit.cover,
             ),
           ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  Constants.kStringAppTitle,
-                  style: kTitleHelveticaLightTextStyle,
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  Constants.kStringAppSubtitle,
-                  style: kSubtitleHelveticaLightTextStyle,
-                ),
-              ],
-            ),
-          ),
           Positioned(
-            bottom: 70,
+            height: size.height,
             width: size.width,
-            child: Column(
-              // crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ButtonMain(
-                  text: Constants.kStringEmailButtonText,
-                  icon: const Icon(
-                    CupertinoIcons.mail_solid,
-                    size: 16,
-                    color: Colors.black,
-                  ),
-                  onPressed: () {},
-                ),
-                const SizedBox(height: 20),
-                ButtonMain(
-                  text: Constants.kStringFacebookButtonText,
-                  textColor: Colors.white,
-                  buttonColor: const Color(0xFF22252A),
-                  icon: const Icon(
-                    CupertinoIcons.lock,
-                    size: 16,
-                    color: Colors.white,
-                  ),
-                  onPressed: () {
-                    PlatformAdaptiveNavigator()
-                        .push(context, OnboardingScreen());
-                  },
-                ),
-                const SizedBox(height: 20),
-              ],
+            child: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.center,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                    Colors.black.withOpacity(0.0),
+                    Colors.black.withOpacity(0.3),
+                  ])),
             ),
           ),
-          Positioned(
-            top: 50,
-            right: 20,
-            child: ButtonAlreadyHaveAccount(
-              onPressed: () {},
-              buttonText: Constants.kStringSignIn,
+          SingleChildScrollView(
+            physics: const ClampingScrollPhysics(),
+            child: SizedBox(
+              height: size.height,
+              width: size.width,
+              child: Stack(
+                children: [
+                  Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          Constants.kStringAppTitle,
+                          style: kTitleHelveticaLightTextStyle,
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          Constants.kStringAppSubtitle,
+                          style: kSubtitleHelveticaLightTextStyle,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 70,
+                    width: size.width,
+                    child: Column(
+                      children: [
+                        ButtonMain(
+                          text: Constants.kStringEmailButtonText,
+                          icon: const Icon(
+                            CupertinoIcons.mail_solid,
+                            size: 16,
+                            color: Colors.black,
+                          ),
+                          onPressed: () {},
+                        ),
+                        const SizedBox(height: 20),
+                        ButtonMain(
+                          text: Constants.kStringFacebookButtonText,
+                          textColor: Colors.white,
+                          buttonColor: const Color(0xFF22252A),
+                          icon: const Icon(
+                            CupertinoIcons.lock,
+                            size: 16,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {
+                            PlatformAdaptiveNavigator()
+                                .push(context, const OnboardingScreen());
+                          },
+                        ),
+                        const SizedBox(height: 20),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    top: 50,
+                    right: 20,
+                    child: ButtonAlreadyHaveAccount(
+                      onPressed: () {},
+                      buttonText: Constants.kStringSignIn,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

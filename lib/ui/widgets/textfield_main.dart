@@ -10,13 +10,13 @@ class TextfieldMain extends StatelessWidget {
       // autofocus: true,
       keyboardType: TextInputType.emailAddress,
       // onEditingComplete: ,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         hintText: 'example@mail.com',
         labelText: 'Email',
       ),
       // obscureText: true,
       // maxLength: 50,
-      style: TextStyle(),
+      style: const TextStyle(),
       // validator: ,
       // onFieldSubmitted: ,
       // onSaved: ,

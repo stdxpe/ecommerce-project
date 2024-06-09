@@ -1,17 +1,17 @@
-import 'package:ecommerce_project/ui/screens/sign_up_screen.dart';
+import 'package:ecommerce_project/ui/screens/forgot_password_screen.dart';
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/ui/widgets/background_blur.dart';
 import 'package:ecommerce_project/ui/widgets/button_already_have_account.dart';
 import 'package:ecommerce_project/ui/widgets/button_main.dart';
-import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/utilities/k_strings.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 import 'package:ecommerce_project/ui/widgets/form_input_field.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class SignInScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      Constants.kStringSignInTitle,
+                      Constants.kStringSignUpTitle,
                       style: kTitleMidSizeHelveticaLightTextStyle,
                     ),
                     const SizedBox(height: 20),
@@ -51,18 +51,18 @@ class SignInScreen extends StatelessWidget {
                       paddingHorizontal: 0,
                       onPressed: () {
                         PlatformAdaptiveNavigator()
-                            .push(context, const SignUpScreen());
+                            .push(context, const ForgotPasswordScreen());
                       },
                       textColor: Colors.white,
                       buttonColor: const Color(0xFF22252A),
-                      text: Constants.kStringSignIn,
+                      text: Constants.kStringSignUp,
                     ),
                     const SizedBox(height: 20),
                     Center(
                       child: ButtonAlreadyHaveAccount(
                         onPressed: () {},
-                        textStatic: Constants.kStringDontHaveAnAccount,
-                        buttonText: Constants.kStringSignUp,
+                        textStatic: Constants.kStringAlreadyHaveAnAccount,
+                        buttonText: Constants.kStringSignIn,
                         textStaticColor: Colors.white70,
                         buttonTextColor: Colors.white,
                       ),
