@@ -1,3 +1,5 @@
+import 'package:ecommerce_project/ui/screens/home_screen.dart';
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/ui/widgets/switch_verification_code_dots.dart';
 import 'package:flutter/material.dart';
 
@@ -48,7 +50,10 @@ class VerificationScreen extends StatelessWidget {
 
                     Center(
                       child: ButtonAlreadyHaveAccount(
-                        onPressed: () {},
+                        onPressed: () {
+                          PlatformAdaptiveNavigator()
+                              .push(context, const HomeScreen());
+                        },
                         buttonText:
                             Constants.kStringButtonVerificationResendCode,
                       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'package:ecommerce_project/ui/screens/home_screen.dart';
 import 'package:ecommerce_project/ui/screens/onboarding_screen.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/ui/widgets/button_main.dart';
@@ -76,7 +77,10 @@ class SplashScreen extends StatelessWidget {
                             size: 16,
                             color: Colors.black,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            PlatformAdaptiveNavigator()
+                                .push(context, const OnboardingScreen());
+                          },
                         ),
                         const SizedBox(height: 20),
                         ButtonMain(
@@ -90,7 +94,7 @@ class SplashScreen extends StatelessWidget {
                           ),
                           onPressed: () {
                             PlatformAdaptiveNavigator()
-                                .push(context, const OnboardingScreen());
+                                .push(context, const HomeScreen());
                           },
                         ),
                         const SizedBox(height: 20),

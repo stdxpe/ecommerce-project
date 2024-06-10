@@ -28,7 +28,7 @@ class SwitchIndexerDots extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          for (var i = 0; i <= listItemCount; i++)
+          for (var i = 0; i < listItemCount; i++)
             if (i != currentIndex)
               Container(
                 width: dotSize,
@@ -52,7 +52,7 @@ class SwitchIndexerDots extends StatelessWidget {
                       shape: BoxShape.circle,
                       border: Border.all(
                         color: currentDotColor ?? Colors.black,
-                        width: 1.25,
+                        width: 1.15,
                       ),
                     ),
                     margin: EdgeInsets.symmetric(

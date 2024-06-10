@@ -36,6 +36,9 @@ class ButtonAlreadyHaveAccount extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         GestureDetector(
+          onTap: () {
+            onPressed();
+          },
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 7.5),
             child: Text(
