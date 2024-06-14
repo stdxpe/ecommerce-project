@@ -11,7 +11,7 @@ class ButtonAddToWishlist extends StatelessWidget {
   const ButtonAddToWishlist({
     required this.onPressed,
     this.buttonSize = 20,
-    this.iconSize = 16,
+    this.iconSize = 11,
     this.buttonColor = Colors.white70,
     this.iconColor = Colors.red,
     super.key,

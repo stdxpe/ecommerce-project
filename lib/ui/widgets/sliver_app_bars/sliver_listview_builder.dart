@@ -7,6 +7,7 @@ class SliverListviewBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SliverList.builder(
+      itemCount: 10,
       itemBuilder: (context, index) {
         return Container(
           height: 200,

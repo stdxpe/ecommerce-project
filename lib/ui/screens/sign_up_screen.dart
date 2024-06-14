@@ -1,12 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
 import 'package:ecommerce_project/ui/screens/forgot_password_screen.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/ui/widgets/background_blur.dart';
 import 'package:ecommerce_project/ui/widgets/button_already_have_account.dart';
 import 'package:ecommerce_project/ui/widgets/button_main.dart';
-import 'package:ecommerce_project/utilities/k_strings.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 import 'package:ecommerce_project/ui/widgets/form_input_field.dart';
 
@@ -40,7 +40,7 @@ class SignUpScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      Constants.kStringSignUpTitle,
+                      Strings.kStringSignUpTitle,
                       style: kTitleMidSizeHelveticaLightTextStyle,
                     ),
                     const SizedBox(height: 20),
@@ -55,14 +55,14 @@ class SignUpScreen extends StatelessWidget {
                       },
                       textColor: Colors.white,
                       buttonColor: const Color(0xFF22252A),
-                      text: Constants.kStringSignUp,
+                      text: Strings.kStringSignUp,
                     ),
                     const SizedBox(height: 20),
                     Center(
                       child: ButtonAlreadyHaveAccount(
                         onPressed: () {},
-                        textStatic: Constants.kStringAlreadyHaveAnAccount,
-                        buttonText: Constants.kStringSignIn,
+                        textStatic: Strings.kStringAlreadyHaveAnAccount,
+                        buttonText: Strings.kStringSignIn,
                         textStaticColor: Colors.white70,
                         buttonTextColor: Colors.white,
                       ),

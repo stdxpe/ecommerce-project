@@ -1,5 +1,6 @@
-import 'package:ecommerce_project/ui/widgets/frosted_glass_blur_filter.dart';
 import 'package:flutter/material.dart';
+
+import 'package:ecommerce_project/ui/widgets/background_frosted_glass_blur_filter.dart';
 
 class BackgroundBlur extends StatelessWidget {
   const BackgroundBlur({super.key});
@@ -8,7 +9,6 @@ class BackgroundBlur extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      // resizeToAvoidBottomInset: false,
       body: Stack(alignment: Alignment.center, children: [
         Container(
           width: size.width,
@@ -20,7 +20,7 @@ class BackgroundBlur extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        const FrostedGlassBlurFilter(blurPercent: 30.0),
+        const BackgroundFrostedGlassBlurFilter(blurPercent: 30.0),
       ]),
     );
   }

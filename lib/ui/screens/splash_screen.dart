@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/ui/screens/home_screen.dart';
 import 'package:ecommerce_project/ui/screens/onboarding_screen.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/ui/widgets/button_main.dart';
-import 'package:ecommerce_project/utilities/k_strings.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 import 'package:ecommerce_project/ui/widgets/button_already_have_account.dart';
 
@@ -54,12 +54,12 @@ class SplashScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          Constants.kStringAppTitle,
+                          Strings.kStringAppTitle,
                           style: kTitleHelveticaLightTextStyle,
                         ),
                         const SizedBox(height: 10),
                         Text(
-                          Constants.kStringAppSubtitle,
+                          Strings.kStringAppSubtitle,
                           style: kSubtitleHelveticaLightTextStyle,
                         ),
                       ],
@@ -71,7 +71,7 @@ class SplashScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         ButtonMain(
-                          text: Constants.kStringEmailButtonText,
+                          text: Strings.kStringEmailButtonText,
                           icon: const Icon(
                             CupertinoIcons.mail_solid,
                             size: 16,
@@ -84,7 +84,7 @@ class SplashScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 20),
                         ButtonMain(
-                          text: Constants.kStringFacebookButtonText,
+                          text: Strings.kStringFacebookButtonText,
                           textColor: Colors.white,
                           buttonColor: const Color(0xFF22252A),
                           icon: const Icon(
@@ -105,8 +105,11 @@ class SplashScreen extends StatelessWidget {
                     top: 50,
                     right: 20,
                     child: ButtonAlreadyHaveAccount(
-                      onPressed: () {},
-                      buttonText: Constants.kStringSignIn,
+                      onPressed: () {
+                        PlatformAdaptiveNavigator()
+                            .push(context, const HomeScreen());
+                      },
+                      buttonText: Strings.kStringSignIn,
                     ),
                   ),
                 ],

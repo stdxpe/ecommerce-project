@@ -1,8 +1,9 @@
-import 'package:ecommerce_project/utilities/k_text_styles.dart';
 import 'package:flutter/material.dart';
 
-class DummyTopContent extends StatelessWidget {
-  const DummyTopContent({super.key});
+import 'package:ecommerce_project/utilities/k_text_styles.dart';
+
+class DummyTopSlidingContent extends StatelessWidget {
+  const DummyTopSlidingContent({super.key});
 
   @override
   Widget build(BuildContext context) {

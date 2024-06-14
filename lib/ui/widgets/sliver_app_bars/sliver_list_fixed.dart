@@ -9,11 +9,22 @@ class SliverListFixed extends StatelessWidget {
     return SliverList(
       delegate: SliverChildListDelegate.fixed(
         [
+          // Container(
+          //   height: 50,
+          //   width: size.width,
+          //   color: Colors.orange,
+          // ),
           Container(
             height: 50,
-            width: size.width,
-            color: Colors.orange,
+            width: 50,
+            color: Colors.yellow,
           ),
+          // SizedBox(
+          //   height: 200,
+          //   width: size.width,
+          //   // color: Colors.white,
+          //   child: const ProductHorizontalListview(),
+          // ),
           Container(
             width: size.width,
             height: 50,

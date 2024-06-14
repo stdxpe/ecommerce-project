@@ -1,9 +1,9 @@
-import 'package:ecommerce_project/ui/screens/verification_screen.dart';
-import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:flutter/material.dart';
 
+import 'package:ecommerce_project/ui/screens/verification_screen.dart';
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/ui/widgets/button_main.dart';
-import 'package:ecommerce_project/utilities/k_strings.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 import 'package:ecommerce_project/ui/widgets/form_input_field.dart';
 
@@ -32,12 +32,12 @@ class ForgotPasswordScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      Constants.kStringForgotPasswordTitle,
+                      Strings.kStringForgotPasswordTitle,
                       style: kTitleMidSizeHelveticaDarkTextStyle,
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      Constants.kStringForgotPasswordSubtitle,
+                      Strings.kStringForgotPasswordSubtitle,
                       style: kSubtitleHelveticaDarkTextStyle,
                     ),
                     const SizedBox(height: 30),
@@ -52,7 +52,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                       },
                       textColor: Colors.white,
                       buttonColor: const Color(0xFF22252A),
-                      text: Constants.kStringButtonSend,
+                      text: Strings.kStringButtonSend,
                     ),
                     const SizedBox(height: 20),
                   ],

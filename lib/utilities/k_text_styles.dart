@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+/// APP WIDE TEXT STYLES
+
 /// Text Styles w/ GoogleFonts
 var kTitleTextStyle = GoogleFonts.roboto(
   textStyle: TextStyle(
@@ -27,7 +29,7 @@ var kTitleHelveticaLightTextStyle = TextStyle(
   color: Colors.white,
   shadows: [kBoxShadowLightText],
   fontSize: 60,
-  fontWeight: FontWeight.bold,
+  fontWeight: FontWeight.w600,
   letterSpacing: 10,
 );
 
@@ -61,6 +63,56 @@ var kSubtitleHelveticaDarkTextStyle = TextStyle(
   fontSize: 13,
   fontWeight: FontWeight.w600,
   letterSpacing: 0.3,
+);
+
+var kTitleHomeScreenCollectionsHelveticaDarkTextStyle = const TextStyle(
+  color: Colors.black,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 18.5,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 0.2,
+);
+var kTitleHomeScreenButtonCollectionsHelveticaDarkTextStyle = const TextStyle(
+  color: Colors.black54,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 10,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 0,
+);
+
+var kProductCollectionPrimaryHelveticaDarkTextStyle = const TextStyle(
+  color: Colors.black,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 11,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0,
+  height: 1.2,
+);
+var kProductCollectionSecondaryHelveticaDarkTextStyle = const TextStyle(
+  color: Colors.black54,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 8,
+  fontWeight: FontWeight.w400,
+  letterSpacing: 0.1,
+  height: 1.0,
+);
+
+const kCardTextStylePrimary = TextStyle(
+  color: Colors.black,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 11,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0,
+  height: 1.2,
+);
+
+const kCardTextStyleSecondary = TextStyle(
+  color: Colors.black54,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 8,
+  fontWeight: FontWeight.w400,
+  letterSpacing: 0.1,
+  height: 1.0,
 );
 
 /// Box Shadows

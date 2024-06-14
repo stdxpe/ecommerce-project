@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_integrated.dart';
-import 'package:ecommerce_project/ui/widgets/top_contents/dummy_top_content.dart';
+import 'package:ecommerce_project/ui/widgets/top_sliding_contents/dummy_top_sliding_content.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
@@ -18,8 +18,8 @@ class DetailsScreen extends StatelessWidget {
             indexerAlignment: Alignment.bottomCenter,
             indexerPadding: EdgeInsets.only(bottom: 50),
             contentList: [
-              DummyTopContent(),
-              DummyTopContent(),
+              DummyTopSlidingContent(),
+              DummyTopSlidingContent(),
             ],
           ),
         ),

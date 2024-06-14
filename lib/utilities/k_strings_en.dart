@@ -1,4 +1,5 @@
-class Constants {
+class Strings {
+  /// APP WIDE STRINGS-EN
   static var kStringAppTitle = 'FANCY';
   static var kStringAppSubtitle = 'Best Fashion Shopping App';
   static var kStringEmailButtonText = 'Sign Up with Email';
@@ -21,4 +22,8 @@ class Constants {
   static var kStringVerificationSubtitle =
       'We have sent you an SMS with a code \nto the number +123 456 789';
   static var kStringButtonVerificationResendCode = 'Send a new code';
+
+  /// HOME SCREEN
+  static var kStringHomeCollectionTitle = 'Top Trends';
+  static var kStringButtonCollectionTitle = 'Show All';
 }

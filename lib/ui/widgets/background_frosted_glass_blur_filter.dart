@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
-class FrostedGlassBlurFilter extends StatelessWidget {
+class BackgroundFrostedGlassBlurFilter extends StatelessWidget {
   final double? height;
   final double? width;
   final Color? blurColor;
   final double? blurColorTransparency;
   final double? blurPercent;
 
-  const FrostedGlassBlurFilter({
+  const BackgroundFrostedGlassBlurFilter({
     this.height,
     this.width,
     this.blurPercent,
