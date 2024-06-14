@@ -23,7 +23,7 @@ class SliverAppBarSnappable extends StatelessWidget {
             width: size.width,
             height: 40,
             color: Colors.red,
-            child: Center(child: Text('bottom side'))),
+            child: const Center(child: Text('bottom side'))),
       ),
 
       // flexibleSpace: FlexibleSpaceBar(

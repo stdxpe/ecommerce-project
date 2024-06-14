@@ -44,7 +44,7 @@ class PlatformAdaptiveAlertDialog extends IPlatformAdaptiveBuilder {
         false;
   }
 
-  /// TODO: Anything can be shown in showDialog, like Sale Commercials :)
+  /// TODO: Anything can be shown in showDialog, like Sale Commercials
   /// TODO: Here comes the showCupertinoAlertDialog? What's the difference b/ cup&stAlertDialog??
 
   @override

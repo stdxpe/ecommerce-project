@@ -39,13 +39,13 @@ class DummyTopSlidingContent extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Divider(
+                const Divider(
                   thickness: 1,
                   height: 20,
                   endIndent: 200,
                   color: Colors.white54,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
                   '20% OFF',
                   style: TextStyle(
