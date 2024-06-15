@@ -1,9 +1,9 @@
+import 'package:flutter/material.dart';
+
 import 'package:ecommerce_project/ui/screens/discover_screen.dart';
 import 'package:ecommerce_project/ui/screens/wishlist_screen.dart';
 import 'package:ecommerce_project/ui/widgets/button_close_icon.dart';
-import 'package:ecommerce_project/ui/widgets/button_main.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:flutter/material.dart';
 
 class SliverAppBarMain extends StatelessWidget {
   const SliverAppBarMain({super.key});
@@ -16,9 +16,8 @@ class SliverAppBarMain extends StatelessWidget {
       // expandedHeight: 50,
       automaticallyImplyLeading: false,
       pinned: true,
-      // backgroundColor: Colors.white,
-      backgroundColor: Colors.red.withOpacity(0.5),
-
+      backgroundColor: Colors.white,
+      // backgroundColor: Colors.red.withOpacity(0.5),
       leading: Container(
         margin: const EdgeInsets.all(10),
         child: ButtonCloseIcon(

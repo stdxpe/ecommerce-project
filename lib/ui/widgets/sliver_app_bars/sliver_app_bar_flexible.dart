@@ -23,7 +23,8 @@ class SliverAppBarFlexible extends StatelessWidget {
       expandedHeight: expandedHeight ?? 300,
       // collapsedHeight: 0,
       // toolbarHeight: 300,
-      backgroundColor: Colors.yellow,
+      // backgroundColor: Colors.yellow
+      backgroundColor: Colors.white,
       automaticallyImplyLeading: false,
       flexibleSpace: FlexibleSpaceBar(
         background: content,
