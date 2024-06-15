@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
-import 'package:ecommerce_project/ui/widgets/product_card_stack.dart';
+import 'package:ecommerce_project/ui/widgets/product_card_vertical.dart';
 import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/ui/widgets/button_collection_title_and_show_all.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
-class ListviewProductCardStack extends StatelessWidget {
+class ListviewHorizontalScrollProductCardVertical extends StatelessWidget {
   final String collectionTitle;
   final List<Product> productList;
   final double? cardHeight;
   final double? cardWidth;
   final double? elevation;
+  final bool? isBorderElevated;
   final double? paddingHorizontalMain;
   final double? paddingBetweenElementsMain;
 
-  const ListviewProductCardStack({
+  const ListviewHorizontalScrollProductCardVertical({
     required this.collectionTitle,
     required this.productList,
-    this.cardHeight = 100,
+    this.cardHeight = 150,
     this.cardWidth = 100,
     this.elevation = 1.5,
+    this.isBorderElevated = true,
     this.paddingHorizontalMain = Constants.kPaddingHorizontalMain -
         Constants.kPaddingBetweenElementsMain,
     this.paddingBetweenElementsMain = Constants.kPaddingBetweenElementsMain,
@@ -49,25 +51,28 @@ class ListviewProductCardStack extends StatelessWidget {
 
         /// Listview
         SizedBox(
+          // color: Colors.blue.withOpacity(0.5),
           height: cardHeight!,
           width: size.width,
           child: ListView.builder(
+            shrinkWrap: true,
             padding: EdgeInsets.symmetric(
               horizontal: paddingHorizontalMain!,
             ),
-            clipBehavior: Clip.none,
             scrollDirection: Axis.horizontal,
+            clipBehavior: Clip.none,
             itemCount: productList.length,
             itemBuilder: (context, index) => Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: paddingBetweenElementsMain!,
+                vertical: 0.0,
               ),
-              child: ProductCardStack(
+              child: ProductCardVertical(
+                isBorderElevated: isBorderElevated,
                 cardHeight: cardHeight!,
                 cardWidth: cardWidth!,
                 elevation: elevation,
-                bottomText: 'Size: M  |  Color: Grey',
-                // bottomContent: Text('Go to Collection'),
+                topText: 'MINX',
                 product: productList[index],
               ),
             ),

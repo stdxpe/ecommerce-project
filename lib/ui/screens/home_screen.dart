@@ -1,16 +1,13 @@
-import 'package:ecommerce_project/ui/widgets/dialog_popup_widget.dart';
-import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_alert_dialog.dart';
-import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:ecommerce_project/ui/widgets/dialog_popup_widget.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/ui/widgets/gridview_product_card_vertical.dart';
-import 'package:ecommerce_project/ui/widgets/listview_product_card_horizontal.dart';
-import 'package:ecommerce_project/ui/widgets/listview_product_card_stack.dart';
-import 'package:ecommerce_project/ui/widgets/listview_product_card_vertical.dart';
+import 'package:ecommerce_project/ui/widgets/listview_horizontal_scroll_product_card_horizontal.dart';
+import 'package:ecommerce_project/ui/widgets/listview_horizontal_scroll_product_card_stack.dart';
+import 'package:ecommerce_project/ui/widgets/listview_horizontal_scroll_product_card_vertical.dart';
 import 'package:ecommerce_project/ui/widgets/button_collection_title_and_show_all.dart';
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_integrated.dart';
 import 'package:ecommerce_project/ui/widgets/sliver_app_bars/sliver_app_bar_flexible.dart';
@@ -25,7 +22,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
-        physics: ClampingScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         slivers: [
           const SliverAppBarMain(),
           SliverAppBarFlexible(
@@ -61,7 +58,7 @@ class HomeScreen extends StatelessWidget {
               (context, index) => Column(
                 children: [
                   const SizedBox(height: Constants.kPaddingAppTop),
-                  ListviewProductCardStack(
+                  ListviewHorizontalScrollProductCardStack(
                     cardHeight: 200,
                     cardWidth: 200,
                     collectionTitle: 'Listview Stack',
@@ -94,7 +91,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: Constants.kPaddingContentAndContent),
-                  ListviewProductCardVertical(
+                  ListviewHorizontalScrollProductCardVertical(
                     cardHeight: 145,
                     cardWidth: 100,
                     isBorderElevated: false,
@@ -128,7 +125,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: Constants.kPaddingContentAndContent),
-                  ListviewProductCardHorizontal(
+                  ListviewHorizontalScrollProductCardHorizontal(
                     cardHeight: 50,
                     cardWidth: 150,
                     isBorderElevated: false,

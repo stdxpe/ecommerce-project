@@ -6,7 +6,7 @@ import 'package:ecommerce_project/ui/widgets/button_collection_title_and_show_al
 import 'package:ecommerce_project/ui/widgets/product_card_horizontal.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
-class ListviewProductCardHorizontal extends StatelessWidget {
+class ListviewHorizontalScrollProductCardHorizontal extends StatelessWidget {
   final String collectionTitle;
   final List<Product> productList;
   final double? cardHeight;
@@ -16,7 +16,7 @@ class ListviewProductCardHorizontal extends StatelessWidget {
   final double? paddingHorizontalMain;
   final double? paddingBetweenElementsMain;
 
-  const ListviewProductCardHorizontal({
+  const ListviewHorizontalScrollProductCardHorizontal({
     required this.collectionTitle,
     required this.productList,
     this.cardHeight = 50,

@@ -31,7 +31,7 @@ class OnboardingScreen extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    Strings.kSkStringOnboardingTitle,
+                    Strings.kStringOnboardingTitle,
                     style: kTitleMidSizeHelveticaDarkTextStyle,
                   ),
                   const SizedBox(height: 10),

@@ -133,6 +133,39 @@ const kDialogPopupCardTextStyleSecondary = TextStyle(
   height: 1.2,
 );
 
+const kTitleMainTextStyle = TextStyle(
+  color: Colors.black,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 28,
+  fontWeight: FontWeight.w700,
+  letterSpacing: 0,
+  height: 1.1,
+);
+
+const kItemsFoundTextStyle = TextStyle(
+  color: Colors.black45,
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0.15,
+  height: 1,
+);
+
+const kWishlistItemsTextStylePrimary = TextStyle(
+  color: Colors.black,
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0.35,
+  height: 1.3,
+);
+
+const kWishlistItemsTextStyleSecondary = TextStyle(
+  color: Colors.black54,
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0.5,
+  height: 1.2,
+);
+
 /// Box Shadows
 var kBoxShadowLightText = BoxShadow(
   color: Colors.black54.withOpacity(0.1),

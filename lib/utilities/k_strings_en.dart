@@ -8,7 +8,7 @@ class Strings {
   static var kStringDontHaveAnAccount = 'Don\'t have an account?';
   static var kStringSignUp = 'Sign Up';
   static var kStringSignIn = 'Sign In';
-  static var kSkStringOnboardingTitle = 'Swipe to browse';
+  static var kStringOnboardingTitle = 'Swipe to browse';
   static var kStringOnboardingSubtitle =
       'Discover products easily by swiping from\none category to another';
   static var kStringButtonOnboarding = 'Start Shopping';
@@ -26,4 +26,7 @@ class Strings {
   /// HOME SCREEN
   static var kStringHomeCollectionTitle = 'Top Trends';
   static var kStringButtonCollectionTitle = 'See All';
+
+  /// WISHLIST SCREEN
+  static const kStringItemsFound = 'items found';
 }
