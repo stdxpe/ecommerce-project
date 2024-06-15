@@ -1,10 +1,8 @@
-import 'package:ecommerce_project/ui/widgets/button_close_icon.dart';
-import 'package:ecommerce_project/ui/widgets/button_main.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/utilities/k_constants.dart';
+import 'package:ecommerce_project/ui/widgets/button_close_icon.dart';
+import 'package:ecommerce_project/ui/widgets/button_main.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
-import 'package:ecommerce_project/models/product.dart';
 
 class DialogPopupCardStack extends StatelessWidget {
   // final Product product;

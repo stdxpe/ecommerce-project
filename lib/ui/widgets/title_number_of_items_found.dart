@@ -1,5 +1,3 @@
-import 'package:ecommerce_project/utilities/k_constants.dart';
-import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
