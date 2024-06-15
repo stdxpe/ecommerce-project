@@ -25,5 +25,5 @@ class Strings {
 
   /// HOME SCREEN
   static var kStringHomeCollectionTitle = 'Top Trends';
-  static var kStringButtonCollectionTitle = 'Show All';
+  static var kStringButtonCollectionTitle = 'See All';
 }

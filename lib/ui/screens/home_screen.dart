@@ -1,3 +1,7 @@
+import 'package:ecommerce_project/ui/widgets/dialog_popup_widget.dart';
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_alert_dialog.dart';
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
@@ -21,15 +25,25 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
-        physics: const ClampingScrollPhysics(),
+        physics: ClampingScrollPhysics(),
         slivers: [
           const SliverAppBarMain(),
-          const SliverAppBarFlexible(
+          SliverAppBarFlexible(
             expandedHeight: 275,
             content: CarouselIntegrated(
               contentList: [
-                DummyTopSlidingContent(),
-                DummyTopSlidingContent(),
+                GestureDetector(
+                    onTap: () {
+                      DialogPopupWidget(
+                        context: context,
+                        title: 'Winter Collection',
+                        subtitle: '20% Off Selected Brands',
+                        imageUrl: 'assets/images/pose2.jpg',
+                        buttonText: 'Check Out',
+                      ).showAlertDialog();
+                    },
+                    child: const DummyTopSlidingContent()),
+                const DummyTopSlidingContent(),
               ],
             ),
           ),

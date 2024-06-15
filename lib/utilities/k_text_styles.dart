@@ -115,6 +115,24 @@ const kCardTextStyleSecondary = TextStyle(
   height: 1.0,
 );
 
+const kDialogPopupCardTextStylePrimary = TextStyle(
+  color: Colors.white,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 40,
+  fontWeight: FontWeight.w700,
+  letterSpacing: 0.5,
+  height: 1.2,
+);
+
+const kDialogPopupCardTextStyleSecondary = TextStyle(
+  color: Colors.white,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 13,
+  fontWeight: FontWeight.w700,
+  letterSpacing: 0.1,
+  height: 1.2,
+);
+
 /// Box Shadows
 var kBoxShadowLightText = BoxShadow(
   color: Colors.black54.withOpacity(0.1),
