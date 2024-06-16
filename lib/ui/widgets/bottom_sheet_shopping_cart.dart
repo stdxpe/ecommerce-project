@@ -25,7 +25,7 @@ class BottomSheetShoppingCart extends StatelessWidget {
         ),
       ),
       child: Container(
-        height: size.height * 0.25,
+        height: size.height * 0.27,
         width: size.width,
         color: ColorPalette.kDarkButtonColor,
         child: Padding(
@@ -43,6 +43,7 @@ class BottomSheetShoppingCart extends StatelessWidget {
                 leftSideText: Strings.kStringTotalAmount,
                 rightSideText: '\$123.99',
               ),
+              const SizedBox(height: Constants.kPaddingBetweenElementsMain),
               ButtonMain(
                 paddingHorizontal: 0,
                 paddingVertical: 0,

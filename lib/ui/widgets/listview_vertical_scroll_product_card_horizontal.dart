@@ -15,6 +15,7 @@ class ListviewVerticalScrollProductCardHorizontal extends StatelessWidget {
   final Widget? optionalBottomWidget;
   final double? paddingHorizontalMain;
   final double? paddingBetweenElementsMain;
+  final double? paddingBottom;
   final TextStyle? textStylePrimary;
   final TextStyle? textStyleSecondary;
 
@@ -29,6 +30,7 @@ class ListviewVerticalScrollProductCardHorizontal extends StatelessWidget {
     this.paddingHorizontalMain = Constants.kPaddingHorizontalMain,
     this.paddingBetweenElementsMain =
         Constants.kPaddingWishlistScreenBetweenElements,
+    this.paddingBottom = Constants.kPaddingAppBottom,
     this.textStylePrimary = kWishlistItemsTextStylePrimary,
     this.textStyleSecondary = kWishlistItemsTextStyleSecondary,
     super.key,
@@ -40,7 +42,7 @@ class ListviewVerticalScrollProductCardHorizontal extends StatelessWidget {
       padding: EdgeInsets.only(
         left: paddingHorizontalMain!,
         right: paddingHorizontalMain!,
-        bottom: Constants.kPaddingAppBottom,
+        bottom: paddingBottom!,
       ),
       sliver: SliverList.builder(
         itemCount: productList.length,

@@ -35,6 +35,7 @@ class ShoppingCartScreen extends StatelessWidget {
                     cardHeight: 75,
                     bottomText: 'Size: M  |  Color: Grey',
                     cardWidth: size.width,
+                    paddingBottom: 0,
                     optionalBottomWidget: const Positioned.fill(
                       child: Align(
                         alignment: Alignment.bottomRight,
@@ -90,6 +91,7 @@ class ShoppingCartScreen extends StatelessWidget {
                 ],
               ),
             ),
+            // TODO: IF NO ITEM FOUND ON SHOPPING CART, TEXT/ICON HERE
             const BottomSheetShoppingCart(),
           ],
         ),
