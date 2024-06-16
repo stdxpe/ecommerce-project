@@ -1,9 +1,8 @@
+import 'package:flutter/material.dart';
 import 'dart:ui';
 
 import 'package:ecommerce_project/ui/widgets/dialog_popup_card_stack.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class DialogPopupWidget extends StatelessWidget {
   final BuildContext context;

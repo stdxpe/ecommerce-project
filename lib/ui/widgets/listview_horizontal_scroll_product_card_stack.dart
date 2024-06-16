@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:ecommerce_project/ui/screens/details_screen.dart';
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/ui/widgets/product_card_stack.dart';
 import 'package:ecommerce_project/models/product.dart';
@@ -62,13 +64,21 @@ class ListviewHorizontalScrollProductCardStack extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                 horizontal: paddingBetweenElementsMain!,
               ),
-              child: ProductCardStack(
-                cardHeight: cardHeight!,
-                cardWidth: cardWidth!,
-                elevation: elevation,
-                bottomText: 'Size: M  |  Color: Grey',
-                // bottomContent: Text('Go to Collection'),
-                product: productList[index],
+              child: GestureDetector(
+                onTap: () {
+                  PlatformAdaptiveNavigator().push(
+                    context,
+                    const DetailsScreen(),
+                  );
+                },
+                child: ProductCardStack(
+                  cardHeight: cardHeight!,
+                  cardWidth: cardWidth!,
+                  elevation: elevation,
+                  bottomText: 'Size: M  |  Color: Grey',
+                  // bottomContent: Text('Go to Collection'),
+                  product: productList[index],
+                ),
               ),
             ),
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/screens/discover_screen.dart';
+import 'package:ecommerce_project/ui/screens/shopping_cart_screen.dart';
 import 'package:ecommerce_project/ui/screens/wishlist_screen.dart';
 import 'package:ecommerce_project/ui/widgets/button_close_icon.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
@@ -68,7 +68,7 @@ class SliverAppBarMain extends StatelessWidget {
             onPressed: () {
               PlatformAdaptiveNavigator().push(
                 context,
-                const DiscoverScreen(),
+                const ShoppingCartScreen(),
               );
             },
             iconSize: 17,

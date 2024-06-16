@@ -8,6 +8,7 @@ class Constants {
   static const double kPaddingContentAndContent = 25;
   static const double kRadiusCardPrimary = 12.5;
   static const double kRadiusCardSecondary = 7.5;
+  static const double kRadiusButtonItemCounter = 30;
 
   static const double kPaddingAppTopAndMainTitle = 40;
   static const double kPaddingMainTitleAndContent = 20;

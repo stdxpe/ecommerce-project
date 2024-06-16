@@ -28,5 +28,11 @@ class Strings {
   static var kStringButtonCollectionTitle = 'See All';
 
   /// WISHLIST SCREEN
+  static const kStringWishlist = 'Wishlist';
   static const kStringItemsFound = 'items found';
+
+  /// SHOPPING CART SCREEN
+  static const kStringShoppingCart = 'Shopping Cart';
+  static const kStringButtonContinue = 'Continue';
+  static const kStringTotalAmount = 'Total Amount';
 }

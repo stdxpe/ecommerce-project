@@ -162,8 +162,24 @@ const kWishlistItemsTextStyleSecondary = TextStyle(
   color: Colors.black54,
   fontSize: 10,
   fontWeight: FontWeight.w500,
-  letterSpacing: 0.5,
+  letterSpacing: 0.65,
   height: 1.2,
+);
+
+var kShoppingCartBottomCardTextStylePrimary = TextStyle(
+  color: Colors.black.withOpacity(0.5),
+  fontSize: 13,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0.35,
+  height: 1.3,
+);
+
+const kShoppingCartBottomCardTextStyleSecondary = TextStyle(
+  color: Colors.black,
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0.35,
+  height: 1.3,
 );
 
 /// Box Shadows

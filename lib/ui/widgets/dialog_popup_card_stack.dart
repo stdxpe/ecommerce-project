@@ -40,7 +40,7 @@ class DialogPopupCardStack extends StatelessWidget {
           imageUrl,
           fit: BoxFit.cover,
         ),
-        Container(
+        SizedBox(
           height: cardHeight,
           width: cardWidth,
           // color: Colors.red.withOpacity(0.5),
