@@ -1,46 +1,33 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
+import 'package:ecommerce_project/ui/widgets/button_circular_main.dart';
 
 class ButtonAddToWishlist extends StatelessWidget {
   final Function onPressed;
   final double? buttonSize;
   final double? iconSize;
-  final Color? buttonColor;
-  final Color? iconColor;
 
   const ButtonAddToWishlist({
     required this.onPressed,
-    this.buttonSize = 20,
-    this.iconSize = 11,
-    this.buttonColor = Colors.white70,
-    this.iconColor = Colors.red,
+    this.buttonSize = 17,
+    this.iconSize = 10,
     super.key,
   });
 
-  // final double buttonSize;
-
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
+    return ButtonCircularMain(
+      onPressed: () {
         onPressed();
       },
-      child: Container(
-        height: buttonSize,
-        width: buttonSize,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: buttonColor,
-        ),
-        child: Center(
-          child: Icon(
-            CupertinoIcons.suit_heart_fill,
-            // CupertinoIcons.suit_heart,
-            color: iconColor,
-            size: iconSize,
-          ),
-        ),
-      ),
+      icon: CupertinoIcons.suit_heart_fill,
+      // icon: Icons.favorite_outline_rounded,
+      // icon: Icons.favorite_rounded,
+      iconColor: Colors.red,
+      buttonColor: Colors.white.withOpacity(0.9),
+      buttonSize: buttonSize,
+      iconSize: iconSize,
     );
   }
 }

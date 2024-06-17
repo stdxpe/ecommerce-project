@@ -1,4 +1,5 @@
 import 'package:ecommerce_project/ui/widgets/button_close_icon.dart';
+import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:flutter/material.dart';
 
@@ -38,16 +39,13 @@ class WishlistScreen extends StatelessWidget {
                     children: [
                       ButtonCloseIcon(
                         onPressed: () {},
-                        buttonSize: 25,
-                        iconSize: 15,
-                        buttonColor: Colors.red,
+                        buttonColor: ColorPalette.kColorDarkButton,
+                        iconColor: Colors.white,
                       ),
                       const SizedBox(width: 5),
                       ButtonCloseIcon(
                         onPressed: () {},
-                        buttonSize: 25,
-                        iconSize: 15,
-                        buttonColor: Colors.black12,
+                        buttonColor: ColorPalette.kColorModalBottomSheet,
                       ),
                     ],
                   ),

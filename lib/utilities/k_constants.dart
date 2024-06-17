@@ -3,6 +3,7 @@ class Constants {
   static const double kPaddingAppTop = 35;
   static const double kPaddingAppBottom = 100;
   static const double kPaddingHorizontalMain = 15;
+  static const double kPaddingHorizontalMainButton = 35;
   static const double kPaddingBetweenElementsMain = 5;
   static const double kPaddingTitleAndContent = 7.5;
   static const double kPaddingContentAndContent = 25;
@@ -15,4 +16,6 @@ class Constants {
   static const double kPaddingItemsCountAndMainTitle = 0;
   static const double kPaddingItemsCountAndContent = 25;
   static const double kPaddingWishlistScreenBetweenElements = 20;
+
+  static const double kPaddingDetailsScreenBetweenElementsMain = 20;
 }

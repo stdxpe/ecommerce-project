@@ -41,6 +41,7 @@ class SplashScreen extends StatelessWidget {
                   ])),
             ),
           ),
+          // TODO: Stack mustnt have too many children
           SingleChildScrollView(
             physics: const ClampingScrollPhysics(),
             child: SizedBox(
@@ -71,19 +72,24 @@ class SplashScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         ButtonMain(
+                          onPressed: () {
+                            PlatformAdaptiveNavigator()
+                                .push(context, const OnboardingScreen());
+                          },
                           text: Strings.kStringEmailButtonText,
                           icon: const Icon(
                             CupertinoIcons.mail_solid,
                             size: 16,
                             color: Colors.black,
                           ),
-                          onPressed: () {
-                            PlatformAdaptiveNavigator()
-                                .push(context, const OnboardingScreen());
-                          },
                         ),
                         const SizedBox(height: 20),
+                        // TODO: Icons gotta be inline vertically?
                         ButtonMain(
+                          onPressed: () {
+                            PlatformAdaptiveNavigator()
+                                .push(context, const HomeScreen());
+                          },
                           text: Strings.kStringFacebookButtonText,
                           textColor: Colors.white,
                           buttonColor: const Color(0xFF22252A),
@@ -92,10 +98,6 @@ class SplashScreen extends StatelessWidget {
                             size: 16,
                             color: Colors.white,
                           ),
-                          onPressed: () {
-                            PlatformAdaptiveNavigator()
-                                .push(context, const HomeScreen());
-                          },
                         ),
                         const SizedBox(height: 20),
                       ],

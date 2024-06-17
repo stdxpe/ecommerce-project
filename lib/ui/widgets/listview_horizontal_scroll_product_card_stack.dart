@@ -68,7 +68,9 @@ class ListviewHorizontalScrollProductCardStack extends StatelessWidget {
                 onTap: () {
                   PlatformAdaptiveNavigator().push(
                     context,
-                    const DetailsScreen(),
+                    DetailsScreen(
+                      product: productList[index],
+                    ),
                   );
                 },
                 child: ProductCardStack(

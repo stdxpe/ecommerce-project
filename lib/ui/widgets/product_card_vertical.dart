@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 import 'package:ecommerce_project/models/product.dart';
-import 'package:ecommerce_project/ui/widgets/button_add_to_wishlist.dart';
 
 class ProductCardVertical extends StatelessWidget {
   final Product product;
@@ -48,6 +47,7 @@ class ProductCardVertical extends StatelessWidget {
               /// Image
               Center(
                 child: Card(
+                  //TODO if isBorderElevated true, image bottom corners to-be-sharpened, not radius.
                   margin: EdgeInsets.zero,
                   elevation: elevation,
                   clipBehavior: Clip.hardEdge,
@@ -56,30 +56,14 @@ class ProductCardVertical extends StatelessWidget {
                       Constants.kRadiusCardSecondary,
                     ),
                   ),
-                  child: Stack(
-                    children: [
-                      AspectRatio(
-                        aspectRatio: 1,
-                        child: Image.asset(
-                          height: cardWidth,
-                          width: cardWidth,
-                          product.imageUrl,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(5.0),
-                        child: Align(
-                          alignment: Alignment.topRight,
-                          child: ButtonAddToWishlist(
-                            onPressed: () {},
-                            buttonSize: 16,
-                            iconSize: 10,
-                            buttonColor: Colors.white.withOpacity(0.9),
-                          ),
-                        ),
-                      ),
-                    ],
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Image.asset(
+                      height: cardWidth,
+                      width: cardWidth,
+                      product.imageUrl,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),

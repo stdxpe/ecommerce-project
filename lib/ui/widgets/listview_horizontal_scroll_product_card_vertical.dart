@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:ecommerce_project/ui/widgets/button_add_to_wishlist.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/ui/widgets/product_card_vertical.dart';
 import 'package:ecommerce_project/models/product.dart';
@@ -51,7 +52,6 @@ class ListviewHorizontalScrollProductCardVertical extends StatelessWidget {
 
         /// Listview
         SizedBox(
-          // color: Colors.blue.withOpacity(0.5),
           height: cardHeight!,
           width: size.width,
           child: ListView.builder(
@@ -67,13 +67,30 @@ class ListviewHorizontalScrollProductCardVertical extends StatelessWidget {
                 horizontal: paddingBetweenElementsMain!,
                 vertical: 0.0,
               ),
-              child: ProductCardVertical(
-                isBorderElevated: isBorderElevated,
-                cardHeight: cardHeight!,
-                cardWidth: cardWidth!,
-                elevation: elevation,
-                topText: 'MINX',
-                product: productList[index],
+              child: Stack(
+                children: [
+                  ProductCardVertical(
+                    isBorderElevated: isBorderElevated,
+                    cardHeight: cardHeight!,
+                    cardWidth: cardWidth!,
+                    elevation: elevation,
+                    topText: 'MINX',
+                    product: productList[index],
+                  ),
+                  Positioned.fill(
+                    child: Align(
+                      alignment: Alignment.topRight,
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: ButtonAddToWishlist(
+                          onPressed: () {},
+                          buttonSize: cardWidth! * 0.19,
+                          iconSize: cardWidth! * 0.12,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

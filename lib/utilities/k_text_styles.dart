@@ -182,6 +182,34 @@ const kShoppingCartBottomCardTextStyleSecondary = TextStyle(
   height: 1.3,
 );
 
+const kDetailsScreenTitleMainTextStyle = TextStyle(
+  color: Colors.black,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 27,
+  fontWeight: FontWeight.w700,
+  letterSpacing: 0.2,
+  height: 1,
+);
+
+const kDetailsScreenPriceTextStyle = TextStyle(
+  color: Colors.black,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 26,
+  fontWeight: FontWeight.w700,
+  letterSpacing: 0.5,
+  height: 1.1,
+);
+
+const kDetailsScreenDroppedPriceTextStyle = TextStyle(
+  color: Colors.black54,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 18,
+  decoration: TextDecoration.lineThrough,
+  fontWeight: FontWeight.w700,
+  letterSpacing: 0.2,
+  height: 1,
+);
+
 /// Box Shadows
 var kBoxShadowLightText = BoxShadow(
   color: Colors.black54.withOpacity(0.1),

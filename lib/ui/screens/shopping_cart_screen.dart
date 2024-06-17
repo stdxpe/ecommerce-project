@@ -39,10 +39,7 @@ class ShoppingCartScreen extends StatelessWidget {
                     optionalBottomWidget: const Positioned.fill(
                       child: Align(
                         alignment: Alignment.bottomRight,
-                        child: Padding(
-                          padding: EdgeInsets.all(5.0),
-                          child: ButtonShoppingCartItemCounter(itemCount: 2),
-                        ),
+                        child: ButtonShoppingCartItemCounter(itemCount: 2),
                       ),
                     ),
                     productList: [

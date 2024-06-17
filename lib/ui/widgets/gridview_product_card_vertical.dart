@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:ecommerce_project/ui/widgets/button_add_to_wishlist.dart';
 import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/ui/widgets/product_card_vertical.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
@@ -44,13 +45,30 @@ class GridviewProductCardVertical extends StatelessWidget {
         ),
         itemCount: productList.length,
         itemBuilder: (context, index) {
-          return ProductCardVertical(
-            isBorderElevated: isBorderElevated,
-            cardHeight: cardHeight!,
-            cardWidth: cardWidth!,
-            elevation: elevation,
-            topText: 'MINX',
-            product: productList[index],
+          return Stack(
+            children: [
+              ProductCardVertical(
+                isBorderElevated: isBorderElevated,
+                cardHeight: cardHeight!,
+                cardWidth: cardWidth!,
+                elevation: elevation,
+                topText: 'MINX',
+                product: productList[index],
+              ),
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.topRight,
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: ButtonAddToWishlist(
+                      onPressed: () {},
+                      // buttonSize: 30,
+                      // iconSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           );
         },
       ),

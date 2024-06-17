@@ -18,7 +18,6 @@ class BottomSheetShoppingCart extends StatelessWidget {
     return Card(
       margin: EdgeInsets.zero,
       elevation: 10,
-      clipBehavior: Clip.hardEdge,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(
           Constants.kRadiusCardSecondary,
@@ -27,7 +26,17 @@ class BottomSheetShoppingCart extends StatelessWidget {
       child: Container(
         height: size.height * 0.27,
         width: size.width,
-        color: ColorPalette.kDarkButtonColor,
+        decoration: BoxDecoration(
+          color: ColorPalette.kColorModalBottomSheet,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black54.withOpacity(0.15),
+              spreadRadius: 0.5,
+              blurRadius: 10,
+              offset: const Offset(0, 0),
+            ),
+          ],
+        ),
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: Constants.kPaddingHorizontalMain * 2,
@@ -49,7 +58,7 @@ class BottomSheetShoppingCart extends StatelessWidget {
                 paddingVertical: 0,
                 text: Strings.kStringButtonContinue,
                 textColor: Colors.white,
-                buttonColor: const Color(0xFF22252A),
+                buttonColor: ColorPalette.kColorDarkButton,
                 onPressed: () {
                   PlatformAdaptiveNavigator()
                       .push(context, const PaymentScreen());

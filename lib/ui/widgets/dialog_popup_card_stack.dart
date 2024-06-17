@@ -100,8 +100,6 @@ class DialogPopupCardStack extends StatelessWidget {
               margin: const EdgeInsets.all(10),
               child: ButtonCloseIcon(
                 onPressed: () {},
-                iconSize: 17,
-                buttonSize: 28,
               ),
             ),
           ),

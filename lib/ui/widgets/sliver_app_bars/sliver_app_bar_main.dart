@@ -42,8 +42,6 @@ class SliverAppBarMain extends StatelessWidget {
               //   const DiscoverScreen(),
               // );
             },
-            iconSize: 17,
-            buttonSize: 28,
             iconColor: Colors.blue,
           ),
         ),
@@ -56,8 +54,6 @@ class SliverAppBarMain extends StatelessWidget {
                 const WishlistScreen(),
               );
             },
-            iconSize: 17,
-            buttonSize: 28,
             iconColor: Colors.black,
           ),
         ),
@@ -71,8 +67,6 @@ class SliverAppBarMain extends StatelessWidget {
                 const ShoppingCartScreen(),
               );
             },
-            iconSize: 17,
-            buttonSize: 28,
           ),
         ),
       ],

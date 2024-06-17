@@ -70,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Product(
                         title: 'MOS Sale-Fit Shirt Shirtasdfasdfsdfgsdfg',
-                        price: 49,
+                        price: 133.99,
                         imageUrl: 'assets/images/pose2.jpg',
                       ),
                       Product(
@@ -92,8 +92,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: Constants.kPaddingContentAndContent),
                   ListviewHorizontalScrollProductCardVertical(
-                    cardHeight: 145,
-                    cardWidth: 100,
+                    cardWidth: 120,
+                    cardHeight: 165,
                     isBorderElevated: false,
                     collectionTitle: 'Listview Vertical',
                     productList: [
@@ -126,13 +126,13 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: Constants.kPaddingContentAndContent),
                   ListviewHorizontalScrollProductCardHorizontal(
-                    cardHeight: 50,
-                    cardWidth: 150,
+                    cardHeight: 65,
+                    cardWidth: 160,
                     isBorderElevated: false,
                     collectionTitle: 'Listview Horizontal',
                     productList: [
                       Product(
-                        title: 'PCX Sale-Fit',
+                        title: 'PPCX Sale-Fit',
                         price: 69.992342345231115111452345234535234523345234,
                         imageUrl: 'assets/images/pose1.jpg',
                       ),

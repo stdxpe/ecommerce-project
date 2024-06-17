@@ -23,6 +23,7 @@ class OnboardingScreen extends StatelessWidget {
         child: Container(
           height: size.height,
           width: size.width,
+          // TODO: Insets gotta be responsive
           padding: const EdgeInsets.fromLTRB(0, 80, 0, 40),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -30,6 +31,7 @@ class OnboardingScreen extends StatelessWidget {
             children: [
               Column(
                 children: [
+                  // TODO: Title gotta be dynamic/unique to the Carousel Images
                   Text(
                     Strings.kStringOnboardingTitle,
                     style: kTitleMidSizeHelveticaDarkTextStyle,
