@@ -18,7 +18,8 @@ class SliverAppBarMain extends StatelessWidget {
       automaticallyImplyLeading: false,
       pinned: true,
       backgroundColor: Colors.white,
-      // backgroundColor: Colors.red.withOpacity(0.5),
+
+      /// PROFILE ICON
       leading: Container(
         margin: const EdgeInsets.all(10),
         child: ButtonCircularMain(
@@ -38,6 +39,7 @@ class SliverAppBarMain extends StatelessWidget {
       ),
       leadingWidth: 50,
       actions: [
+        /// SEARCH ICON
         Container(
           margin: const EdgeInsets.all(10),
           child: ButtonCircularMain(
@@ -55,6 +57,8 @@ class SliverAppBarMain extends StatelessWidget {
             buttonSize: 28,
           ),
         ),
+
+        /// WISHLIST ICON
         Container(
           margin: const EdgeInsets.all(10),
           child: ButtonCircularMain(
@@ -70,8 +74,11 @@ class SliverAppBarMain extends StatelessWidget {
             ),
             iconColor: Colors.black,
             buttonSize: 28,
+            isNotificationOn: true,
           ),
         ),
+
+        /// SHOPPING CART ICON
         Container(
           margin: const EdgeInsets.all(10),
           child: ButtonCircularMain(
@@ -84,7 +91,8 @@ class SliverAppBarMain extends StatelessWidget {
             icon: Icons.shopping_bag_outlined,
             iconColor: Colors.black,
             buttonSize: 28,
-            iconSize: 19,
+            iconSize: 17,
+            isNotificationOn: true,
           ),
         ),
       ],

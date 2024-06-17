@@ -37,7 +37,7 @@ class Strings {
   static const kStringTotalAmount = 'Total Amount';
 
   /// DETAILS SCREEN
-  static const kStringButtonCheckOut = 'Check Out';
+  static const kStringButtonCheckOut = 'Go to Shopping Cart';
   static const kStringButtonContinueShopping = 'Continue Shopping';
   static const kStringSuccess =
       'Success! You\'ve added\nthis item to your cart.';

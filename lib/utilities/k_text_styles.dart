@@ -136,7 +136,7 @@ const kDialogPopupCardTextStyleSecondary = TextStyle(
 const kDialogPopupCardTextStyleDetailsScreen = TextStyle(
   color: Colors.black,
   // shadows: [kBoxShadowLightText],
-  fontSize: 15,
+  fontSize: 16,
   fontWeight: FontWeight.w700,
   letterSpacing: 0.1,
   height: 1.1,

@@ -10,6 +10,7 @@ class ButtonCircularMain extends StatelessWidget {
   final Color? iconColor;
   final double? elevation;
   final Color? elevationColor;
+  final bool? isNotificationOn;
 
   const ButtonCircularMain({
     required this.onPressed,
@@ -21,6 +22,7 @@ class ButtonCircularMain extends StatelessWidget {
     this.iconColor = Colors.black,
     this.elevation = 0.2,
     this.elevationColor,
+    this.isNotificationOn = false,
     super.key,
   });
 
@@ -31,30 +33,48 @@ class ButtonCircularMain extends StatelessWidget {
       onTap: () {
         onPressed();
       },
-      child: Container(
-        height: buttonSize,
-        width: buttonSize,
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: elevationColor ?? Colors.black54.withOpacity(0.35),
-              spreadRadius: elevation!,
-              blurRadius: 10,
-              offset: const Offset(0, 3.5),
+      child: Stack(
+        children: [
+          Container(
+            height: buttonSize,
+            width: buttonSize,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: elevationColor ?? Colors.black54.withOpacity(0.35),
+                  spreadRadius: elevation!,
+                  blurRadius: 10,
+                  offset: const Offset(0, 3.5),
+                ),
+              ],
+              shape: BoxShape.circle,
+              color: buttonColor,
             ),
-          ],
-          shape: BoxShape.circle,
-          color: buttonColor,
-        ),
-        child: Center(
-          child: (icon is IconData)
-              ? Icon(
-                  icon,
-                  color: iconColor,
-                  size: iconSize,
-                )
-              : alternativeWidgetContent,
-        ),
+            child: Center(
+              child: (icon is IconData)
+                  ? Icon(
+                      icon,
+                      color: iconColor,
+                      size: iconSize,
+                    )
+                  : alternativeWidgetContent,
+            ),
+          ),
+          if (isNotificationOn!)
+            Positioned.fill(
+              child: Align(
+                alignment: Alignment(0.7, -0.5),
+                child: Container(
+                  height: 7.5,
+                  width: 7.5,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }
