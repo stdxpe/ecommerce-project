@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'package:ecommerce_project/ui/widgets/button_circular_main.dart';
 import 'package:ecommerce_project/ui/screens/shopping_cart_screen.dart';
 import 'package:ecommerce_project/ui/screens/wishlist_screen.dart';
-import 'package:ecommerce_project/ui/widgets/button_close_icon.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
+import 'package:flutter_svg/svg.dart';
 
 class SliverAppBarMain extends StatelessWidget {
   const SliverAppBarMain({super.key});
@@ -20,53 +21,70 @@ class SliverAppBarMain extends StatelessWidget {
       // backgroundColor: Colors.red.withOpacity(0.5),
       leading: Container(
         margin: const EdgeInsets.all(10),
-        child: ButtonCloseIcon(
+        child: ButtonCircularMain(
           onPressed: () {
-            // PlatformAdaptiveNavigator().push(
-            //   context,
-            //   const DiscoverScreen(),
-            // );
+            PlatformAdaptiveNavigator().push(
+              context,
+              const WishlistScreen(),
+            );
           },
-          iconSize: 17,
-          buttonSize: 28,
-          iconColor: Colors.purple,
+          alternativeWidgetContent: SvgPicture.asset(
+            'assets/icons/user-icon.svg',
+            height: 15,
+          ),
+          iconColor: Colors.black,
+          buttonColor: Colors.white,
         ),
       ),
+      leadingWidth: 50,
       actions: [
         Container(
           margin: const EdgeInsets.all(10),
-          child: ButtonCloseIcon(
+          child: ButtonCircularMain(
             onPressed: () {
               // PlatformAdaptiveNavigator().push(
               //   context,
-              //   const DiscoverScreen(),
+              //   const SearchScreen(),
               // );
             },
-            iconColor: Colors.blue,
+            alternativeWidgetContent: SvgPicture.asset(
+              'assets/icons/loupe-icon.svg',
+              height: 15,
+            ),
+            buttonColor: Colors.white,
+            buttonSize: 28,
           ),
         ),
         Container(
           margin: const EdgeInsets.all(10),
-          child: ButtonCloseIcon(
+          child: ButtonCircularMain(
             onPressed: () {
               PlatformAdaptiveNavigator().push(
                 context,
                 const WishlistScreen(),
               );
             },
+            alternativeWidgetContent: SvgPicture.asset(
+              'assets/icons/heart-icon.svg',
+              height: 15,
+            ),
             iconColor: Colors.black,
+            buttonSize: 28,
           ),
         ),
         Container(
           margin: const EdgeInsets.all(10),
-          child: ButtonCloseIcon(
-            iconColor: Colors.red,
+          child: ButtonCircularMain(
             onPressed: () {
               PlatformAdaptiveNavigator().push(
                 context,
                 const ShoppingCartScreen(),
               );
             },
+            icon: Icons.shopping_bag_outlined,
+            iconColor: Colors.black,
+            buttonSize: 28,
+            iconSize: 19,
           ),
         ),
       ],

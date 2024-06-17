@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
-import 'package:ecommerce_project/ui/widgets/button_close_icon.dart';
+import 'package:ecommerce_project/models/review.dart';
+import 'package:ecommerce_project/ui/widgets/review_widget_single.dart';
 import 'package:ecommerce_project/ui/widgets/button_main.dart';
 import 'package:ecommerce_project/ui/widgets/button_circular_main.dart';
 import 'package:ecommerce_project/ui/widgets/switch_color_selection.dart';
@@ -10,6 +12,7 @@ import 'package:ecommerce_project/ui/widgets/title_details_screen_name_and_price
 import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_static.dart';
+import 'package:flutter_svg/svg.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Product product;
@@ -29,22 +32,31 @@ class DetailsScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         leading: Container(
           margin: const EdgeInsets.all(10),
-          child: ButtonCloseIcon(
+          child: ButtonCircularMain(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            iconColor: Colors.white,
+            icon: CupertinoIcons.chevron_back,
             buttonColor: Colors.black.withOpacity(0.15),
+            iconColor: Colors.white,
+            buttonSize: 28,
+            iconSize: 22,
           ),
         ),
         leadingWidth: 45,
         actions: [
           Container(
             margin: const EdgeInsets.all(10),
-            child: ButtonCloseIcon(
+            child: ButtonCircularMain(
               onPressed: () {},
-              iconColor: Colors.white,
+              alternativeWidgetContent: SvgPicture.asset(
+                'assets/icons/share-1-icon.svg',
+                color: Colors.white.withOpacity(0.85),
+                height: 15,
+              ),
+              // elevationColor: Colors.transparent,
               buttonColor: Colors.black.withOpacity(0.15),
+              buttonSize: 28,
             ),
           ),
         ],
@@ -190,7 +202,7 @@ class DetailsScreen extends StatelessWidget {
                   horizontal: Constants.kPaddingHorizontalMain),
               // color: Colors.yellow.withOpacity(0.5),
               child: const Text(
-                'ClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdc',
+                'ClassisdfgsdfgsdfgsdfgsdfassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdcClassisdfgsdfgsdfgsdfgsdfgsdfgsdc',
                 maxLines: 15,
               ),
             ),
@@ -226,6 +238,40 @@ class DetailsScreen extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(
+                height: Constants.kPaddingDetailsScreenBetweenElementsMain * 3),
+            ExpansionTile(
+              minTileHeight: 0,
+              childrenPadding: EdgeInsets.zero,
+              title: Text('Reviews'),
+              children: [
+                Container(
+                    // color: Colors.pink.withOpacity(0.5),
+                    width: size.width,
+                    // height: 500,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: Constants.kPaddingHorizontalMain),
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      // clipBehavior: Clip.none,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemCount: 10,
+                      itemBuilder: (context, index) {
+                        return ReviewWidgetSingle(
+                          review: Review(
+                              senderName: 'Carly West',
+                              senderPhoto: 'assets/images/pose2.jpg',
+                              productRating: 3.5,
+                              createdAt: '21.07.2024 23:42',
+                              text:
+                                  'ClassisdfgsdfgsdfgsdfgsdcClassisdfggsdfgsdcClassisdfgsdfgsdfgsdfgsdfg'),
+                        );
+                      },
+                    )),
+              ],
+            ),
+            const SizedBox(
+                height: Constants.kPaddingDetailsScreenBetweenElementsMain * 3),
           ],
         ),
       ),
