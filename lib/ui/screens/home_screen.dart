@@ -1,6 +1,7 @@
+import 'package:ecommerce_project/ui/widgets/dialog_popup_card_home_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/widgets/dialog_popup_widget.dart';
+import 'package:ecommerce_project/ui/widgets/dialog_popup_widget_main.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
@@ -19,6 +20,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
@@ -31,12 +34,16 @@ class HomeScreen extends StatelessWidget {
               contentList: [
                 GestureDetector(
                     onTap: () {
-                      DialogPopupWidget(
+                      DialogPopupWidgetMain(
                         context: context,
-                        title: 'Winter Collection',
-                        subtitle: '20% Off Selected Brands',
-                        imageUrl: 'assets/images/pose2.jpg',
-                        buttonText: 'Check Out',
+                        content: DialogPopupCardHomeScreen(
+                          title: 'Winter Collection',
+                          subtitle: '20% Off Selected Brands',
+                          imageUrl: 'assets/images/pose2.jpg',
+                          buttonText: 'Check Out',
+                          cardHeight: size.height * 0.5,
+                          cardWidth: size.width * 0.75,
+                        ),
                       ).showAlertDialog();
                     },
                     child: const DummyTopSlidingContent()),

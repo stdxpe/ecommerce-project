@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
-import 'package:ecommerce_project/ui/widgets/dialog_popup_card_stack.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
-class DialogPopupWidget extends StatelessWidget {
+class DialogPopupWidgetMain extends StatelessWidget {
   final BuildContext context;
-  final String title;
-  final String subtitle;
-  final String buttonText;
-  final String imageUrl;
+  final Widget content;
 
-  const DialogPopupWidget({
+  const DialogPopupWidgetMain({
     required this.context,
-    required this.title,
-    required this.subtitle,
-    required this.buttonText,
-    required this.imageUrl,
+    required this.content,
     super.key,
   });
 
@@ -36,33 +29,20 @@ class DialogPopupWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
     return BackdropFilter(
       filter: ImageFilter.blur(sigmaX: 7.5, sigmaY: 7.5),
       child: AlertDialog(
         insetPadding: EdgeInsets.zero,
         contentPadding: EdgeInsets.zero,
-        clipBehavior: Clip.antiAliasWithSaveLayer,
+        clipBehavior: Clip.hardEdge,
         elevation: 2.5,
         shadowColor: Colors.white.withOpacity(0.05),
-        surfaceTintColor: Colors.yellow,
+        surfaceTintColor: Colors.red,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(Constants.kRadiusCardPrimary),
+          borderRadius: BorderRadius.circular(Constants.kRadiusDialogPopupCard),
         ),
-        // clipBehavior: Clip.hardEdge,
-        // backgroundColor: Colors.transparent,
+        title: content,
         titlePadding: EdgeInsets.zero,
-        // insetPadding: EdgeInsets.all(10),
-        // title: Text(dialogTitle),
-        title: DialogPopupCardStack(
-          title: title,
-          subtitle: subtitle,
-          imageUrl: imageUrl,
-          buttonText: buttonText,
-          cardHeight: size.height * 0.5,
-          cardWidth: size.width * 0.75,
-        ),
       ),
     );
   }

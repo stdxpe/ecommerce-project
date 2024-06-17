@@ -35,4 +35,10 @@ class Strings {
   static const kStringShoppingCart = 'Shopping Cart';
   static const kStringButtonContinue = 'Continue';
   static const kStringTotalAmount = 'Total Amount';
+
+  /// DETAILS SCREEN
+  static const kStringButtonCheckOut = 'Check Out';
+  static const kStringButtonContinueShopping = 'Continue Shopping';
+  static const kStringSuccess =
+      'Success! You\'ve added\nthis item to your cart.';
 }

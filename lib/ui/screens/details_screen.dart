@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_svg/svg.dart';
 
+import 'package:ecommerce_project/utilities/k_color_palette.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
+import 'package:ecommerce_project/utilities/k_constants.dart';
+import 'package:ecommerce_project/models/product.dart';
+import 'package:ecommerce_project/ui/widgets/dialog_popup_card_details_screen.dart';
+import 'package:ecommerce_project/ui/widgets/dialog_popup_widget_main.dart';
 import 'package:ecommerce_project/models/review.dart';
 import 'package:ecommerce_project/ui/widgets/review_widget_single.dart';
 import 'package:ecommerce_project/ui/widgets/button_main.dart';
 import 'package:ecommerce_project/ui/widgets/button_circular_main.dart';
 import 'package:ecommerce_project/ui/widgets/switch_color_selection.dart';
 import 'package:ecommerce_project/ui/widgets/switch_total_rating_stars.dart';
-import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/ui/widgets/title_details_screen_name_and_price.dart';
-import 'package:ecommerce_project/utilities/k_color_palette.dart';
-import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_static.dart';
-import 'package:flutter_svg/svg.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Product product;
@@ -177,7 +180,21 @@ class DetailsScreen extends StatelessWidget {
                                   ),
                                   const SizedBox(height: 15),
                                   ButtonCircularMain(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      DialogPopupWidgetMain(
+                                        context: context,
+                                        content: DialogPopupCardDetailsScreen(
+                                          title: Strings.kStringSuccess,
+                                          imageUrl: product.imageUrl,
+                                          buttonTextPrimary:
+                                              Strings.kStringButtonCheckOut,
+                                          buttonTextSecondary: Strings
+                                              .kStringButtonContinueShopping,
+                                          cardHeight: size.height * 0.5,
+                                          cardWidth: size.width * 0.75,
+                                        ),
+                                      ).showAlertDialog();
+                                    },
                                     icon: Icons.shopping_bag,
                                     iconColor: Colors.white,
                                     buttonColor: ColorPalette.kColorDarkButton,
