@@ -63,11 +63,11 @@ class ButtonCircularMain extends StatelessWidget {
           if (isNotificationOn!)
             Positioned.fill(
               child: Align(
-                alignment: Alignment(0.7, -0.5),
+                alignment: const Alignment(0.7, -0.5),
                 child: Container(
                   height: 7.5,
                   width: 7.5,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.red,
                   ),

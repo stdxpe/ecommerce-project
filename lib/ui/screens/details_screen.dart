@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
+import 'package:ecommerce_project/ui/screens/reviews_screen.dart';
 import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
@@ -122,13 +124,25 @@ class DetailsScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const SizedBox(
-                                  // color: Colors.yellow.withOpacity(0.5),
-                                  child: SwitchTotalRatingStars(rating: 3.5),
+                                GestureDetector(
+                                  onTap: () {
+                                    PlatformAdaptiveNavigator().push(
+                                      context,
+                                      ReviewsScreen(product: product),
+                                    );
+                                  },
+                                  child: const SizedBox(
+                                    // color: Colors.yellow.withOpacity(0.5),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        SwitchTotalRatingStars(rating: 3.5),
+                                        SizedBox(width: 12.5),
+                                        Text('234 Reviews'),
+                                      ],
+                                    ),
+                                  ),
                                 ),
-                                // const SizedBox(
-                                //     height: Constants
-                                //         .kPaddingDetailsScreenBetweenElementsMain),
                                 SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,
                                   clipBehavior: Clip.none,
@@ -260,7 +274,7 @@ class DetailsScreen extends StatelessWidget {
             ExpansionTile(
               minTileHeight: 0,
               childrenPadding: EdgeInsets.zero,
-              title: Text('Reviews'),
+              title: const Text('Reviews'),
               children: [
                 Container(
                     // color: Colors.pink.withOpacity(0.5),
@@ -271,7 +285,7 @@ class DetailsScreen extends StatelessWidget {
                     child: ListView.builder(
                       shrinkWrap: true,
                       // clipBehavior: Clip.none,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: 10,
                       itemBuilder: (context, index) {
                         return ReviewWidgetSingle(

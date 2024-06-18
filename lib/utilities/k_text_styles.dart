@@ -219,6 +219,31 @@ const kDetailsScreenDroppedPriceTextStyle = TextStyle(
   height: 1,
 );
 
+const kReviewScreenProductCardTextStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 0.35,
+  height: 1.3,
+);
+
+const kReviewScreenReviewPointTextStyle = TextStyle(
+  color: Colors.black,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 35,
+  fontWeight: FontWeight.w700,
+  letterSpacing: 1,
+  height: 1,
+);
+
+const kReviewScreenReviewTextStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 15,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 0.35,
+  height: 1.3,
+);
+
 /// Box Shadows
 var kBoxShadowLightText = BoxShadow(
   color: Colors.black54.withOpacity(0.1),
