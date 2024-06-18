@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/screens/payment_screen.dart';
+import 'package:ecommerce_project/ui/screens/payment_screen_step_shipping.dart';
 import 'package:ecommerce_project/ui/widgets/button_main.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/ui/widgets/title_shopping_card_bottom_sheet.dart';
@@ -61,7 +61,7 @@ class BottomSheetShoppingCart extends StatelessWidget {
                 buttonColor: ColorPalette.kColorDarkButton,
                 onPressed: () {
                   PlatformAdaptiveNavigator()
-                      .push(context, const PaymentScreen());
+                      .push(context, const PaymentScreenStepShipping());
                 },
               ),
               const SizedBox(height: Constants.kPaddingBetweenElementsMain),
