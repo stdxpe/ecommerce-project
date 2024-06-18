@@ -237,72 +237,7 @@ class DetailsScreen extends StatelessWidget {
                 maxLines: 15,
               ),
             ),
-            const SizedBox(
-                height: Constants.kPaddingDetailsScreenBetweenElementsMain),
-            Container(
-              // color: Colors.green.withOpacity(0.5),
-              padding: const EdgeInsets.symmetric(
-                horizontal: Constants.kPaddingHorizontalMainButton -
-                    Constants.kPaddingHorizontalMain,
-              ),
-              width: size.width,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: ButtonMain(
-                      onPressed: () {},
-                      text: 'Add to Shopping Cart',
-                      buttonColor: ColorPalette.kColorDarkButton,
-                      textColor: Colors.white,
-                      paddingHorizontal: 0,
-                    ),
-                  ),
-                  const SizedBox(width: 15),
-                  ButtonCircularMain(
-                    onPressed: () {},
-                    icon: Icons.favorite,
-                    iconColor: Colors.red,
-                    buttonSize: 50,
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-                height: Constants.kPaddingDetailsScreenBetweenElementsMain * 3),
-            ExpansionTile(
-              minTileHeight: 0,
-              childrenPadding: EdgeInsets.zero,
-              title: const Text('Reviews'),
-              children: [
-                Container(
-                    // color: Colors.pink.withOpacity(0.5),
-                    width: size.width,
-                    // height: 500,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: Constants.kPaddingHorizontalMain),
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      // clipBehavior: Clip.none,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: 10,
-                      itemBuilder: (context, index) {
-                        return ReviewWidgetSingle(
-                          review: Review(
-                              senderName: 'Carly West',
-                              senderPhoto: 'assets/images/pose2.jpg',
-                              productRating: 3.5,
-                              createdAt: '21.07.2024 23:42',
-                              text:
-                                  'ClassisdfgsdfgsdfgsdfgsdcClassisdfggsdfgsdcClassisdfgsdfgsdfgsdfgsdfg'),
-                        );
-                      },
-                    )),
-              ],
-            ),
-            const SizedBox(
-                height: Constants.kPaddingDetailsScreenBetweenElementsMain * 3),
+            const SizedBox(height: Constants.kPaddingAppBottom),
           ],
         ),
       ),
