@@ -33,20 +33,21 @@ class HomeScreen extends StatelessWidget {
             content: CarouselIntegrated(
               contentList: [
                 GestureDetector(
-                    onTap: () {
-                      DialogPopupWidgetMain(
-                        context: context,
-                        content: DialogPopupCardHomeScreen(
-                          title: 'Winter Collection',
-                          subtitle: '20% Off Selected Brands',
-                          imageUrl: 'assets/images/pose2.jpg',
-                          buttonText: 'Check Out',
-                          cardHeight: size.height * 0.5,
-                          cardWidth: size.width * 0.75,
-                        ),
-                      ).showAlertDialog();
-                    },
-                    child: const DummyTopSlidingContent()),
+                  onTap: () {
+                    DialogPopupWidgetMain(
+                      context: context,
+                      content: DialogPopupCardHomeScreen(
+                        title: 'Winter Collection',
+                        subtitle: '20% Off Selected Brands',
+                        imageUrl: 'assets/images/pose2.jpg',
+                        buttonText: 'Check Out',
+                        cardHeight: size.height * 0.5,
+                        cardWidth: size.width * 0.75,
+                      ),
+                    ).showAlertDialog();
+                  },
+                  child: const DummyTopSlidingContent(),
+                ),
                 const DummyTopSlidingContent(),
               ],
             ),

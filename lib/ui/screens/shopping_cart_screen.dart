@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'package:ecommerce_project/models/product.dart';
+import 'package:ecommerce_project/ui/screens/payment_screen_step_shipping.dart';
 import 'package:ecommerce_project/ui/widgets/bottom_sheet_shopping_cart.dart';
 import 'package:ecommerce_project/ui/widgets/button_shopping_cart_item_counter.dart';
-import 'package:ecommerce_project/utilities/k_strings_en.dart';
+import 'package:ecommerce_project/ui/widgets/listview_vertical_scroll_product_card_horizontal.dart';
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
+import 'package:ecommerce_project/ui/widgets/sliver_app_bars/sliver_app_bar_main.dart';
 import 'package:ecommerce_project/ui/widgets/title_main_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/title_number_of_items_found_sliver.dart';
-import 'package:ecommerce_project/ui/widgets/listview_vertical_scroll_product_card_horizontal.dart';
-import 'package:ecommerce_project/models/product.dart';
-import 'package:ecommerce_project/ui/widgets/sliver_app_bars/sliver_app_bar_main.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 
 class ShoppingCartScreen extends StatelessWidget {
   const ShoppingCartScreen({super.key});
@@ -89,7 +91,12 @@ class ShoppingCartScreen extends StatelessWidget {
               ),
             ),
             // TODO: IF NO ITEM FOUND ON SHOPPING CART, TEXT/ICON HERE
-            const BottomSheetShoppingCart(),
+            BottomSheetShoppingCart(
+              onPressed: () {
+                PlatformAdaptiveNavigator()
+                    .push(context, const PaymentScreenStepShipping());
+              },
+            ),
           ],
         ),
       ),

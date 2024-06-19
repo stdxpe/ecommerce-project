@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/widgets/bottom_sheet_button_continue.dart';
+import 'package:ecommerce_project/models/enums.dart';
+import 'package:ecommerce_project/ui/screens/payment_screen_step_payment.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheet_payment_summary.dart';
 import 'package:ecommerce_project/ui/widgets/payment_stepper_status_bar.dart';
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/ui/widgets/sliver_app_bars/app_bar_non_sliver_standart.dart';
 import 'package:ecommerce_project/ui/widgets/textfield_main.dart';
 import 'package:ecommerce_project/ui/widgets/title_payment_screen_main.dart';
@@ -28,7 +31,7 @@ class PaymentScreenStepShipping extends StatelessWidget {
           width: size.width,
           // color: Colors.amber.withOpacity(0.5),
           padding: const EdgeInsets.only(
-            top: Constants.kPaddingHorizontalMain,
+            top: Constants.kPaddingAppBarAndContent,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,8 +46,8 @@ class PaymentScreenStepShipping extends StatelessWidget {
                   children: [
                     /// PAYMENT STEPPER STATUS BAR
                     PaymentStepperStatusBar(
-                        // paymentStatus: PaymentStatus.success,
-                        ),
+                      paymentStatus: PaymentStatus.shipping,
+                    ),
 
                     /// PAYMENT TITLE
                     const TitlePaymentScreenMain(
@@ -62,7 +65,12 @@ class PaymentScreenStepShipping extends StatelessWidget {
               ),
 
               /// PAYMENT BUTTON
-              const BottomSheetButtonContinue(),
+              BottomSheetPaymentSummary(
+                onPressed: () {
+                  PlatformAdaptiveNavigator()
+                      .push(context, const PaymentScreenStepPayment());
+                },
+              ),
             ],
           ),
         ),
@@ -72,6 +80,7 @@ class PaymentScreenStepShipping extends StatelessWidget {
 }
 
 
+/// TODO: if stepper needed?
 // Stepper(
 //   type: StepperType.horizontal,
 //   steps: stepsList,

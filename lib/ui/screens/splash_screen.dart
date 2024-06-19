@@ -22,7 +22,7 @@ class SplashScreen extends StatelessWidget {
             height: size.height,
             width: size.width,
             child: Image.asset(
-              '/Users/dxpe/projects/ecommerce-project/assets/images/pose${1}.jpg',
+              '/Users/dxpe/projects/ecommerce-project/assets/images/pose${5}.jpg',
               filterQuality: FilterQuality.high,
               fit: BoxFit.cover,
             ),

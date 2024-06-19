@@ -62,7 +62,7 @@ class ReviewsScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              '3.5 of 5',
+                              '3.5 / 5',
                               textAlign: TextAlign.end,
                               maxLines: 1,
                               softWrap: false,

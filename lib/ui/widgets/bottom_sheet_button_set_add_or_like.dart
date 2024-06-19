@@ -15,10 +15,10 @@ class BottomSheetButtonSetAddOrLike extends StatelessWidget {
     return Container(
       width: size.width,
       padding: const EdgeInsets.only(
-        left: Constants.kPaddingHorizontalMainButton,
-        right: Constants.kPaddingHorizontalMainButton,
+        left: Constants.kPaddingButtonHorizontalMain,
+        right: Constants.kPaddingButtonHorizontalMain,
         top: Constants.kPaddingHorizontalMain,
-        bottom: Constants.kPaddingHorizontalMainButton,
+        bottom: Constants.kPaddingButtonHorizontalMain,
       ),
       decoration: BoxDecoration(
         color: ColorPalette.kColorModalBottomSheet,

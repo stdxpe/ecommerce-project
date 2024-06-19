@@ -224,6 +224,8 @@ class DetailsScreen extends StatelessWidget {
                 ],
               ),
             ),
+
+            /// TODO: Add "You may also like and Vertical Product Card"
             Container(
               width: size.width,
               padding: const EdgeInsets.symmetric(

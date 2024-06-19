@@ -19,7 +19,7 @@ class TitlePaymentStep extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          '$title ${stepNumber + 1}',
+          '$title $stepNumber',
           textAlign: TextAlign.center,
           style: kItemsFoundTextStyle,
         ),

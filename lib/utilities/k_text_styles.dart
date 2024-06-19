@@ -244,6 +244,53 @@ const kReviewScreenReviewTextStyle = TextStyle(
   height: 1.3,
 );
 
+const kPaymentScreenSummaryButtonTextStyle = TextStyle(
+  color: Colors.green,
+  fontSize: 13,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 0.35,
+  height: 1,
+);
+
+const kPaymentScreenSummaryTitleTextStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 15,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 0.35,
+  height: 2,
+);
+
+const kPaymentScreenSummarySubtitleTextStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 13,
+  fontWeight: FontWeight.w400,
+  letterSpacing: 0.5,
+  height: 1.3,
+);
+
+const kPaymentScreenSummarySubtitleCreditCardTextStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 13,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 2,
+  height: 1.3,
+);
+
+var kCreditCardTextStyle = TextStyle(
+  shadows: [
+    BoxShadow(
+      color: Colors.black54.withOpacity(0.35),
+      spreadRadius: 0.1,
+      blurRadius: 10,
+      offset: Offset(0, 3.5),
+    ),
+  ],
+  color: Colors.white,
+  fontSize: 15,
+  fontWeight: FontWeight.w800,
+  letterSpacing: 2.5,
+);
+
 /// Box Shadows
 var kBoxShadowLightText = BoxShadow(
   color: Colors.black54.withOpacity(0.1),
