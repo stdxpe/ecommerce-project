@@ -28,11 +28,11 @@ class Strings {
   static var kStringButtonCollectionTitle = 'See All';
 
   /// WISHLIST SCREEN
-  static const kStringWishlist = 'Wishlist';
+  static const kStringWishlistTitle = 'Wishlist';
   static const kStringItemsFound = 'items found';
 
   /// SHOPPING CART SCREEN
-  static const kStringShoppingCart = 'Shopping Cart';
+  static const kStringShoppingCartTitle = 'Shopping Cart';
   static const kStringButtonContinue = 'Continue';
   static const kStringTotalAmount = 'Total Amount';
 
@@ -41,4 +41,7 @@ class Strings {
   static const kStringButtonContinueShopping = 'Continue Shopping';
   static const kStringSuccess =
       'Success! You\'ve added\nthis item to your cart.';
+
+  /// SEARCH DISCOVER/EXPLORE SCREEN
+  static const kStringExploreTitle = 'Discover';
 }

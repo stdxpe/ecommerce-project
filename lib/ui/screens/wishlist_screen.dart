@@ -1,13 +1,13 @@
-import 'package:ecommerce_project/ui/widgets/button_close_icon.dart';
-import 'package:ecommerce_project/utilities/k_color_palette.dart';
-import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/widgets/title_main_sliver.dart';
-import 'package:ecommerce_project/ui/widgets/title_number_of_items_found_sliver.dart';
-import 'package:ecommerce_project/ui/widgets/listview_vertical_scroll_product_card_horizontal.dart';
 import 'package:ecommerce_project/models/product.dart';
-import 'package:ecommerce_project/ui/widgets/sliver_app_bars/sliver_app_bar_main.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_close_icon.dart';
+import 'package:ecommerce_project/ui/widgets/listview_vertical_scroll_product_card_horizontal.dart';
+import 'package:ecommerce_project/ui/widgets/slivers/sliver_app_bar_main.dart';
+import 'package:ecommerce_project/ui/widgets/titles/title_main_sliver.dart';
+import 'package:ecommerce_project/ui/widgets/titles/title_number_of_items_found_sliver.dart';
+import 'package:ecommerce_project/utilities/k_color_palette.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 
 class WishlistScreen extends StatelessWidget {
   const WishlistScreen({super.key});
@@ -22,7 +22,7 @@ class WishlistScreen extends StatelessWidget {
         physics: const ClampingScrollPhysics(),
         slivers: [
           const SliverAppBarMain(),
-          const TitleMainSliver(title: Strings.kStringWishlist),
+          const TitleMainSliver(title: Strings.kStringWishlistTitle),
           const TitleNumberOfItemsFoundSliver(itemCount: 21),
           ListviewVerticalScrollProductCardHorizontal(
             isBorderElevated: false,

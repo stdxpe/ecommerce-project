@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:ecommerce_project/ui/widgets/button_circular_main.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 

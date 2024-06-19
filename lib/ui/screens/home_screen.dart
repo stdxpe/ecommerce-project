@@ -1,19 +1,19 @@
-import 'package:ecommerce_project/ui/widgets/dialog_popup_card_home_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/widgets/dialog_popup_widget_main.dart';
-import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/models/product.dart';
-import 'package:ecommerce_project/utilities/k_constants.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_collection_title_and_show_all.dart';
+import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_integrated.dart';
+import 'package:ecommerce_project/ui/widgets/dialog_popup_card_home_screen.dart';
+import 'package:ecommerce_project/ui/widgets/dialog_popup_widget_main.dart';
 import 'package:ecommerce_project/ui/widgets/gridview_product_card_vertical.dart';
 import 'package:ecommerce_project/ui/widgets/listview_horizontal_scroll_product_card_horizontal.dart';
 import 'package:ecommerce_project/ui/widgets/listview_horizontal_scroll_product_card_stack.dart';
 import 'package:ecommerce_project/ui/widgets/listview_horizontal_scroll_product_card_vertical.dart';
-import 'package:ecommerce_project/ui/widgets/button_collection_title_and_show_all.dart';
-import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_integrated.dart';
-import 'package:ecommerce_project/ui/widgets/sliver_app_bars/sliver_app_bar_flexible.dart';
-import 'package:ecommerce_project/ui/widgets/sliver_app_bars/sliver_app_bar_main.dart';
+import 'package:ecommerce_project/ui/widgets/slivers/sliver_app_bar_flexible.dart';
+import 'package:ecommerce_project/ui/widgets/slivers/sliver_app_bar_main.dart';
 import 'package:ecommerce_project/ui/widgets/top_sliding_contents/dummy_top_sliding_content.dart';
+import 'package:ecommerce_project/utilities/k_constants.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

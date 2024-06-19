@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/widgets/button_add_to_wishlist.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_add_to_wishlist.dart';
 import 'package:ecommerce_project/models/product.dart';
-import 'package:ecommerce_project/ui/widgets/product_card_vertical.dart';
+import 'package:ecommerce_project/ui/widgets/cards/product_card_vertical.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
 class GridviewProductCardVertical extends StatelessWidget {

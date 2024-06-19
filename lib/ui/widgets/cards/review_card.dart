@@ -5,9 +5,9 @@ import 'package:ecommerce_project/models/review.dart';
 import 'package:ecommerce_project/ui/widgets/switch_total_rating_stars.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
-class ReviewWidgetSingle extends StatelessWidget {
+class ReviewCard extends StatelessWidget {
   final Review review;
-  const ReviewWidgetSingle({
+  const ReviewCard({
     required this.review,
     super.key,
   });

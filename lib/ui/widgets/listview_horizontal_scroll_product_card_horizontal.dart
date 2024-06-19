@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/models/product.dart';
-import 'package:ecommerce_project/ui/widgets/button_collection_title_and_show_all.dart';
-import 'package:ecommerce_project/ui/widgets/product_card_horizontal.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_collection_title_and_show_all.dart';
+import 'package:ecommerce_project/ui/widgets/cards/product_card_horizontal.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
 class ListviewHorizontalScrollProductCardHorizontal extends StatelessWidget {

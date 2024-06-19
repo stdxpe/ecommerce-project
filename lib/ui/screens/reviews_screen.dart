@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/models/review.dart';
 import 'package:ecommerce_project/ui/widgets/bottom_sheet_button_set_add_or_like.dart';
-import 'package:ecommerce_project/ui/widgets/product_card_horizontal_mini.dart';
-import 'package:ecommerce_project/ui/widgets/review_widget_single.dart';
-import 'package:ecommerce_project/ui/widgets/sliver_app_bars/app_bar_non_sliver_standart.dart';
+import 'package:ecommerce_project/ui/widgets/cards/product_card_horizontal_mini.dart';
+import 'package:ecommerce_project/ui/widgets/cards/review_card.dart';
+import 'package:ecommerce_project/ui/widgets/slivers/app_bar_non_sliver_standart.dart';
 import 'package:ecommerce_project/ui/widgets/switch_total_rating_stars.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
@@ -92,7 +92,7 @@ class ReviewsScreen extends StatelessWidget {
                         physics: const NeverScrollableScrollPhysics(),
                         itemCount: 10,
                         itemBuilder: (context, index) {
-                          return ReviewWidgetSingle(
+                          return ReviewCard(
                             review: Review(
                                 senderName: 'Carly West',
                                 senderPhoto: 'assets/images/pose2.jpg',

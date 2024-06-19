@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/ui/screens/sign_in_screen.dart';
-import 'package:ecommerce_project/ui/widgets/button_already_have_account.dart';
-import 'package:ecommerce_project/ui/widgets/button_main.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_already_have_account.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_seperated.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/ui/widgets/switch_indexer_dots.dart';

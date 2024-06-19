@@ -5,8 +5,8 @@ import 'package:ecommerce_project/ui/screens/forgot_password_screen.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/ui/widgets/background_blur.dart';
-import 'package:ecommerce_project/ui/widgets/button_already_have_account.dart';
-import 'package:ecommerce_project/ui/widgets/button_main.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_already_have_account.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 import 'package:ecommerce_project/ui/widgets/form_input_field.dart';
 

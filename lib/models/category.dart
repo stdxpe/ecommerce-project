@@ -1,5 +1,5 @@
-class Category {
-  String id;
-  String name;
-  String icon;
-}
+// class Category {
+//   String id;
+//   String name;
+//   String icon;
+// }

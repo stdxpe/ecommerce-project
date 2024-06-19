@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-import 'package:ecommerce_project/ui/widgets/credit_card_visual_model.dart';
+import 'package:ecommerce_project/ui/widgets/cards/credit_card_visual_model.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
 class CarouselCreditCards extends StatelessWidget {

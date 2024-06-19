@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/widgets/sliver_app_bars/sliver_app_bar_main.dart';
-import 'package:ecommerce_project/ui/widgets/title_main.dart';
+import 'package:ecommerce_project/ui/widgets/slivers/sliver_app_bar_main.dart';
+import 'package:ecommerce_project/ui/widgets/titles/title_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
 class DiscoverScreen extends StatelessWidget {

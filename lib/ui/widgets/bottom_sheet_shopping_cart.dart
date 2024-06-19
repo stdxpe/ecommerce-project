@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/widgets/button_main.dart';
-import 'package:ecommerce_project/ui/widgets/title_shopping_card_bottom_sheet.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
+import 'package:ecommerce_project/ui/widgets/titles/title_shopping_card_bottom_sheet.dart';
 import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';

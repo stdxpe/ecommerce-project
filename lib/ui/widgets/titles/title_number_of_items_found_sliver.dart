@@ -1,7 +1,8 @@
-import 'package:ecommerce_project/ui/widgets/title_number_of_items_found.dart';
+import 'package:flutter/material.dart';
+
+import 'package:ecommerce_project/ui/widgets/titles/title_number_of_items_found.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
-import 'package:flutter/material.dart';
 
 class TitleNumberOfItemsFoundSliver extends StatelessWidget {
   final String title;

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
-import 'package:ecommerce_project/ui/widgets/button_circular_main.dart';
+import 'package:ecommerce_project/ui/screens/search_discover_screen.dart';
 import 'package:ecommerce_project/ui/screens/shopping_cart_screen.dart';
 import 'package:ecommerce_project/ui/screens/wishlist_screen.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:flutter_svg/svg.dart';
 
 class SliverAppBarMain extends StatelessWidget {
   const SliverAppBarMain({super.key});
@@ -44,10 +45,10 @@ class SliverAppBarMain extends StatelessWidget {
           margin: const EdgeInsets.all(10),
           child: ButtonCircularMain(
             onPressed: () {
-              // PlatformAdaptiveNavigator().push(
-              //   context,
-              //   const SearchScreen(),
-              // );
+              PlatformAdaptiveNavigator().push(
+                context,
+                const SearchDiscoverScreen(),
+              );
             },
             alternativeWidgetContent: SvgPicture.asset(
               'assets/icons/loupe-icon.svg',
