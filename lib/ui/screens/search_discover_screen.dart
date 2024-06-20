@@ -40,7 +40,7 @@ class SearchDiscoverScreen extends StatelessWidget {
 
           SliverToBoxAdapter(
             child: Container(
-              margin: EdgeInsets.only(bottom: 50),
+              margin: const EdgeInsets.only(bottom: 50),
 
               // padding: EdgeInsets.symmetric(horizontal: 35 / 2),
               // color: Colors.red.withOpacity(0.5),
@@ -60,7 +60,7 @@ class SearchDiscoverScreen extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: Container(
-              margin: EdgeInsets.only(bottom: 50),
+              margin: const EdgeInsets.only(bottom: 50),
               height: size.height * 0.32,
               width: size.width,
               // padding: EdgeInsets.symmetric(horizontal: 35 / 2),
@@ -90,7 +90,7 @@ class SearchDiscoverScreen extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: Container(
-              margin: EdgeInsets.only(bottom: 50),
+              margin: const EdgeInsets.only(bottom: 50),
               // color: Colors.red.withOpacity(0.5),
               child: StaggeredGridCardComponent2(
                 width: size.width,
@@ -148,26 +148,22 @@ class SearchDiscoverScreen extends StatelessWidget {
           ),
 
           SliverToBoxAdapter(
-            child: Container(
-              // padding: EdgeInsets.symmetric(horizontal: 35 / 2),
-              // color: Colors.red.withOpacity(0.5),
-              child: CollectionCardPrimary(
-                isRadiusCorners: false,
-                cardWidth: size.width,
-                cardHeight: size.width,
-                collection: Collection(
-                  id: '0',
-                  title: 'Spring Collection',
-                  subtitle: '30% OFF',
-                  description: 'For Selected Spring Style',
-                  imageUrl: 'assets/images/pose0.jpg',
-                ),
+            child: CollectionCardPrimary(
+              isRadiusCorners: false,
+              cardWidth: size.width,
+              cardHeight: size.width,
+              collection: Collection(
+                id: '0',
+                title: 'Spring Collection',
+                subtitle: '30% OFF',
+                description: 'For Selected Spring Style',
+                imageUrl: 'assets/images/pose0.jpg',
               ),
             ),
           ),
           SliverToBoxAdapter(
             child: Container(
-              margin: EdgeInsets.only(bottom: 50, top: 50),
+              margin: const EdgeInsets.only(bottom: 50, top: 50),
               // color: Colors.red.withOpacity(0.5),
               child: StaggeredGridCardComponent(
                 width: size.width,

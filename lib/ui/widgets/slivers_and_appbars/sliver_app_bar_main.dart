@@ -1,9 +1,8 @@
-import 'package:ecommerce_project/ui/screens/profile_screen.dart';
-import 'package:ecommerce_project/ui/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:ecommerce_project/ui/screens/search_discover_screen.dart';
+import 'package:ecommerce_project/ui/screens/profile_screen.dart';
+import 'package:ecommerce_project/ui/screens/search_screen.dart';
 import 'package:ecommerce_project/ui/screens/shopping_cart_screen.dart';
 import 'package:ecommerce_project/ui/screens/wishlist_screen.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';

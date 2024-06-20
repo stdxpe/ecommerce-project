@@ -23,7 +23,7 @@ class PaymentScreenStepResult extends StatefulWidget {
 class _PaymentScreenStepResultState extends State<PaymentScreenStepResult> {
   /// TODO: Riverpod method.
   Future initMethod() async {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     Size size = MediaQuery.of(context).size;
 
     print('init state executed');
@@ -93,7 +93,7 @@ class _PaymentScreenStepResultState extends State<PaymentScreenStepResult> {
                       CircleAvatar(
                         backgroundColor: Colors.grey.withAlpha(35),
                         radius: 100,
-                        child: CircularProgressIndicator(),
+                        child: const CircularProgressIndicator(),
                         // const Icon(
                         //   Icons.card_giftcard,
                         //   // Icons.check,

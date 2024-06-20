@@ -62,7 +62,7 @@ class SearchScreen extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(bottom: 50),
+                      margin: const EdgeInsets.only(bottom: 50),
                       height: size.height * 0.32,
                       width: size.width,
                       // padding: EdgeInsets.symmetric(horizontal: 35 / 2),
@@ -91,7 +91,7 @@ class SearchScreen extends StatelessWidget {
                           }),
                     ),
                     Container(
-                      margin: EdgeInsets.only(bottom: 50),
+                      margin: const EdgeInsets.only(bottom: 50),
                       // color: Colors.red.withOpacity(0.5),
                       child: StaggeredGridCardComponent2(
                         width: size.width,
@@ -100,20 +100,16 @@ class SearchScreen extends StatelessWidget {
                         heightItemCount: 2,
                       ),
                     ),
-                    Container(
-                      // padding: EdgeInsets.symmetric(horizontal: 35 / 2),
-                      // color: Colors.red.withOpacity(0.5),
-                      child: CollectionCardPrimary(
-                        isRadiusCorners: false,
-                        cardWidth: size.width,
-                        cardHeight: size.width,
-                        collection: Collection(
-                          id: '0',
-                          title: 'Spring Collection',
-                          subtitle: '30% OFF',
-                          description: 'For Selected Spring Style',
-                          imageUrl: 'assets/images/pose0.jpg',
-                        ),
+                    CollectionCardPrimary(
+                      isRadiusCorners: false,
+                      cardWidth: size.width,
+                      cardHeight: size.width,
+                      collection: Collection(
+                        id: '0',
+                        title: 'Spring Collection',
+                        subtitle: '30% OFF',
+                        description: 'For Selected Spring Style',
+                        imageUrl: 'assets/images/pose0.jpg',
                       ),
                     ),
                     ListView.builder(

@@ -1,4 +1,3 @@
-import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -284,7 +283,7 @@ var kCreditCardTextStyle = TextStyle(
       color: Colors.black54.withOpacity(0.35),
       spreadRadius: 0.1,
       blurRadius: 10,
-      offset: Offset(0, 3.5),
+      offset: const Offset(0, 3.5),
     ),
   ],
   color: Colors.white,

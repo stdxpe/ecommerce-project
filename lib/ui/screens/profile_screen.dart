@@ -14,18 +14,16 @@ class ProfileScreen extends StatelessWidget {
     print('carried string: ');
 
     return Scaffold(
-      appBar: AppBarStandartBackButton(),
-      body: Container(
-        child: ElevatedButton(
-          onPressed: () async {
-            await showSearch(
-              context: context,
-              query: '',
-              delegate: CustomSearchDelegate(),
-            );
-          },
-          child: Text('??'),
-        ),
+      appBar: const AppBarStandartBackButton(),
+      body: ElevatedButton(
+        onPressed: () async {
+          await showSearch(
+            context: context,
+            query: '',
+            delegate: CustomSearchDelegate(),
+          );
+        },
+        child: const Text('??'),
       ),
     );
   }
