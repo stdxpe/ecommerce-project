@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/screens/details_screen.dart';
+import 'package:ecommerce_project/ui/screens/product_details_screen.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/ui/widgets/cards/product_card_stack.dart';
@@ -68,7 +68,7 @@ class ListviewHorizontalScrollProductCardStack extends StatelessWidget {
                 onTap: () {
                   PlatformAdaptiveNavigator().push(
                     context,
-                    DetailsScreen(
+                    ProductDetailsScreen(
                       product: productList[index],
                     ),
                   );

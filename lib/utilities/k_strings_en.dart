@@ -42,6 +42,20 @@ class Strings {
   static const kStringSuccess =
       'Success! You\'ve added\nthis item to your cart.';
 
+  /// REVIEWS SCREEN
+  static const kStringButtonAddToShoppingCart = 'Add to Shopping Cart';
+
   /// SEARCH DISCOVER/EXPLORE SCREEN
   static const kStringExploreTitle = 'Discover';
+  static const kStringSearchTitle = 'Search';
+  static const kStringSearchInitialText = 'Please search for a product';
+
+  /// PAYMENT SCREEN
+  static const kStringPaymentResultTitlePositive = 'Success!';
+  static const kStringPaymentResultTitleNegative = 'Error!';
+  static const kStringPaymentResultSubtitlePositive =
+      'Thank you for purchasing. Your order will be shipped in 2-4 working days.';
+
+  static const kStringPaymentResultSubtitleNegative =
+      'An error occured during the process. Please try again.';
 }

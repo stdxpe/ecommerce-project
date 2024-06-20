@@ -1,3 +1,4 @@
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_share_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
@@ -6,8 +7,8 @@ import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/ui/screens/reviews_screen.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_static.dart';
-import 'package:ecommerce_project/ui/widgets/dialog_popup_card_details_screen.dart';
-import 'package:ecommerce_project/ui/widgets/dialog_popup_widget_main.dart';
+import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_card_details_screen.dart';
+import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_widget_main.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/ui/widgets/switch_color_selection.dart';
 import 'package:ecommerce_project/ui/widgets/switch_total_rating_stars.dart';
@@ -16,10 +17,10 @@ import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 
-class DetailsScreen extends StatelessWidget {
+class ProductDetailsScreen extends StatelessWidget {
   final Product product;
 
-  const DetailsScreen({
+  const ProductDetailsScreen({
     required this.product,
     super.key,
   });
@@ -29,40 +30,7 @@ class DetailsScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        forceMaterialTransparency: true,
-        backgroundColor: Colors.transparent,
-        leading: Container(
-          margin: const EdgeInsets.all(10),
-          child: ButtonCircularMain(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: CupertinoIcons.chevron_back,
-            buttonColor: Colors.black.withOpacity(0.15),
-            iconColor: Colors.white,
-            buttonSize: 28,
-            iconSize: 22,
-          ),
-        ),
-        leadingWidth: 45,
-        actions: [
-          Container(
-            margin: const EdgeInsets.all(10),
-            child: ButtonCircularMain(
-              onPressed: () {},
-              alternativeWidgetContent: SvgPicture.asset(
-                'assets/icons/share-1-icon.svg',
-                color: Colors.white.withOpacity(0.85),
-                height: 15,
-              ),
-              // elevationColor: Colors.transparent,
-              buttonColor: Colors.black.withOpacity(0.15),
-              buttonSize: 28,
-            ),
-          ),
-        ],
-      ),
+      appBar: const AppBarStandartBackShareButton(),
       body: SingleChildScrollView(
         physics: const ClampingScrollPhysics(),
         child: Column(

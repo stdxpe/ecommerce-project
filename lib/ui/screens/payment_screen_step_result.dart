@@ -3,14 +3,53 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_project/models/enums.dart';
 import 'package:ecommerce_project/ui/screens/home_screen.dart';
 import 'package:ecommerce_project/ui/widgets/bottom_sheet_payment_summary.dart';
+import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_card_payment_result_screen.dart';
+import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_widget_main.dart';
 import 'package:ecommerce_project/ui/widgets/payment_stepper_status_bar.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:ecommerce_project/ui/widgets/slivers/app_bar_non_sliver_standart.dart';
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_button.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_payment_screen_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 
-class PaymentScreenStepResult extends StatelessWidget {
+class PaymentScreenStepResult extends StatefulWidget {
   const PaymentScreenStepResult({super.key});
+
+  @override
+  State<PaymentScreenStepResult> createState() =>
+      _PaymentScreenStepResultState();
+}
+
+class _PaymentScreenStepResultState extends State<PaymentScreenStepResult> {
+  /// TODO: Riverpod method.
+  Future initMethod() async {
+    await Future.delayed(Duration(seconds: 1));
+    Size size = MediaQuery.of(context).size;
+
+    print('init state executed');
+    DialogPopupWidgetMain(
+      context: context,
+      content: DialogPopupCardPaymentResultScreen(
+        title: Strings.kStringPaymentResultTitlePositive,
+        subtitle: Strings.kStringPaymentResultSubtitlePositive,
+        imageUrl: 'assets/images/pose3.jpg',
+        buttonTextPrimary: Strings.kStringButtonContinue,
+        cardHeight: size.height * 0.5,
+        cardWidth: size.width * 0.75,
+      ),
+    ).showAlertDialog();
+    print('dialog popup executed');
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    initMethod();
+    // WidgetsFlutterBinding.ensureInitialized;
+  }
+
+  ///TODO: Instead of Screen, use Dialog Popup w/ Success or Fail message.
+  /// initState method comes from Riverpod methods.
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +57,7 @@ class PaymentScreenStepResult extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: const AppBarNonSliverStandart(),
+      appBar: const AppBarStandartBackButton(),
       body: Container(
         height: size.height,
         width: size.width,
@@ -44,7 +83,7 @@ class PaymentScreenStepResult extends StatelessWidget {
                   ),
 
                   /// PAYMENT TITLE
-                  const TitlePaymentScreenMain(title: 'Success', stepNumber: 4),
+                  const TitlePaymentScreenMain(title: 'Result', stepNumber: 4),
 
                   /// TODO: LOTTIE ANIMATION HERE
                   /// PAYMENT [TEMPORARY] CONTENT
@@ -54,17 +93,18 @@ class PaymentScreenStepResult extends StatelessWidget {
                       CircleAvatar(
                         backgroundColor: Colors.grey.withAlpha(35),
                         radius: 100,
-                        child: const Icon(
-                          Icons.card_giftcard,
-                          // Icons.check,
+                        child: CircularProgressIndicator(),
+                        // const Icon(
+                        //   Icons.card_giftcard,
+                        //   // Icons.check,
 
-                          color: Colors.black,
-                          size: 100,
-                        ),
+                        //   color: Colors.black,
+                        //   size: 100,
+                        // ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 15),
                       const Text(
-                        'Congrats!',
+                        'Waiting...',
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 40,
@@ -74,7 +114,7 @@ class PaymentScreenStepResult extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
                       const Text(
-                        'Thank you for purchasing.\nYour order will be shipped in 2-4 working days.',
+                        'Please wait for the result.',
                         style: TextStyle(
                           color: Colors.black54,
                           fontSize: 12,

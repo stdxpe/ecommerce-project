@@ -5,13 +5,15 @@ import 'package:ecommerce_project/models/review.dart';
 import 'package:ecommerce_project/ui/widgets/bottom_sheet_button_set_add_or_like.dart';
 import 'package:ecommerce_project/ui/widgets/cards/product_card_horizontal_mini.dart';
 import 'package:ecommerce_project/ui/widgets/cards/review_card.dart';
-import 'package:ecommerce_project/ui/widgets/slivers/app_bar_non_sliver_standart.dart';
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_button.dart';
 import 'package:ecommerce_project/ui/widgets/switch_total_rating_stars.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
 class ReviewsScreen extends StatelessWidget {
   final Product product;
+  // TODO: Product's review comes here.
 
   const ReviewsScreen({
     required this.product,
@@ -24,7 +26,7 @@ class ReviewsScreen extends StatelessWidget {
     return Scaffold(
       // extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
-      appBar: const AppBarNonSliverStandart(),
+      appBar: const AppBarStandartBackButton(backgroundColor: Colors.white),
       body: SizedBox(
         // color: Colors.red.withOpacity(0.5),
         height: size.height,
@@ -108,7 +110,11 @@ class ReviewsScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const BottomSheetButtonSetAddOrLike(),
+            BottomSheetButtonSetAddOrLike(
+              buttonText: Strings.kStringButtonAddToShoppingCart,
+              onPressedMainButton: () {},
+              onPressedCircularButton: () {},
+            ),
           ],
         ),
       ),

@@ -1,3 +1,5 @@
+import 'package:ecommerce_project/ui/screens/profile_screen.dart';
+import 'package:ecommerce_project/ui/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -27,7 +29,7 @@ class SliverAppBarMain extends StatelessWidget {
           onPressed: () {
             PlatformAdaptiveNavigator().push(
               context,
-              const WishlistScreen(),
+              const ProfileScreen(),
             );
           },
           alternativeWidgetContent: SvgPicture.asset(
@@ -47,7 +49,8 @@ class SliverAppBarMain extends StatelessWidget {
             onPressed: () {
               PlatformAdaptiveNavigator().push(
                 context,
-                const SearchDiscoverScreen(),
+                // const SearchDiscoverScreen(),
+                const SearchScreen(),
               );
             },
             alternativeWidgetContent: SvgPicture.asset(

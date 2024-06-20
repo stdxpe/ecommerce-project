@@ -7,7 +7,7 @@ import 'package:ecommerce_project/ui/widgets/bottom_sheet_payment_summary.dart';
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_credit_cards.dart';
 import 'package:ecommerce_project/ui/widgets/payment_stepper_status_bar.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:ecommerce_project/ui/widgets/slivers/app_bar_non_sliver_standart.dart';
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_button.dart';
 import 'package:ecommerce_project/ui/widgets/textfield_main.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_payment_screen_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
@@ -15,6 +15,7 @@ import 'package:ecommerce_project/utilities/k_constants.dart';
 class PaymentScreenStepPayment extends StatelessWidget {
   const PaymentScreenStepPayment({super.key});
 
+  /// TODO: Random Credit Card colors every time.
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -23,7 +24,7 @@ class PaymentScreenStepPayment extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: const AppBarNonSliverStandart(),
+      appBar: const AppBarStandartBackButton(),
       body: SingleChildScrollView(
         clipBehavior: Clip.none,
         padding: EdgeInsets.zero,

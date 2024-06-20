@@ -3,9 +3,14 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
 
-class AppBarNonSliverStandart extends StatelessWidget
+class AppBarStandartBackButton extends StatelessWidget
     implements PreferredSizeWidget {
-  const AppBarNonSliverStandart({super.key});
+  final Color? backgroundColor;
+
+  const AppBarStandartBackButton({
+    this.backgroundColor = Colors.transparent,
+    super.key,
+  });
 
   // const AppBarNonSliverStandart({super.key})
   //     : preferredSize = const Size.fromHeight(kToolbarHeight);
@@ -16,9 +21,9 @@ class AppBarNonSliverStandart extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
-      foregroundColor: Colors.white,
-      surfaceTintColor: Colors.white,
+      backgroundColor: backgroundColor,
+      foregroundColor: backgroundColor,
+      surfaceTintColor: backgroundColor,
       leading: Container(
         margin: const EdgeInsets.all(10),
         child: ButtonCircularMain(

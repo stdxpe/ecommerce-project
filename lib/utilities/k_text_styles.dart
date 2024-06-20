@@ -1,3 +1,4 @@
+import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -146,6 +147,7 @@ const kTitleMainTextStyle = TextStyle(
   color: Colors.black,
   // shadows: [kBoxShadowLightText],
   fontSize: 28,
+  overflow: TextOverflow.ellipsis,
   fontWeight: FontWeight.w700,
   letterSpacing: 0,
   height: 1.1,
@@ -291,7 +293,35 @@ var kCreditCardTextStyle = TextStyle(
   letterSpacing: 2.5,
 );
 
+const kCollectionCardTextStylePrimary = TextStyle(
+  color: Colors.white,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 40,
+  fontWeight: FontWeight.w700,
+  letterSpacing: 0.5,
+  height: 1.2,
+);
+
+const kCollectionCardTextStyleSecondary = TextStyle(
+  color: Colors.white,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 25,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 0,
+  height: 1.2,
+);
+
+const kDialogPopupCardTextStylePaymentScreen = TextStyle(
+  color: Colors.black,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 30,
+  fontWeight: FontWeight.w700,
+  letterSpacing: 0.3,
+  height: 1.1,
+);
+
 /// Box Shadows
+///
 var kBoxShadowLightText = BoxShadow(
   color: Colors.black54.withOpacity(0.1),
   spreadRadius: 0.1,

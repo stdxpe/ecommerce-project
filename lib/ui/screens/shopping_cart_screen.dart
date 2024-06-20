@@ -6,7 +6,7 @@ import 'package:ecommerce_project/ui/widgets/bottom_sheet_shopping_cart.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_shopping_cart_item_counter.dart';
 import 'package:ecommerce_project/ui/widgets/listview_vertical_scroll_product_card_horizontal.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:ecommerce_project/ui/widgets/slivers/sliver_app_bar_main.dart';
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/sliver_app_bar_main.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_main_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_number_of_items_found_sliver.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
@@ -31,7 +31,8 @@ class ShoppingCartScreen extends StatelessWidget {
                 slivers: [
                   const SliverAppBarMain(),
                   const TitleMainSliver(
-                      title: Strings.kStringShoppingCartTitle),
+                    title: Strings.kStringShoppingCartTitle,
+                  ),
                   const TitleNumberOfItemsFoundSliver(itemCount: 21),
                   ListviewVerticalScrollProductCardHorizontal(
                     isBorderElevated: false,

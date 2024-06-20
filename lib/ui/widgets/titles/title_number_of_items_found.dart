@@ -20,7 +20,7 @@ class TitleNumberOfItemsFound extends StatelessWidget {
       children: [
         Text(
           '$itemCount $title',
-          textAlign: TextAlign.center,
+          textAlign: TextAlign.start,
           style: kItemsFoundTextStyle,
         ),
       ],
