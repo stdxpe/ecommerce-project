@@ -5,7 +5,7 @@ import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
-import 'package:ecommerce_project/ui/widgets/form_input_field.dart';
+import 'package:ecommerce_project/ui/widgets/textfields/form_input_field.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});

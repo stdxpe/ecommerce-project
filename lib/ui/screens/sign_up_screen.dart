@@ -8,7 +8,7 @@ import 'package:ecommerce_project/ui/widgets/background_blur.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_already_have_account.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
-import 'package:ecommerce_project/ui/widgets/form_input_field.dart';
+import 'package:ecommerce_project/ui/widgets/textfields/form_input_field.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});

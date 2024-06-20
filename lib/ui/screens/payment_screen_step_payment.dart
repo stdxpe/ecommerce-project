@@ -3,12 +3,12 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:ecommerce_project/models/enums.dart';
 import 'package:ecommerce_project/ui/screens/payment_screen_step_summary.dart';
-import 'package:ecommerce_project/ui/widgets/bottom_sheet_payment_summary.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_payment_summary.dart';
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_credit_cards.dart';
 import 'package:ecommerce_project/ui/widgets/payment_stepper_status_bar.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_button.dart';
-import 'package:ecommerce_project/ui/widgets/textfield_main.dart';
+import 'package:ecommerce_project/ui/widgets/textfields/textfield_main.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_payment_screen_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:ecommerce_project/ui/screens/searchbox_delegate.dart';
+import 'package:ecommerce_project/ui/widgets/searchbox_delegate.dart';
 
 class AppBarStandartBackSearchButton extends StatelessWidget
     implements PreferredSizeWidget {

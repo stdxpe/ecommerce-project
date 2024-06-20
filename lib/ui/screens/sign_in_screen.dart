@@ -8,7 +8,7 @@ import 'package:ecommerce_project/ui/widgets/buttons/button_already_have_account
 import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
-import 'package:ecommerce_project/ui/widgets/form_input_field.dart';
+import 'package:ecommerce_project/ui/widgets/textfields/form_input_field.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});

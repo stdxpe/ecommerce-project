@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/enums.dart';
 import 'package:ecommerce_project/ui/screens/home_screen.dart';
-import 'package:ecommerce_project/ui/widgets/bottom_sheet_payment_summary.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_payment_summary.dart';
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_card_payment_result_screen.dart';
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_widget_main.dart';
 import 'package:ecommerce_project/ui/widgets/payment_stepper_status_bar.dart';

@@ -6,7 +6,7 @@ import 'package:ecommerce_project/ui/widgets/switch_verification_code_dots.dart'
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_already_have_account.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
-import 'package:ecommerce_project/ui/widgets/form_input_field.dart';
+import 'package:ecommerce_project/ui/widgets/textfields/form_input_field.dart';
 
 class VerificationScreen extends StatelessWidget {
   const VerificationScreen({super.key});

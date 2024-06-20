@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/widgets/textfield_main.dart';
+import 'package:ecommerce_project/ui/widgets/textfields/textfield_main.dart';
 
 class FormCustumInputField extends StatelessWidget {
   const FormCustumInputField({super.key});

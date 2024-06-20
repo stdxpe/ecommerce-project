@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/models/review.dart';
-import 'package:ecommerce_project/ui/widgets/bottom_sheet_button_set_add_or_like.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_button_set_add_or_like.dart';
 import 'package:ecommerce_project/ui/widgets/cards/product_card_horizontal_mini.dart';
 import 'package:ecommerce_project/ui/widgets/cards/review_card.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_button.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/screens/searchbox_delegate.dart';
+import 'package:ecommerce_project/ui/widgets/searchbox_delegate.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_button.dart';
 
 class ProfileScreen extends StatelessWidget {

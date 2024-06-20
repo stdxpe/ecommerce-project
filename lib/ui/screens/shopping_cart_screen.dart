@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/ui/screens/payment_screen_step_shipping.dart';
-import 'package:ecommerce_project/ui/widgets/bottom_sheet_shopping_cart.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_shopping_cart.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_shopping_cart_item_counter.dart';
 import 'package:ecommerce_project/ui/widgets/listview_vertical_scroll_product_card_horizontal.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
