@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:ecommerce_project/ui/widgets/searchbox_delegate.dart';
+import 'package:ecommerce_project/ui/widgets/searchbox_custom_delegate.dart';
 
 class AppBarStandartBackSearchButton extends StatelessWidget
     implements PreferredSizeWidget {
@@ -37,7 +37,7 @@ class AppBarStandartBackSearchButton extends StatelessWidget
       actions: [
         IconButton(
           onPressed: () {
-            showSearch(context: context, delegate: CustomSearchDelegate());
+            showSearch(context: context, delegate: SearchBoxCustomDelegate());
           },
           icon: const Icon(
             CupertinoIcons.search,

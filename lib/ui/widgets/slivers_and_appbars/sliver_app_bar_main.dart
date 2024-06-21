@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'package:ecommerce_project/ui/screens/discover_screen.dart';
 import 'package:ecommerce_project/ui/screens/profile_screen.dart';
-import 'package:ecommerce_project/ui/screens/search_screen.dart';
 import 'package:ecommerce_project/ui/screens/shopping_cart_screen.dart';
 import 'package:ecommerce_project/ui/screens/wishlist_screen.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
@@ -48,8 +48,7 @@ class SliverAppBarMain extends StatelessWidget {
             onPressed: () {
               PlatformAdaptiveNavigator().push(
                 context,
-                // const SearchDiscoverScreen(),
-                const SearchScreen(),
+                const DiscoverScreen(),
               );
             },
             alternativeWidgetContent: SvgPicture.asset(

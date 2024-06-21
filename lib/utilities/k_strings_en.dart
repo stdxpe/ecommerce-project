@@ -46,7 +46,7 @@ class Strings {
   static const kStringButtonAddToShoppingCart = 'Add to Shopping Cart';
 
   /// SEARCH DISCOVER/EXPLORE SCREEN
-  static const kStringExploreTitle = 'Discover';
+  static const kStringDiscoverTitle = 'Discover';
   static const kStringSearchTitle = 'Search';
   static const kStringSearchInitialText = 'Please search for a product';
 
