@@ -141,7 +141,8 @@ class HomeScreen extends StatelessWidget {
                   ListviewHorizontalScrollProductCardHorizontal(
                     cardHeight: 65,
                     cardWidth: 160,
-                    isBorderElevated: false,
+                    isBorderElevated: true,
+                    elevation: 5,
                     collectionTitle: 'Listview Horizontal',
                     productList: [
                       Product(

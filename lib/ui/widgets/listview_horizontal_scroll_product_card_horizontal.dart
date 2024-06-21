@@ -50,7 +50,8 @@ class ListviewHorizontalScrollProductCardHorizontal extends StatelessWidget {
         ),
 
         /// Listview
-        SizedBox(
+        Container(
+          clipBehavior: Clip.none,
           height: cardHeight!,
           width: size.width,
           child: ListView.builder(

@@ -10,8 +10,11 @@ import 'package:ecommerce_project/utilities/k_text_styles.dart';
 class BottomSheetPaymentSummary extends StatelessWidget {
   final Function onPressed;
   final String? buttonText;
+  final String? optionalButtonText;
+
   final bool? isContentIncluded;
   final bool? isBackButtonIncluded;
+
   final double? paddingHorizontalMain;
   final double? paddingTop;
   final double? paddingBottom;
@@ -22,6 +25,7 @@ class BottomSheetPaymentSummary extends StatelessWidget {
     this.isContentIncluded = false,
     this.isBackButtonIncluded = false,
     this.buttonText = Strings.kStringButtonContinue,
+    this.optionalButtonText = Strings.kStringButtonBack,
     this.paddingHorizontalMain = Constants.kPaddingButtonHorizontalMain,
     this.paddingTop = Constants.kPaddingButtonTopMain,
     this.paddingBottom = Constants.kPaddingButtonBottomMain,
@@ -100,7 +104,7 @@ class BottomSheetPaymentSummary extends StatelessWidget {
                         child: ButtonMain(
                           paddingHorizontal: 0,
                           paddingVertical: 0,
-                          text: Strings.kStringButtonBack,
+                          text: optionalButtonText,
                           textColor: Colors.white,
                           buttonColor: ColorPalette.kColorDarkButton,
                           onPressed: () {

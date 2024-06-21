@@ -319,6 +319,33 @@ const kDialogPopupCardTextStylePaymentScreen = TextStyle(
   height: 1.1,
 );
 
+const kUserProfileTextStyleTitle = TextStyle(
+  color: Colors.black,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 25,
+  fontWeight: FontWeight.w700,
+  letterSpacing: 0.5,
+  height: 1.5,
+);
+
+const kUserProfileTextStyleSubtitle = TextStyle(
+  color: Colors.black,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 15,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0.5,
+  height: 1.2,
+);
+
+const kUserProfileTextStyleSwitchIconTexts = TextStyle(
+  color: Colors.black,
+  // shadows: [kBoxShadowLightText],
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 0.4,
+  height: 1.5,
+);
+
 /// Box Shadows
 ///
 var kBoxShadowLightText = BoxShadow(
