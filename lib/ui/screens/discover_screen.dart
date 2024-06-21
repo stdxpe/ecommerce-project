@@ -1,15 +1,15 @@
-import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
-import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/collection.dart';
 import 'package:ecommerce_project/models/product.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
 import 'package:ecommerce_project/ui/widgets/cards/collection_card_primary.dart';
 import 'package:ecommerce_project/ui/widgets/cards/collection_card_secondary.dart';
 import 'package:ecommerce_project/ui/widgets/cards/product_card_horizontal_mini.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_search_button.dart';
 import 'package:ecommerce_project/ui/widgets/staggered_grid_card_component2.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_main.dart';
+import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 
@@ -49,8 +49,7 @@ class DiscoverScreen extends StatelessWidget {
                       child: TitleMain(title: Strings.kStringDiscoverTitle),
                     ),
 
-                    /// CONTENT
-
+                    /// COLLECTION CARD CONTENT
                     CollectionCardPrimary(
                       isRadiusCorners: false,
                       cardWidth: size.width,
@@ -64,6 +63,8 @@ class DiscoverScreen extends StatelessWidget {
                         imageUrl: 'assets/images/pose5.jpg',
                       ),
                     ),
+
+                    /// COLLECTION MINI CARD LISTVIEW CONTENT
                     Container(
                       margin: const EdgeInsets.only(bottom: 50),
                       height: size.height * 0.32,
@@ -93,6 +94,8 @@ class DiscoverScreen extends StatelessWidget {
                             );
                           }),
                     ),
+
+                    /// COLLECTION STAGGERED CARD CONTENT
                     Container(
                       margin: const EdgeInsets.only(bottom: 20),
                       // color: Colors.red.withOpacity(0.5),
@@ -103,6 +106,8 @@ class DiscoverScreen extends StatelessWidget {
                         heightItemCount: 2,
                       ),
                     ),
+
+                    /// COLLECTION NAME CARD LISTVIEW CONTENT
                     Container(
                       margin: const EdgeInsets.only(bottom: 25),
                       height: 50,
@@ -127,6 +132,8 @@ class DiscoverScreen extends StatelessWidget {
                         },
                       ),
                     ),
+
+                    /// COLLECTION CARD CONTENT
                     CollectionCardPrimary(
                       isRadiusCorners: false,
                       cardWidth: size.width,

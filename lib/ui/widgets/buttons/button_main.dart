@@ -36,17 +36,18 @@ class ButtonMain extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        onPressed();
-      },
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(
-          paddingLeft ?? paddingHorizontal!,
-          paddingVertical!,
-          paddingRight ?? paddingHorizontal!,
-          paddingVertical!,
-        ),
+    return Padding(
+      padding: EdgeInsets.fromLTRB(
+        paddingLeft ?? paddingHorizontal!,
+        paddingVertical!,
+        paddingRight ?? paddingHorizontal!,
+        paddingVertical!,
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(30),
+        onTap: () {
+          onPressed();
+        },
         child: Container(
           width: width,
           height: height ?? 50,

@@ -5,12 +5,15 @@ import 'package:ecommerce_project/ui/widgets/searchbox_custom_delegate.dart';
 
 class AppBarStandartBackSearchButton extends StatelessWidget
     implements PreferredSizeWidget {
-  /// TODO: Sizes gotta be .sp .w. h
   final Color? backgroundColor;
+  final bool? isOnlyBackButton;
   const AppBarStandartBackSearchButton({
     this.backgroundColor = Colors.transparent,
+    this.isOnlyBackButton = false,
     super.key,
   });
+
+  /// TODO: Sizes gotta be .sp .w. h
 
   // const AppBarNonSliverStandart({super.key})
   //     : preferredSize = const Size.fromHeight(kToolbarHeight);
@@ -35,16 +38,17 @@ class AppBarStandartBackSearchButton extends StatelessWidget
         ),
       ),
       actions: [
-        IconButton(
-          onPressed: () {
-            showSearch(context: context, delegate: SearchBoxCustomDelegate());
-          },
-          icon: const Icon(
-            CupertinoIcons.search,
-            color: Colors.black,
-            size: 24,
+        if (!isOnlyBackButton!)
+          IconButton(
+            onPressed: () {
+              showSearch(context: context, delegate: SearchBoxCustomDelegate());
+            },
+            icon: const Icon(
+              CupertinoIcons.search,
+              color: Colors.black,
+              size: 24,
+            ),
           ),
-        ),
       ],
     );
   }
