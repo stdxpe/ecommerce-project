@@ -6,6 +6,7 @@ import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_payment_
 import 'package:ecommerce_project/ui/widgets/cards/user_profile_card.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_search_button.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_payment_summary_change.dart';
+import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
@@ -28,6 +29,57 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            Container(
+              width: size.width,
+              // height: 100,
+              decoration: BoxDecoration(
+                color: ColorPalette.kColorModalBottomSheet,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black54.withOpacity(0.15),
+                    spreadRadius: 0.5,
+                    blurRadius: 10,
+                    offset: const Offset(0, 0),
+                  ),
+                ],
+              ),
+              child: Container(
+                // color: Colors.red.withOpacity(0.5),
+                padding: const EdgeInsets.only(
+                  left: Constants.kPaddingHorizontalMain,
+                  right: Constants.kPaddingHorizontalMain,
+                  // bottom: Constants.kPaddingHorizontalMain,
+                ),
+                child: Stack(
+                  children: [
+                    UserProfileCard(
+                      // isBorderElevated: true,
+                      elevation: 5,
+                      cardHeight: 65,
+                      cardWidth: size.width,
+                      userModel: UserModel(
+                        name: 'Jane Doe',
+                        email: 'verified@email.com',
+                        phone: '555 5432134',
+                        profilePhoto: 'assets/images/pose7.jpg',
+                      ),
+                    ),
+                    Positioned.fill(
+                      child: Align(
+                        alignment: Alignment.bottomRight,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.edit_note,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             Expanded(
               child: SingleChildScrollView(
                 physics: const ClampingScrollPhysics(),
@@ -36,60 +88,12 @@ class ProfileScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(
                     left: Constants.kPaddingHorizontalMain,
                     right: Constants.kPaddingHorizontalMain,
+                    top: Constants.kPaddingHorizontalMain,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      /// TITLE
-                      // Container(
-                      //   padding: const EdgeInsets.only(
-                      //     top: Constants.kPaddingAppTopAndMainTitle,
-                      //     bottom: Constants.kPaddingItemsCountAndContent,
-                      //   ),
-                      //   // color: Colors.red.withOpacity(0.5),
-                      //   child: const TitleMain(
-                      //     // title: Strings.kStringDiscoverTitle,
-                      //     title: 'Profile',
-                      //   ),
-                      // ),
-
                       /// CONTENT
-                      Container(
-                        // color: Colors.red.withOpacity(0.5),
-                        padding: const EdgeInsets.only(
-                            // top: Constants.kPaddingAppTopAndMainTitle,
-                            // bottom: Constants.kPaddingContentAndContent,
-                            ),
-                        child: Stack(
-                          children: [
-                            UserProfileCard(
-                              // isBorderElevated: true,
-                              elevation: 5,
-                              cardHeight: 100,
-                              cardWidth: size.width,
-                              userModel: UserModel(
-                                name: 'Jane Doe',
-                                email: 'verified@email.com',
-                                phone: '555 5432134',
-                                profilePhoto: 'assets/images/pose7.jpg',
-                              ),
-                            ),
-                            Positioned.fill(
-                              child: Align(
-                                alignment: Alignment.bottomRight,
-                                child: IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.edit_note,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-
                       Container(
                         // color: Colors.green.withOpacity(0.5),
                         child: Column(

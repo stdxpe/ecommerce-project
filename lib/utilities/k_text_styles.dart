@@ -322,16 +322,16 @@ const kDialogPopupCardTextStylePaymentScreen = TextStyle(
 const kUserProfileTextStyleTitle = TextStyle(
   color: Colors.black,
   // shadows: [kBoxShadowLightText],
-  fontSize: 25,
+  fontSize: 20,
   fontWeight: FontWeight.w700,
-  letterSpacing: 0.5,
+  letterSpacing: 0.2,
   height: 1.5,
 );
 
 const kUserProfileTextStyleSubtitle = TextStyle(
   color: Colors.black,
   // shadows: [kBoxShadowLightText],
-  fontSize: 15,
+  fontSize: 12,
   fontWeight: FontWeight.w500,
   letterSpacing: 0.5,
   height: 1.2,
