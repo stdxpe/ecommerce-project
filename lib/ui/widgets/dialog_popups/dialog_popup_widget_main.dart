@@ -6,10 +6,12 @@ import 'package:ecommerce_project/utilities/k_constants.dart';
 class DialogPopupWidgetMain extends StatelessWidget {
   final BuildContext context;
   final Widget content;
+  final bool? barrierDismissible;
 
   const DialogPopupWidgetMain({
     required this.context,
     required this.content,
+    this.barrierDismissible = true,
     super.key,
   });
 
@@ -17,7 +19,7 @@ class DialogPopupWidgetMain extends StatelessWidget {
     return await showDialog(
           // useSafeArea: false,
           barrierColor: Colors.black.withOpacity(0.5),
-          barrierDismissible: true,
+          barrierDismissible: barrierDismissible!,
           context: context,
           builder: (context) => this,
         ) ??

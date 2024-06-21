@@ -1,33 +1,24 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/screens/shopping_cart_screen.dart';
-import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
 import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
-import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
 class DialogPopupCardPaymentResultScreen extends StatelessWidget {
-  // final Product product;
-
-  final String title;
-  final String subtitle;
-
-  final String buttonTextPrimary;
-
-  final String imageUrl;
-  final double cardHeight;
-  final double cardWidth;
+  final bool isResultEndedWithSuccess;
+  final Function(bool result) onPressed;
+  final String? buttonTextPrimary;
+  final double? cardWidth;
   final double? elevation;
   final TextStyle? textStylePrimary;
 
   const DialogPopupCardPaymentResultScreen({
-    required this.title,
-    required this.subtitle,
-    required this.buttonTextPrimary,
-    required this.imageUrl,
-    required this.cardHeight,
-    required this.cardWidth,
+    required this.isResultEndedWithSuccess,
+    required this.onPressed,
+    this.buttonTextPrimary = Strings.kStringButtonContinue,
+    this.cardWidth,
     this.elevation = 1.5,
     this.textStylePrimary = kDialogPopupCardTextStylePaymentScreen,
     super.key,
@@ -35,18 +26,13 @@ class DialogPopupCardPaymentResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Container(
       color: Colors.white,
-      width: cardWidth,
+      width: cardWidth ?? size.width * 0.75,
       child: Column(
         children: [
-          Image.asset(
-            height: cardHeight * 0.5,
-            width: cardWidth,
-            imageUrl,
-            fit: BoxFit.cover,
-            alignment: Alignment.topCenter,
-          ),
           Container(
             padding: const EdgeInsets.symmetric(
               horizontal: Constants.kPaddingHorizontalMainDialogPopupButtons,
@@ -54,8 +40,26 @@ class DialogPopupCardPaymentResultScreen extends StatelessWidget {
             ),
             child: Column(
               children: [
+                CircleAvatar(
+                  backgroundColor: Colors.grey.withAlpha(35),
+                  radius: 100,
+                  child: isResultEndedWithSuccess
+                      ? const Icon(
+                          Icons.card_giftcard,
+                          color: Colors.black,
+                          size: 100,
+                        )
+                      : const Icon(
+                          Icons.error,
+                          color: Colors.black,
+                          size: 100,
+                        ),
+                ),
+                const SizedBox(height: 15),
                 Text(
-                  title,
+                  isResultEndedWithSuccess
+                      ? Strings.kStringPaymentResultTitlePositive
+                      : Strings.kStringPaymentResultTitleNegative,
                   overflow: TextOverflow.ellipsis,
                   softWrap: true,
                   maxLines: 1,
@@ -63,7 +67,9 @@ class DialogPopupCardPaymentResultScreen extends StatelessWidget {
                   style: textStylePrimary,
                 ),
                 Text(
-                  subtitle,
+                  isResultEndedWithSuccess
+                      ? Strings.kStringPaymentResultSubtitlePositive
+                      : Strings.kStringPaymentResultSubtitleNegative,
                   overflow: TextOverflow.ellipsis,
                   softWrap: true,
                   maxLines: 3,
@@ -77,12 +83,11 @@ class DialogPopupCardPaymentResultScreen extends StatelessWidget {
                     height: Constants.kPaddingVerticalMainDialogPopupButtons),
                 ButtonMain(
                   onPressed: () {
-                    PlatformAdaptiveNavigator().pushReplacement(
-                      context,
-                      const ShoppingCartScreen(),
-                    );
+                    onPressed(isResultEndedWithSuccess);
                   },
-                  text: buttonTextPrimary,
+                  text: isResultEndedWithSuccess
+                      ? buttonTextPrimary
+                      : Strings.kStringButtonContinue,
                   buttonColor: ColorPalette.kColorDarkButton,
                   textColor: Colors.white,
                   width: cardWidth,

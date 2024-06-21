@@ -34,6 +34,8 @@ class Strings {
   /// SHOPPING CART SCREEN
   static const kStringShoppingCartTitle = 'Shopping Cart';
   static const kStringButtonContinue = 'Continue';
+  static const kStringButtonBack = 'Back';
+
   static const kStringTotalAmount = 'Total Amount';
 
   /// DETAILS SCREEN

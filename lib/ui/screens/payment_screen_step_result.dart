@@ -10,7 +10,6 @@ import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_button.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_payment_screen_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
-import 'package:ecommerce_project/utilities/k_strings_en.dart';
 
 class PaymentScreenStepResult extends StatefulWidget {
   const PaymentScreenStepResult({super.key});
@@ -29,13 +28,23 @@ class _PaymentScreenStepResultState extends State<PaymentScreenStepResult> {
     print('init state executed');
     DialogPopupWidgetMain(
       context: context,
+      barrierDismissible: false,
       content: DialogPopupCardPaymentResultScreen(
-        title: Strings.kStringPaymentResultTitlePositive,
-        subtitle: Strings.kStringPaymentResultSubtitlePositive,
-        imageUrl: 'assets/images/pose3.jpg',
-        buttonTextPrimary: Strings.kStringButtonContinue,
-        cardHeight: size.height * 0.5,
+        isResultEndedWithSuccess: false,
         cardWidth: size.width * 0.75,
+        onPressed: (result) {
+          (result)
+
+              /// TODO: This screen gotta take result parameter, not popup widget.
+              /// otherwise gotta need popUntil navigator.
+              ? PlatformAdaptiveNavigator().pushAndRemoveUntil(
+                  context,
+                  const HomeScreen(),
+                )
+              : Navigator.of(context).pop();
+
+          // : Navigator.of(context).popUntil();
+        },
       ),
     ).showAlertDialog();
     print('dialog popup executed');
@@ -131,6 +140,8 @@ class _PaymentScreenStepResultState extends State<PaymentScreenStepResult> {
 
             /// PAYMENT BUTTON
             BottomSheetPaymentSummary(
+              /// TODO: if result is false, button Text gotta be?
+              isBackButtonIncluded: true,
               buttonText: 'Continue Shopping',
               onPressed: () {
                 PlatformAdaptiveNavigator().push(context, const HomeScreen());

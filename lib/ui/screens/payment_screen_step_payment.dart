@@ -137,6 +137,7 @@ class PaymentScreenStepPayment extends StatelessWidget {
 
               /// PAYMENT BUTTON
               BottomSheetPaymentSummary(
+                isBackButtonIncluded: true,
                 onPressed: () {
                   PlatformAdaptiveNavigator()
                       .push(context, const PaymentScreenStepSummary());

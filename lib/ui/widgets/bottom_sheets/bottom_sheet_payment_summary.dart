@@ -11,6 +11,7 @@ class BottomSheetPaymentSummary extends StatelessWidget {
   final Function onPressed;
   final String? buttonText;
   final bool? isContentIncluded;
+  final bool? isBackButtonIncluded;
   final double? paddingHorizontalMain;
   final double? paddingTop;
   final double? paddingBottom;
@@ -19,6 +20,7 @@ class BottomSheetPaymentSummary extends StatelessWidget {
   const BottomSheetPaymentSummary({
     required this.onPressed,
     this.isContentIncluded = false,
+    this.isBackButtonIncluded = false,
     this.buttonText = Strings.kStringButtonContinue,
     this.paddingHorizontalMain = Constants.kPaddingButtonHorizontalMain,
     this.paddingTop = Constants.kPaddingButtonTopMain,
@@ -88,15 +90,42 @@ class BottomSheetPaymentSummary extends StatelessWidget {
                     SizedBox(height: paddingTop!),
                   ],
                 ),
-              ButtonMain(
-                paddingHorizontal: 0,
-                paddingVertical: 0,
-                text: buttonText,
-                textColor: Colors.white,
-                buttonColor: ColorPalette.kColorDarkButton,
-                onPressed: () {
-                  onPressed();
-                },
+              Container(
+                // color: Colors.red.withOpacity(0.5),
+                child: Row(
+                  children: [
+                    /// TODO: Not sure of with back button
+                    if (isBackButtonIncluded!)
+                      Expanded(
+                        child: ButtonMain(
+                          paddingHorizontal: 0,
+                          paddingVertical: 0,
+                          text: Strings.kStringButtonBack,
+                          textColor: Colors.white,
+                          buttonColor: ColorPalette.kColorDarkButton,
+                          onPressed: () {
+                            /// TODO: That shouldnt be navigator pop. Gotta need stepper like widget. For saving state
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                      ),
+                    if (isBackButtonIncluded!)
+                      const SizedBox(
+                          width: Constants.kPaddingBetweenElementsMain * 2),
+                    Expanded(
+                      child: ButtonMain(
+                        paddingHorizontal: 0,
+                        paddingVertical: 0,
+                        text: buttonText,
+                        textColor: Colors.white,
+                        buttonColor: ColorPalette.kColorDarkButton,
+                        onPressed: () {
+                          onPressed();
+                        },
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
