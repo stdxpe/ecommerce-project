@@ -20,6 +20,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'ECommerce Project',
       theme: ThemeData(
+        // iconTheme: IconThemeData(
+        //   color: Colors.red,
+        //   size: 24,
+        //   // shadows:
+        // ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
         ),

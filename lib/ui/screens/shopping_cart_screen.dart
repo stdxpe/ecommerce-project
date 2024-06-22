@@ -29,7 +29,10 @@ class ShoppingCartScreen extends StatelessWidget {
               child: CustomScrollView(
                 physics: const ClampingScrollPhysics(),
                 slivers: [
-                  const SliverAppBarMain(automaticallyImplyLeading: true),
+                  const SliverAppBarMain(
+                    automaticallyImplyLeading: true,
+                    useShoppingCartButton: false,
+                  ),
                   const TitleMainSliver(
                     title: Strings.kStringShoppingCartTitle,
                   ),

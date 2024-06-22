@@ -1,3 +1,5 @@
+import 'package:ecommerce_project/ui/widgets/icon_buttons/search_icon_button.dart';
+import 'package:ecommerce_project/ui/widgets/icon_buttons/x_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -48,43 +50,44 @@ class SearchBoxCustomDelegate extends SearchDelegate {
   @override
   List<Widget>? buildActions(BuildContext context) {
     return [
-      IconButton(
+      XIconButton(
+        iconThemeSize: 18,
+        iconThemeColor: Colors.black87,
         onPressed: () {
           query = '';
           buildSuggestions(context);
         },
-        icon: const Icon(
-          CupertinoIcons.clear,
-          color: Colors.black,
-          size: 18,
-        ),
       ),
-      IconButton(
+      SearchIconButton(
+        iconThemeSize: 24,
+        iconThemeColor: Colors.black87,
         onPressed: () {
           // buildResults(context);
           showResults(context);
         },
-        icon: const Icon(
-          CupertinoIcons.search,
-          color: Colors.black,
-          size: 24,
-        ),
       ),
     ];
   }
 
   @override
   Widget? buildLeading(BuildContext context) {
-    return IconButton(
-      onPressed: () {
-        Navigator.of(context).pop();
-      },
-      icon: const Icon(
-        CupertinoIcons.chevron_back,
-        color: Colors.black,
-        size: 24,
-      ),
+    automaticallyImplyLeading = true;
+
+    IconThemeData(
+      color: Colors.black87,
+      size: 24,
+      // shadows:
     );
+    // return IconButton(
+    //   onPressed: () {
+    //     Navigator.of(context).pop();
+    //   },
+    //   icon: const Icon(
+    //     CupertinoIcons.chevron_back,
+    //     color: Colors.black,
+    //     size: 24,
+    //   ),
+    // );
   }
 
   @override

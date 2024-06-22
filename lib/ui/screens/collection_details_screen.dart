@@ -1,3 +1,4 @@
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/collection.dart';
@@ -22,9 +23,9 @@ class CollectionDetailsScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       extendBodyBehindAppBar: false,
-      appBar: const AppBarStandartBackSearchButton(
+      appBar: const AppBarMainNonSliver(
         backgroundColor: Colors.white,
-        isOnlyBackButton: true,
+        automaticallyImplyLeading: true,
       ),
       body: SingleChildScrollView(
         physics: const ClampingScrollPhysics(),

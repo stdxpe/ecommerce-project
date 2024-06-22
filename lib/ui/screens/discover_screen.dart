@@ -6,7 +6,7 @@ import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
 import 'package:ecommerce_project/ui/widgets/cards/collection_card_primary.dart';
 import 'package:ecommerce_project/ui/widgets/cards/collection_card_secondary.dart';
 import 'package:ecommerce_project/ui/widgets/cards/product_card_horizontal_mini.dart';
-import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_search_button.dart';
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/staggered_grid_card_component2.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_main.dart';
 import 'package:ecommerce_project/utilities/k_color_palette.dart';
@@ -24,8 +24,10 @@ class DiscoverScreen extends StatelessWidget {
     return Scaffold(
       // extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
-      appBar:
-          const AppBarStandartBackSearchButton(backgroundColor: Colors.white),
+      appBar: const AppBarMainNonSliver(
+        backgroundColor: Colors.white,
+        isSearchButtonIncluded: true,
+      ),
       body: SizedBox(
         // color: Colors.red.withOpacity(0.5),
         height: size.height,

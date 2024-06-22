@@ -7,7 +7,7 @@ import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_static.da
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_card_details_screen.dart';
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_widget_main.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_share_button.dart';
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/switch_color_selection.dart';
 import 'package:ecommerce_project/ui/widgets/switch_total_rating_stars.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_details_screen_name_and_price.dart';
@@ -28,7 +28,11 @@ class ProductDetailsScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: const AppBarStandartBackShareButton(),
+      appBar: const AppBarMainNonSliver(
+        // backgroundColor: Colors.white,
+        automaticallyImplyLeading: true,
+        isShareButtonIncluded: true,
+      ),
       body: SingleChildScrollView(
         physics: const ClampingScrollPhysics(),
         child: Column(

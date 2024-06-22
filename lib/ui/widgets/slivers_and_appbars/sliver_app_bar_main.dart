@@ -1,17 +1,20 @@
-import 'package:ecommerce_project/ui/widgets/titles/title_app_bar_main.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/screens/shopping_cart_screen.dart';
-import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
-import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
+import 'package:ecommerce_project/ui/widgets/icon_buttons/shopping_cart_icon_button.dart';
+import 'package:ecommerce_project/ui/widgets/titles/title_app_bar_main.dart';
 
 class SliverAppBarMain extends StatelessWidget {
+  final Color? backgroundColor;
+
   final bool? automaticallyImplyLeading;
   final bool? useTitle;
+  final bool? useShoppingCartButton;
 
   const SliverAppBarMain({
     super.key,
+    this.backgroundColor = Colors.white,
     this.automaticallyImplyLeading = false,
+    this.useShoppingCartButton = true,
     this.useTitle = false,
   });
 
@@ -22,86 +25,15 @@ class SliverAppBarMain extends StatelessWidget {
       // snap: true,
       // expandedHeight: 50,
       automaticallyImplyLeading: automaticallyImplyLeading!,
+      backgroundColor: backgroundColor,
+      foregroundColor: backgroundColor,
+      surfaceTintColor: backgroundColor,
+      scrolledUnderElevation: 0,
       pinned: true,
-      backgroundColor: Colors.white,
       centerTitle: false,
       title: useTitle! ? const TitleAppBarMain() : Container(),
-      // /// PROFILE ICON
-      // leading: Container(
-      //   margin: const EdgeInsets.all(10),
-      //   child: ButtonCircularMain(
-      //     onPressed: () {
-      //       PlatformAdaptiveNavigator().push(
-      //         context,
-      //         const ProfileScreen(),
-      //       );
-      //     },
-      //     alternativeWidgetContent: SvgPicture.asset(
-      //       'assets/icons/user-icon.svg',
-      //       height: 15,
-      //     ),
-      //     iconColor: Colors.black,
-      //     buttonColor: Colors.white,
-      //   ),
-      // ),
-      // leadingWidth: 50,
       actions: [
-        // /// SEARCH ICON
-        // Container(
-        //   margin: const EdgeInsets.all(10),
-        //   child: ButtonCircularMain(
-        //     onPressed: () {
-        //       PlatformAdaptiveNavigator().push(
-        //         context,
-        //         const DiscoverScreen(),
-        //       );
-        //     },
-        //     alternativeWidgetContent: SvgPicture.asset(
-        //       'assets/icons/loupe-icon.svg',
-        //       height: 15,
-        //     ),
-        //     buttonColor: Colors.white,
-        //     buttonSize: 28,
-        //   ),
-        // ),
-
-        // /// WISHLIST ICON
-        // Container(
-        //   margin: const EdgeInsets.all(10),
-        //   child: ButtonCircularMain(
-        //     onPressed: () {
-        //       PlatformAdaptiveNavigator().push(
-        //         context,
-        //         const WishlistScreen(),
-        //       );
-        //     },
-        //     alternativeWidgetContent: SvgPicture.asset(
-        //       'assets/icons/heart-icon.svg',
-        //       height: 15,
-        //     ),
-        //     iconColor: Colors.black,
-        //     buttonSize: 28,
-        //     isNotificationOn: true,
-        //   ),
-        // ),
-
-        /// SHOPPING CART ICON
-        Container(
-          margin: const EdgeInsets.all(10),
-          child: ButtonCircularMain(
-            onPressed: () {
-              PlatformAdaptiveNavigator().push(
-                context,
-                const ShoppingCartScreen(),
-              );
-            },
-            icon: Icons.shopping_bag_outlined,
-            iconColor: Colors.black,
-            buttonSize: 30,
-            iconSize: 20,
-            isNotificationOn: true,
-          ),
-        ),
+        if (useShoppingCartButton!) const ShoppingCartIconButton(),
       ],
     );
   }

@@ -8,6 +8,8 @@ class Strings {
   static var kStringDontHaveAnAccount = 'Don\'t have an account?';
   static var kStringSignUp = 'Sign Up';
   static var kStringSignIn = 'Sign In';
+  static var kStringSignOut = 'Sign Out';
+
   static var kStringOnboardingTitle = 'Swipe to browse';
   static var kStringOnboardingSubtitle =
       'Discover products easily by swiping from\none category to another';

@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:ecommerce_project/models/user_model.dart';
-import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_payment_summary.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
 import 'package:ecommerce_project/ui/widgets/cards/user_profile_card.dart';
-import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_search_button.dart';
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_payment_summary_change.dart';
 import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -20,8 +21,9 @@ class ProfileScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: const AppBarStandartBackSearchButton(
-          backgroundColor: Colors.white, isOnlyBackButton: true),
+      appBar: const AppBarMainNonSliver(
+        backgroundColor: Colors.white,
+      ),
       body: Container(
         // color: Colors.red.withOpacity(0.5),
         height: size.height,
@@ -221,19 +223,18 @@ class ProfileScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                      ), // SizedBox(height: paddingTop!),
+                      ),
+                      ButtonMain(
+                        onPressed: () {},
+                        text: Strings.kStringSignOut,
+                        textColor: Colors.white,
+                        buttonColor: ColorPalette.kColorDarkButton,
+                        paddingHorizontal: 0,
+                      ),
+                      const SizedBox(height: Constants.kPaddingAppBottom),
                     ],
                   ),
                 ),
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: BottomSheetPaymentSummary(
-                isBackButtonIncluded: true,
-                optionalButtonText: 'Change Password',
-                buttonText: 'Sign Out',
-                onPressed: () {},
               ),
             ),
           ],

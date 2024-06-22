@@ -7,7 +7,7 @@ import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_card_pay
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_widget_main.dart';
 import 'package:ecommerce_project/ui/widgets/payment_stepper_status_bar.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_button.dart';
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_payment_screen_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
@@ -66,7 +66,10 @@ class _PaymentScreenStepResultState extends State<PaymentScreenStepResult> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: const AppBarStandartBackButton(),
+      appBar: const AppBarMainNonSliver(
+        backgroundColor: Colors.white,
+        automaticallyImplyLeading: true,
+      ),
       body: Container(
         height: size.height,
         width: size.width,

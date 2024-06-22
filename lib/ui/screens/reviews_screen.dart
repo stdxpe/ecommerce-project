@@ -5,7 +5,7 @@ import 'package:ecommerce_project/models/review.dart';
 import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_button_set_add_or_like.dart';
 import 'package:ecommerce_project/ui/widgets/cards/product_card_horizontal_mini.dart';
 import 'package:ecommerce_project/ui/widgets/cards/review_card.dart';
-import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_button.dart';
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/switch_total_rating_stars.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
@@ -26,7 +26,10 @@ class ReviewsScreen extends StatelessWidget {
     return Scaffold(
       // extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
-      appBar: const AppBarStandartBackButton(backgroundColor: Colors.white),
+      appBar: const AppBarMainNonSliver(
+        backgroundColor: Colors.white,
+        automaticallyImplyLeading: true,
+      ),
       body: SizedBox(
         // color: Colors.red.withOpacity(0.5),
         height: size.height,

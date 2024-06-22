@@ -7,7 +7,7 @@ import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_payment_
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_credit_cards.dart';
 import 'package:ecommerce_project/ui/widgets/payment_stepper_status_bar.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_button.dart';
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/textfields/textfield_main.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_payment_screen_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
@@ -24,7 +24,10 @@ class PaymentScreenStepPayment extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: const AppBarStandartBackButton(),
+      appBar: const AppBarMainNonSliver(
+        backgroundColor: Colors.white,
+        automaticallyImplyLeading: true,
+      ),
       body: SingleChildScrollView(
         clipBehavior: Clip.none,
         padding: EdgeInsets.zero,
