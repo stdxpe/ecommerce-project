@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/widgets/icon_buttons/shopping_cart_icon_button.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/icon_buttons/shopping_cart_icon_button.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_app_bar_main.dart';
 
 class SliverAppBarMain extends StatelessWidget {

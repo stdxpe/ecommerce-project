@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/widgets/icon_buttons/search_icon_button.dart';
-import 'package:ecommerce_project/ui/widgets/icon_buttons/share_icon_button.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/icon_buttons/search_icon_button.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/icon_buttons/share_icon_button.dart';
 import 'package:ecommerce_project/ui/widgets/searchbox_custom_delegate.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_app_bar_main.dart';
 
