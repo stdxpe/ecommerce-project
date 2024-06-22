@@ -71,7 +71,7 @@ class ProfileScreen extends StatelessWidget {
                         alignment: Alignment.bottomRight,
                         child: IconButton(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.edit_note,
                             color: Colors.black,
                           ),

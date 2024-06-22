@@ -5,7 +5,6 @@ import 'package:ecommerce_project/ui/widgets/titles/title_app_bar_main.dart';
 
 class SliverAppBarMain extends StatelessWidget {
   final Color? backgroundColor;
-
   final bool? automaticallyImplyLeading;
   final bool? useTitle;
   final bool? useShoppingCartButton;
@@ -21,6 +20,7 @@ class SliverAppBarMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      iconTheme: const IconThemeData(color: Colors.black87, size: 24),
       // floating: true,
       // snap: true,
       // expandedHeight: 50,

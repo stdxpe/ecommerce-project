@@ -1,9 +1,8 @@
-import 'package:ecommerce_project/ui/widgets/icon_buttons/search_icon_button.dart';
-import 'package:ecommerce_project/ui/widgets/icon_buttons/x_icon_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 import 'package:ecommerce_project/ui/screens/search_screen.dart';
+import 'package:ecommerce_project/ui/widgets/icon_buttons/search_icon_button.dart';
+import 'package:ecommerce_project/ui/widgets/icon_buttons/x_icon_button.dart';
 
 class SearchBoxCustomDelegate extends SearchDelegate {
   @override
@@ -73,7 +72,7 @@ class SearchBoxCustomDelegate extends SearchDelegate {
   Widget? buildLeading(BuildContext context) {
     automaticallyImplyLeading = true;
 
-    IconThemeData(
+    const IconThemeData(
       color: Colors.black87,
       size: 24,
       // shadows:

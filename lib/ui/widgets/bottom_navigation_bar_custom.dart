@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:ecommerce_project/ui/screens/discover_screen.dart';
-import 'package:ecommerce_project/ui/screens/home_screen.dart';
-import 'package:ecommerce_project/ui/screens/profile_screen.dart';
-import 'package:ecommerce_project/ui/screens/wishlist_screen.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
-import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/utilities/k_color_palette.dart';
 
 class BottomNavigationBarCustom extends StatefulWidget {

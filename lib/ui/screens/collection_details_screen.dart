@@ -1,10 +1,9 @@
-import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/collection.dart';
 import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/ui/widgets/gridview_product_card_vertical_non_sliver.dart';
-import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_standart_back_search_button.dart';
+import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_main.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_number_of_items_found.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
