@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      extendBody: true,
       backgroundColor: Colors.white,
       body: CustomScrollView(
         physics: const ClampingScrollPhysics(),

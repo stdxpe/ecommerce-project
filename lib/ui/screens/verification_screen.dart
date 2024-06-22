@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/screens/home_screen.dart';
+import 'package:ecommerce_project/ui/screens/main_screen.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_already_have_account.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/ui/widgets/switch_verification_code_dots.dart';
-import 'package:ecommerce_project/utilities/k_strings_en.dart';
-import 'package:ecommerce_project/ui/widgets/buttons/button_already_have_account.dart';
-import 'package:ecommerce_project/utilities/k_text_styles.dart';
 import 'package:ecommerce_project/ui/widgets/textfields/form_input_field.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
+import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
 class VerificationScreen extends StatelessWidget {
   const VerificationScreen({super.key});
@@ -51,8 +51,10 @@ class VerificationScreen extends StatelessWidget {
                     Center(
                       child: ButtonAlreadyHaveAccount(
                         onPressed: () {
-                          PlatformAdaptiveNavigator()
-                              .push(context, const HomeScreen());
+                          PlatformAdaptiveNavigator().pushAndRemoveUntil(
+                            context,
+                            const MainScreenWithAppBarAndBottomNavBar(),
+                          );
                         },
                         buttonText: Strings.kStringButtonVerificationResendCode,
                       ),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:ecommerce_project/utilities/k_strings_en.dart';
-import 'package:ecommerce_project/ui/screens/home_screen.dart';
+import 'package:ecommerce_project/ui/screens/main_screen.dart';
 import 'package:ecommerce_project/ui/screens/onboarding_screen.dart';
-import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
-import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
-import 'package:ecommerce_project/utilities/k_text_styles.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_already_have_account.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
+import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -87,8 +87,10 @@ class SplashScreen extends StatelessWidget {
                         // TODO: Icons gotta be inline vertically?
                         ButtonMain(
                           onPressed: () {
-                            PlatformAdaptiveNavigator()
-                                .push(context, const HomeScreen());
+                            PlatformAdaptiveNavigator().pushAndRemoveUntil(
+                              context,
+                              const MainScreenWithAppBarAndBottomNavBar(),
+                            );
                           },
                           text: Strings.kStringFacebookButtonText,
                           textColor: Colors.white,
@@ -108,8 +110,10 @@ class SplashScreen extends StatelessWidget {
                     right: 20,
                     child: ButtonAlreadyHaveAccount(
                       onPressed: () {
-                        PlatformAdaptiveNavigator()
-                            .push(context, const HomeScreen());
+                        PlatformAdaptiveNavigator().pushAndRemoveUntil(
+                          context,
+                          const MainScreenWithAppBarAndBottomNavBar(),
+                        );
                       },
                       buttonText: Strings.kStringSignIn,
                     ),

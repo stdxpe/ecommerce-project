@@ -144,7 +144,9 @@ class _PaymentScreenStepResultState extends State<PaymentScreenStepResult> {
               isBackButtonIncluded: true,
               buttonText: 'Continue Shopping',
               onPressed: () {
-                PlatformAdaptiveNavigator().push(context, const HomeScreen());
+                // PlatformAdaptiveNavigator().push(context, const HomeScreen());
+
+                Navigator.of(context).popUntil((route) => route.isFirst);
               },
             ),
           ],
