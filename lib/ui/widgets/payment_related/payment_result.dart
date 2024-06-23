@@ -5,6 +5,7 @@ import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_payment_
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_card_payment_result_screen.dart';
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_widget_main.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
+import 'package:ecommerce_project/utilities/k_constants.dart';
 
 class PaymentResult extends StatefulWidget {
   final Function onPressedMain;
@@ -23,15 +24,17 @@ class PaymentResult extends StatefulWidget {
 }
 
 class _PaymentResultState extends State<PaymentResult> {
+  late BuildContext currentContext;
+
   /// TODO: Riverpod method.
   Future initCustomMethod() async {
-    await Future.delayed(const Duration(seconds: 1));
-    Size size = MediaQuery.of(context).size;
+    await Future.delayed(const Duration(seconds: 4));
+    Size size = MediaQuery.of(currentContext).size;
 
     print('init state executed');
     DialogPopupWidgetMain(
-      context: context,
-      barrierDismissible: false,
+      context: currentContext,
+      barrierDismissible: true,
       content: DialogPopupCardPaymentResultScreen(
         isResultEndedWithSuccess: widget.isResultEndedWithSuccess,
         cardWidth: size.width * 0.75,
@@ -56,7 +59,7 @@ class _PaymentResultState extends State<PaymentResult> {
   @override
   void initState() {
     super.initState();
-    WidgetsFlutterBinding.ensureInitialized;
+    // WidgetsFlutterBinding.ensureInitialized;
     initCustomMethod();
   }
 
@@ -65,50 +68,57 @@ class _PaymentResultState extends State<PaymentResult> {
 
   @override
   Widget build(BuildContext context) {
+    currentContext = context;
     return Container(
-      color: Colors.amber.withOpacity(0.5),
+      // color: Colors.amber.withOpacity(0.5),
       child: Column(
         children: [
           Expanded(
             child: SingleChildScrollView(
               physics: const ClampingScrollPhysics(),
-              child: Column(
-                children: [
-                  /// TODO: LOTTIE ANIMATION HERE
-                  /// PAYMENT [TEMPORARY] CONTENT
-                  CircleAvatar(
-                    backgroundColor: Colors.grey.withAlpha(35),
-                    radius: 100,
-                    child: const CircularProgressIndicator(),
-                    // const Icon(
-                    //   Icons.card_giftcard,
-                    //   // Icons.check,
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  left: Constants.kPaddingHorizontalMain,
+                  right: Constants.kPaddingHorizontalMain,
+                ),
+                child: Column(
+                  children: [
+                    /// TODO: LOTTIE ANIMATION HERE
+                    /// PAYMENT [TEMPORARY] CONTENT
+                    CircleAvatar(
+                      backgroundColor: Colors.grey.withAlpha(35),
+                      radius: 100,
+                      child: const CircularProgressIndicator(),
+                      // const Icon(
+                      //   Icons.card_giftcard,
+                      //   // Icons.check,
 
-                    //   color: Colors.black,
-                    //   size: 100,
-                    // ),
-                  ),
-                  const SizedBox(height: 15),
-                  const Text(
-                    'Waiting...',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 40,
-                      fontWeight: FontWeight.w600,
+                      //   color: Colors.black,
+                      //   size: 100,
+                      // ),
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 10),
-                  const Text(
-                    'Please wait for the result.',
-                    style: TextStyle(
-                      color: Colors.black54,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w500,
+                    const SizedBox(height: 15),
+                    const Text(
+                      'Waiting...',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 40,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
+                    const SizedBox(height: 10),
+                    const Text(
+                      'Please wait for the result.',
+                      style: TextStyle(
+                        color: Colors.black54,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

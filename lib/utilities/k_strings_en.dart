@@ -55,6 +55,13 @@ class Strings {
   static const kStringSearchInitialText = 'Please search for a product';
 
   /// PAYMENT SCREEN
+  static const kStringPaymentStatusShipping = 'Shipping';
+  static const kStringPaymentStatusPayment = 'Payment';
+  static const kStringPaymentStatusSummary = 'Summary';
+  static const kStringPaymentStatusResult = 'Result';
+  static const kStringPaymentStatusSuccess = 'Success';
+  static const kStringPaymentStatusFailed = 'Failed';
+
   static const kStringPaymentResultTitlePositive = 'Success!';
   static const kStringPaymentResultTitleNegative = 'Error!';
   static const kStringPaymentResultSubtitlePositive =

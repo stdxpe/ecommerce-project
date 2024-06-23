@@ -19,7 +19,7 @@ class PaymentCreditCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green.withOpacity(0.5),
+      // color: Colors.green.withOpacity(0.5),
       child: Column(
         children: [
           Expanded(
@@ -35,51 +35,62 @@ class PaymentCreditCard extends StatelessWidget {
                     aspectRatioHorizontalToVertical: 1.5846394984,
                     aspectRatioVerticalToHorizontal: 0.6310583581,
                   ),
-                  const TextfieldMain(),
-                  const TextfieldMain(),
-                  const Row(
-                    children: [
-                      Flexible(flex: 1, child: TextfieldMain()),
-                      SizedBox(
-                          width: Constants.kPaddingBetweenElementsMain * 2),
-                      Flexible(flex: 1, child: TextfieldMain()),
-                    ],
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        flex: 1,
-                        child: Checkbox(
-                          activeColor: Colors.grey[900],
-                          checkColor: Colors.white,
-                          value: true,
-                          onChanged: (value) {},
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: Constants.kPaddingHorizontalMain,
+                      right: Constants.kPaddingHorizontalMain,
+                    ),
+                    child: Column(
+                      children: [
+                        const TextfieldMain(),
+                        const TextfieldMain(),
+                        const Row(
+                          children: [
+                            Flexible(flex: 1, child: TextfieldMain()),
+                            SizedBox(
+                                width:
+                                    Constants.kPaddingBetweenElementsMain * 2),
+                            Flexible(flex: 1, child: TextfieldMain()),
+                          ],
                         ),
-                      ),
-                      const Flexible(
-                        flex: 3,
-                        child: Text(
-                          'Save this credit card details',
-                          style: TextStyle(
-                            color: Colors.black87,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            letterSpacing: 0.3,
-                          ),
-                          textAlign: TextAlign.start,
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Flexible(
+                              flex: 1,
+                              child: Checkbox(
+                                activeColor: Colors.grey[900],
+                                checkColor: Colors.white,
+                                value: true,
+                                onChanged: (value) {},
+                              ),
+                            ),
+                            const Flexible(
+                              flex: 3,
+                              child: Text(
+                                'Save this credit card details',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                  letterSpacing: 0.3,
+                                ),
+                                textAlign: TextAlign.start,
+                              ),
+                            ),
+                            Flexible(
+                              flex: 1,
+                              child: CupertinoSwitch(
+                                onChanged: (value) {},
+                                value: true,
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                      Flexible(
-                        flex: 1,
-                        child: CupertinoSwitch(
-                          onChanged: (value) {},
-                          value: true,
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),

@@ -65,6 +65,19 @@ class PaymentStepperStatusBar extends StatelessWidget {
         activeColor!,
         activeColor!,
       ];
+    } else if (paymentStatus == PaymentStatus.result) {
+      currentColors.clear();
+      currentColors = [
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+      ];
     } else if (paymentStatus == PaymentStatus.success) {
       currentColors.clear();
       currentColors = [

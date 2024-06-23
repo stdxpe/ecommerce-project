@@ -32,7 +32,9 @@ class PaymentSummary extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(
-                      vertical: Constants.kPaddingBetweenElementsMain),
+                    vertical: Constants.kPaddingBetweenElementsMain,
+                    horizontal: Constants.kPaddingBetweenElementsMain * 2,
+                  ),
                   child: ProductCardHorizontalMini(
                     product: Product(
                       title: '$index MOS Sale-Fit Shirt Shirtasdfasdfsdfgsdfg',

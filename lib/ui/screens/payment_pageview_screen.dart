@@ -4,10 +4,12 @@ import 'package:ecommerce_project/models/enums.dart';
 import 'package:ecommerce_project/ui/widgets/payment_related/payment_credit_card.dart';
 import 'package:ecommerce_project/ui/widgets/payment_related/payment_result.dart';
 import 'package:ecommerce_project/ui/widgets/payment_related/payment_shipping_address.dart';
-import 'package:ecommerce_project/ui/widgets/payment_related/payment_summary.dart';
 import 'package:ecommerce_project/ui/widgets/payment_related/payment_stepper_status_bar.dart';
+import 'package:ecommerce_project/ui/widgets/payment_related/payment_summary.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_payment_screen_main.dart';
+import 'package:ecommerce_project/utilities/k_constants.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 
 class PaymentPageviewScreen extends StatefulWidget {
   const PaymentPageviewScreen({super.key});
@@ -32,9 +34,19 @@ class _PaymentPageviewScreenState extends State<PaymentPageviewScreen> {
       PaymentStatus.shipping,
       PaymentStatus.payment,
       PaymentStatus.summary,
+      PaymentStatus.result,
       PaymentStatus.success,
       PaymentStatus.failed,
     ];
+
+    final Map<PaymentStatus, String> paymentStatusMap = {
+      PaymentStatus.shipping: Strings.kStringPaymentStatusShipping,
+      PaymentStatus.payment: Strings.kStringPaymentStatusPayment,
+      PaymentStatus.summary: Strings.kStringPaymentStatusSummary,
+      PaymentStatus.result: Strings.kStringPaymentStatusResult,
+      PaymentStatus.success: Strings.kStringPaymentStatusSuccess,
+      PaymentStatus.failed: Strings.kStringPaymentStatusFailed,
+    };
 
     void setPaymentStatus(
         {PaymentStatus enteredPaymentStatus = PaymentStatus.shipping}) {
@@ -81,7 +93,7 @@ class _PaymentPageviewScreenState extends State<PaymentPageviewScreen> {
         onPressedMain: () {
           /// TODO: Payment Operation is gonna-be-here.
           goNextPage();
-          setPaymentStatus(enteredPaymentStatus: PaymentStatus.success);
+          setPaymentStatus(enteredPaymentStatus: PaymentStatus.result);
           // setPaymentStatus(enteredPaymentStatus: PaymentStatus.failed);
         },
         onPressedOptional: () {
@@ -123,28 +135,36 @@ class _PaymentPageviewScreenState extends State<PaymentPageviewScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                children: [
-                  PaymentStepperStatusBar(
-                    paymentStatus: paymentStatusList[_screenIndex],
-                    onPressed: (manualClickedStatus) {
-                      setState(() {
-                        _paymentStatus = manualClickedStatus;
-                        print(
-                            'Status Stepper: Manual Clicked Payment Status: $manualClickedStatus');
-                        print(
-                            'Status Stepper: Payment Status: $_paymentStatus');
-                        _screenIndex =
-                            paymentStatusList.indexOf(manualClickedStatus);
-                        pageViewController.jumpToPage(_screenIndex);
-                      });
-                    },
-                  ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: Constants.kPaddingHorizontalMain,
+                  right: Constants.kPaddingHorizontalMain,
+                ),
+                child: Column(
+                  children: [
+                    PaymentStepperStatusBar(
+                      paymentStatus: paymentStatusList[_screenIndex],
+                      onPressed: (manualClickedStatus) {
+                        setState(() {
+                          _paymentStatus = manualClickedStatus;
+                          print(
+                              'Status Stepper: Manual Clicked Payment Status: $manualClickedStatus');
+                          print(
+                              'Status Stepper: Payment Status: $_paymentStatus');
+                          _screenIndex =
+                              paymentStatusList.indexOf(manualClickedStatus);
+                          pageViewController.jumpToPage(_screenIndex);
+                        });
+                      },
+                    ),
 
-                  /// PAYMENT TITLE
-                  const TitlePaymentScreenMain(
-                      title: 'Shipping', stepNumber: 1),
-                ],
+                    /// PAYMENT TITLE
+                    TitlePaymentScreenMain(
+                      title: paymentStatusMap[_paymentStatus]!,
+                      stepNumber: _screenIndex + 1,
+                    ),
+                  ],
+                ),
               ),
               Expanded(
                 child: PageView(

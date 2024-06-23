@@ -1,1 +1,1 @@
-enum PaymentStatus { shipping, payment, summary, success, failed }
+enum PaymentStatus { shipping, payment, summary, result, success, failed }
