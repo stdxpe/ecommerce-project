@@ -8,12 +8,14 @@ import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
 class BottomSheetPaymentSummary extends StatelessWidget {
-  final Function onPressed;
-  final String? buttonText;
+  final Function onPressedMain;
+  final Function? onPressedOptional;
+
+  final String? mainButtonText;
   final String? optionalButtonText;
 
-  final bool? isContentIncluded;
-  final bool? isBackButtonIncluded;
+  final bool? isSummaryContentIncluded;
+  final bool? isOptionalButtonIncluded;
 
   final double? paddingHorizontalMain;
   final double? paddingTop;
@@ -21,10 +23,11 @@ class BottomSheetPaymentSummary extends StatelessWidget {
   final double? paddingButtonTop;
 
   const BottomSheetPaymentSummary({
-    required this.onPressed,
-    this.isContentIncluded = false,
-    this.isBackButtonIncluded = false,
-    this.buttonText = Strings.kStringButtonContinue,
+    required this.onPressedMain,
+    this.onPressedOptional,
+    this.isSummaryContentIncluded = false,
+    this.isOptionalButtonIncluded = false,
+    this.mainButtonText = Strings.kStringButtonContinue,
     this.optionalButtonText = Strings.kStringButtonBack,
     this.paddingHorizontalMain = Constants.kPaddingButtonHorizontalMain,
     this.paddingTop = Constants.kPaddingButtonTopMain,
@@ -62,7 +65,7 @@ class BottomSheetPaymentSummary extends StatelessWidget {
           ),
           child: Column(
             children: [
-              if (isContentIncluded!)
+              if (isSummaryContentIncluded!)
                 Column(
                   children: [
                     /// TODO: Address and Credit Card info comes here.
@@ -98,8 +101,8 @@ class BottomSheetPaymentSummary extends StatelessWidget {
                 // color: Colors.red.withOpacity(0.5),
                 child: Row(
                   children: [
-                    /// TODO: Not sure of with back button
-                    if (isBackButtonIncluded!)
+                    /// OPTIONAL BACK BUTTON
+                    if (isOptionalButtonIncluded!)
                       Expanded(
                         child: ButtonMain(
                           paddingHorizontal: 0,
@@ -108,23 +111,24 @@ class BottomSheetPaymentSummary extends StatelessWidget {
                           textColor: Colors.white,
                           buttonColor: ColorPalette.kColorDarkButton,
                           onPressed: () {
-                            /// TODO: That shouldnt be navigator pop. Gotta need stepper like widget. For saving state
-                            Navigator.of(context).pop();
+                            if (isOptionalButtonIncluded!) onPressedOptional!();
                           },
                         ),
                       ),
-                    if (isBackButtonIncluded!)
+                    if (isOptionalButtonIncluded!)
                       const SizedBox(
                           width: Constants.kPaddingBetweenElementsMain * 2),
+
+                    /// MAIN BUTTON
                     Expanded(
                       child: ButtonMain(
                         paddingHorizontal: 0,
                         paddingVertical: 0,
-                        text: buttonText,
+                        text: mainButtonText,
                         textColor: Colors.white,
                         buttonColor: ColorPalette.kColorDarkButton,
                         onPressed: () {
-                          onPressed();
+                          onPressedMain();
                         },
                       ),
                     ),

@@ -41,10 +41,10 @@ class SearchBoxCustomDelegate extends SearchDelegate {
   //   super.dispose();
   // }
 
-  @override
-  PreferredSizeWidget? buildBottom(BuildContext context) {
-    return super.buildBottom(context);
-  }
+  // @override
+  // PreferredSizeWidget? buildBottom(BuildContext context) {
+  //   return super.buildBottom(context);
+  // }
 
   @override
   List<Widget>? buildActions(BuildContext context) {
@@ -87,6 +87,7 @@ class SearchBoxCustomDelegate extends SearchDelegate {
     //     size: 24,
     //   ),
     // );
+    return null;
   }
 
   @override

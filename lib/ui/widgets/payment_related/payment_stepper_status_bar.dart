@@ -2,34 +2,23 @@ import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/enums.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
-import 'package:ecommerce_project/ui/widgets/payment_status_bar_dot.dart';
+import 'package:ecommerce_project/ui/widgets/payment_related/payment_status_bar_dot.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
-class PaymentStepperStatusBar extends StatefulWidget {
-  late PaymentStatus? paymentStatus;
+class PaymentStepperStatusBar extends StatelessWidget {
+  PaymentStatus? paymentStatus;
+  final Function(PaymentStatus paymentStatus)? onPressed;
   final Color? activeColor;
   final Color? passiveColor;
 
   PaymentStepperStatusBar({
     this.paymentStatus = PaymentStatus.shipping,
+    // this.paymentStatus,
+    this.onPressed,
     this.activeColor = Colors.black,
     this.passiveColor = Colors.black26,
     super.key,
   });
-
-  @override
-  State<PaymentStepperStatusBar> createState() =>
-      _PaymentStepperStatusBarState();
-}
-
-class _PaymentStepperStatusBarState extends State<PaymentStepperStatusBar> {
-  late PaymentStatus paymentStatus;
-
-  @override
-  void initState() {
-    paymentStatus = widget.paymentStatus!;
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,84 +29,85 @@ class _PaymentStepperStatusBarState extends State<PaymentStepperStatusBar> {
     if (paymentStatus == PaymentStatus.shipping) {
       currentColors.clear();
       currentColors = [
-        widget.activeColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
+        activeColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
       ];
     } else if (paymentStatus == PaymentStatus.payment) {
       currentColors.clear();
       currentColors = [
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
       ];
     } else if (paymentStatus == PaymentStatus.summary) {
       currentColors.clear();
       currentColors = [
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
       ];
     } else if (paymentStatus == PaymentStatus.success) {
       currentColors.clear();
       currentColors = [
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
-        widget.activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
+        activeColor!,
       ];
     } else if (paymentStatus == PaymentStatus.failed) {
       currentColors.clear();
       currentColors = [
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
-        widget.passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
+        passiveColor!,
       ];
     }
 
     return Container(
+      clipBehavior: Clip.none,
       // color: Colors.green.withOpacity(0.5),
       padding: const EdgeInsets.only(
         left: Constants.kPaddingHorizontalMain * 2,
         right: Constants.kPaddingHorizontalMain * 2,
+        bottom: 15,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           ButtonCircularMain(
             onPressed: () {
-              setState(() {
-                paymentStatus = PaymentStatus.shipping;
-              });
+              paymentStatus = PaymentStatus.shipping;
+              onPressed!(paymentStatus!);
             },
             buttonSize: 30,
             iconSize: 20,
@@ -135,9 +125,8 @@ class _PaymentStepperStatusBarState extends State<PaymentStepperStatusBar> {
           ),
           ButtonCircularMain(
             onPressed: () {
-              setState(() {
-                paymentStatus = PaymentStatus.payment;
-              });
+              paymentStatus = PaymentStatus.payment;
+              onPressed!(paymentStatus!);
             },
             buttonSize: 30,
             iconSize: 20,
@@ -155,9 +144,8 @@ class _PaymentStepperStatusBarState extends State<PaymentStepperStatusBar> {
           ),
           ButtonCircularMain(
             onPressed: () {
-              setState(() {
-                paymentStatus = PaymentStatus.summary;
-              });
+              paymentStatus = PaymentStatus.summary;
+              onPressed!(paymentStatus!);
             },
             buttonSize: 30,
             iconSize: 20,
