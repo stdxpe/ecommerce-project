@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:ecommerce_project/models/user_model.dart';
-import 'package:ecommerce_project/ui/widgets/buttons/button_main.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_profile_screen_listile.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_profile_screen_switch_tile.dart';
 import 'package:ecommerce_project/ui/widgets/cards/user_profile_card.dart';
+import 'package:ecommerce_project/ui/widgets/payment_related/payment_credit_card.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_payment_summary_change.dart';
 import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
-import 'package:ecommerce_project/utilities/k_strings_en.dart';
-import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({
@@ -24,221 +24,194 @@ class ProfileScreen extends StatelessWidget {
       appBar: const AppBarMainNonSliver(
         backgroundColor: Colors.white,
       ),
-      body: Container(
-        // color: Colors.red.withOpacity(0.5),
-        height: size.height,
-        width: size.width,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              width: size.width,
-              // height: 100,
-              decoration: BoxDecoration(
-                color: ColorPalette.kColorModalBottomSheet,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black54.withOpacity(0.15),
-                    spreadRadius: 0.5,
-                    blurRadius: 10,
-                    offset: const Offset(0, 0),
+      body: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: size.width,
+            decoration: BoxDecoration(
+              color: ColorPalette.kColorModalBottomSheet,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black54.withOpacity(0.15),
+                  spreadRadius: 0.5,
+                  blurRadius: 10,
+                  offset: const Offset(0, 2),
+                ),
+              ],
+            ),
+            child: Container(
+              // color: Colors.red.withOpacity(0.5),
+              padding: const EdgeInsets.only(
+                left: Constants.kPaddingHorizontalMain,
+                right: Constants.kPaddingHorizontalMain,
+              ),
+              child: Stack(
+                children: [
+                  UserProfileCard(
+                    // isBorderElevated: true,
+                    elevation: 5,
+                    cardHeight: 65,
+                    cardWidth: size.width,
+                    userModel: UserModel(
+                      name: 'Jane Doe',
+                      email: 'verified@email.com',
+                      phone: '555 5432134',
+                      profilePhoto: 'assets/images/pose7.jpg',
+                    ),
+                  ),
+                  Positioned.fill(
+                    child: Align(
+                      alignment: Alignment.bottomRight,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.edit_note,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
+            ),
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              physics: const ClampingScrollPhysics(),
               child: Container(
-                // color: Colors.red.withOpacity(0.5),
+                // color: Colors.yellowAccent.withOpacity(0.5),
                 padding: const EdgeInsets.only(
                   left: Constants.kPaddingHorizontalMain,
                   right: Constants.kPaddingHorizontalMain,
-                  // bottom: Constants.kPaddingHorizontalMain,
+                  top: Constants.kPaddingHorizontalMain,
+                  bottom: Constants.kPaddingAppBottom,
                 ),
-                child: Stack(
+                child:
+
+                    /// CONTENT
+                    Column(
                   children: [
-                    UserProfileCard(
-                      // isBorderElevated: true,
-                      elevation: 5,
-                      cardHeight: 65,
-                      cardWidth: size.width,
-                      userModel: UserModel(
-                        name: 'Jane Doe',
-                        email: 'verified@email.com',
-                        phone: '555 5432134',
-                        profilePhoto: 'assets/images/pose7.jpg',
-                      ),
+                    const SizedBox(
+                        height: Constants.kPaddingHorizontalMain * 2),
+                    const Divider(
+                      thickness: 0.75,
+                      height: 0,
+                      color: Colors.black26,
                     ),
-                    Positioned.fill(
-                      child: Align(
-                        alignment: Alignment.bottomRight,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.edit_note,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
+                    ButtonProfileScreenListile(
+                      title: 'Orders',
+                      onPressed: () {},
+                    ),
+                    const Divider(
+                      thickness: 0.75,
+                      height: 0,
+                      color: Colors.black26,
+                    ),
+                    ButtonProfileScreenListile(
+                      title: 'Shipping Addresses',
+                      onPressed: () {},
+                    ),
+                    const Divider(
+                      thickness: 0.75,
+                      height: 0,
+                      color: Colors.black26,
+                    ),
+                    ButtonProfileScreenListile(
+                      title: 'Credit Cards',
+                      onPressed: () {},
+                    ),
+                    const Divider(
+                      thickness: 0.75,
+                      height: 0,
+                      color: Colors.black26,
+                    ),
+                    const ButtonProfileScreenSwitchTile(
+                      title: 'Dark Mode',
+                      switchValue: false,
+                    ),
+                    const Divider(
+                      thickness: 0.75,
+                      height: 0,
+                      color: Colors.black26,
+                    ),
+                    const ButtonProfileScreenSwitchTile(
+                      title: 'Notifications',
+                      switchValue: true,
+                    ),
+                    const Divider(
+                      thickness: 0.75,
+                      height: 0,
+                      color: Colors.black26,
+                    ),
+                    ButtonProfileScreenListile(
+                      title: 'Change Password',
+                      onPressed: () {},
+                    ),
+                    const Divider(
+                      thickness: 0.75,
+                      height: 0,
+                      color: Colors.black26,
+                    ),
+                    ButtonProfileScreenListile(
+                      title: 'About Us',
+                      onPressed: () {},
+                    ),
+                    const Divider(
+                      thickness: 0.75,
+                      height: 0,
+                      color: Colors.black26,
+                    ),
+                    ButtonProfileScreenListile(
+                      title: 'Sign Out',
+                      onPressed: () {},
+                    ),
+                    const Divider(
+                      thickness: 0.75,
+                      height: 0,
+                      color: Colors.black26,
+                    ),
+                    TitlePaymentSummaryChange(
+                      title: 'Shipping Address',
+                      subtext:
+                          '21st Greenday Street 100021\nNew York / Manhattan\nUnited States',
+                      onPressed: () {
+                        showCupertinoModalPopup(
+                          barrierDismissible: true,
+                          barrierColor: Colors.black.withOpacity(0.4),
+                          context: context,
+                          builder: (context) {
+                            return BottomSheet(
+                              constraints: BoxConstraints.loose(
+                                Size.fromHeight(
+                                  size.height * 0.75,
+                                ),
+                              ),
+                              // constraints: BoxConstraints.tightForFinite(height: 100),
+                              enableDrag: false,
+                              backgroundColor: Colors.red,
+                              shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.vertical(
+                                    top: Radius.circular(0.0)),
+                              ),
+                              onClosing: () {},
+                              builder: (context) {
+                                return PaymentCreditCard(
+                                  onPressedOptional: () {},
+                                  onPressedMain: () {},
+                                );
+                              },
+                            );
+                          },
+                        );
+                      },
                     ),
                   ],
                 ),
               ),
             ),
-            Expanded(
-              child: SingleChildScrollView(
-                physics: const ClampingScrollPhysics(),
-                child: Container(
-                  // color: Colors.yellowAccent.withOpacity(0.5),
-                  padding: const EdgeInsets.only(
-                    left: Constants.kPaddingHorizontalMain,
-                    right: Constants.kPaddingHorizontalMain,
-                    top: Constants.kPaddingHorizontalMain,
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      /// CONTENT
-                      Container(
-                        // color: Colors.green.withOpacity(0.5),
-                        child: Column(
-                          children: [
-                            Align(
-                              alignment: Alignment.bottomRight,
-                              child: Container(
-                                // color: Colors.red.withOpacity(0.5),
-                                child: Column(
-                                  // mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: [
-                                    const Divider(
-                                      thickness: 0.75,
-                                      height:
-                                          Constants.kPaddingContentAndContent,
-                                      color: Colors.black26,
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        const Text(
-                                          'Dark Mode',
-                                          style:
-                                              kUserProfileTextStyleSwitchIconTexts,
-                                        ),
-                                        CupertinoSwitch(
-                                          onChanged: (value) {},
-                                          value: true,
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        const Text(
-                                          'Notifications',
-                                          style:
-                                              kUserProfileTextStyleSwitchIconTexts,
-                                        ),
-                                        CupertinoSwitch(
-                                          onChanged: (value) {},
-                                          value: true,
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const Divider(
-                              thickness: 0.75,
-                              height: Constants.kPaddingContentAndContent,
-                              color: Colors.black26,
-                            ),
-                            TitlePaymentSummaryChange(
-                              title: 'Orders',
-                              subtext: 'You havent created an order yet',
-                              textButtonText: '',
-                              onPressed: () {},
-                            ),
-
-                            const Divider(
-                              thickness: 0.75,
-                              height: Constants.kPaddingContentAndContent,
-                              color: Colors.black26,
-                            ),
-
-                            /// TODO: Address and Credit Card info comes here.
-                            TitlePaymentSummaryChange(
-                              title: 'Shipping Address',
-                              subtext:
-                                  '21st Greenday Street 100021\nNew York / Manhattan\nUnited States',
-                              onPressed: () {},
-                            ),
-                            const Divider(
-                              thickness: 0.75,
-                              height: Constants.kPaddingContentAndContent,
-                              color: Colors.black26,
-                            ),
-
-                            TitlePaymentSummaryChange(
-                              title: 'Payment',
-                              subtext: '**** **** **** 5247',
-                              subTextStyle:
-                                  kPaymentScreenSummarySubtitleCreditCardTextStyle,
-                              onPressed: () {},
-                            ),
-
-                            const Divider(
-                              thickness: 0.75,
-                              height: Constants.kPaddingContentAndContent,
-                              color: Colors.black26,
-                            ),
-
-                            /// TODO: Address and Credit Card info comes here.
-                            TitlePaymentSummaryChange(
-                              title: 'Shipping Address',
-                              subtext:
-                                  '21st Greenday Street 100021\nNew York / Manhattan\nUnited States',
-                              onPressed: () {},
-                            ),
-                            const Divider(
-                              thickness: 0.75,
-                              height: Constants.kPaddingContentAndContent,
-                              color: Colors.black26,
-                            ),
-
-                            /// TODO: Address and Credit Card info comes here.
-                            TitlePaymentSummaryChange(
-                              title: 'Shipping Address',
-                              subtext:
-                                  '21st Greenday Street 100021\nNew York / Manhattan\nUnited States',
-                              onPressed: () {},
-                            ),
-                            const Divider(
-                              thickness: 0.75,
-                              height: Constants.kPaddingContentAndContent,
-                              color: Colors.black26,
-                            ),
-                          ],
-                        ),
-                      ),
-                      ButtonMain(
-                        onPressed: () {},
-                        text: Strings.kStringSignOut,
-                        textColor: Colors.white,
-                        buttonColor: ColorPalette.kColorDarkButton,
-                        paddingHorizontal: 0,
-                      ),
-                      const SizedBox(height: Constants.kPaddingAppBottom),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

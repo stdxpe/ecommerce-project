@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/product.dart';
-import 'package:ecommerce_project/ui/widgets/buttons/button_collection_title_and_show_all.dart';
+import 'package:ecommerce_project/ui/widgets/titles/title_collection_and_see_all_button.dart';
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_integrated.dart';
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_card_home_screen.dart';
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_widget_main.dart';
@@ -186,7 +186,7 @@ class HomeScreen extends StatelessWidget {
               bottom: Constants.kPaddingTitleAndContent,
             ),
             sliver: SliverToBoxAdapter(
-              child: ButtonCollectionTitleAndShowAll(
+              child: TitleCollectionAndSeeAllButton(
                 title: 'Gridview',
                 buttonTitle: Strings.kStringButtonCollectionTitle,
                 onPressed: () {},

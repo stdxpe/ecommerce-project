@@ -337,7 +337,7 @@ const kUserProfileTextStyleSubtitle = TextStyle(
   height: 1.2,
 );
 
-const kUserProfileTextStyleSwitchIconTexts = TextStyle(
+const kUserProfileListItemsMainTextStyle = TextStyle(
   color: Colors.black,
   // shadows: [kBoxShadowLightText],
   fontSize: 14,

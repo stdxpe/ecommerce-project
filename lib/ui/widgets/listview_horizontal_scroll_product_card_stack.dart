@@ -5,7 +5,7 @@ import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/ui/widgets/cards/product_card_stack.dart';
 import 'package:ecommerce_project/models/product.dart';
-import 'package:ecommerce_project/ui/widgets/buttons/button_collection_title_and_show_all.dart';
+import 'package:ecommerce_project/ui/widgets/titles/title_collection_and_see_all_button.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
 class ListviewHorizontalScrollProductCardStack extends StatelessWidget {
@@ -42,7 +42,7 @@ class ListviewHorizontalScrollProductCardStack extends StatelessWidget {
             right: paddingHorizontalMain! + paddingBetweenElementsMain!,
             bottom: Constants.kPaddingTitleAndContent,
           ),
-          child: ButtonCollectionTitleAndShowAll(
+          child: TitleCollectionAndSeeAllButton(
             title: collectionTitle,
             buttonTitle: Strings.kStringButtonCollectionTitle,
             onPressed: () {},

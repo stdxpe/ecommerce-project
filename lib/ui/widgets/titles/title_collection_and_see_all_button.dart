@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
-class ButtonCollectionTitleAndShowAll extends StatelessWidget {
+class TitleCollectionAndSeeAllButton extends StatelessWidget {
   final String title;
   final String buttonTitle;
   final Function onPressed;
 
-  const ButtonCollectionTitleAndShowAll({
+  const TitleCollectionAndSeeAllButton({
     required this.title,
     required this.buttonTitle,
     required this.onPressed,
