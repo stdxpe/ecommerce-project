@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
+import 'package:ecommerce_project/models/address.dart';
+import 'package:ecommerce_project/models/credit_card.dart';
+import 'package:ecommerce_project/models/order.dart';
+import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/models/user_model.dart';
+import 'package:ecommerce_project/ui/screens/credit_cards_screen.dart';
+import 'package:ecommerce_project/ui/screens/orders_screen.dart';
+import 'package:ecommerce_project/ui/screens/shipping_addresses_screen.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_profile_screen_listile.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_profile_screen_switch_tile.dart';
 import 'package:ecommerce_project/ui/widgets/cards/user_profile_card.dart';
-import 'package:ecommerce_project/ui/widgets/payment_related/payment_credit_card.dart';
+import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
-import 'package:ecommerce_project/ui/widgets/titles/title_payment_summary_change.dart';
 import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 
@@ -101,7 +106,43 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     ButtonProfileScreenListile(
                       title: 'Orders',
-                      onPressed: () {},
+                      onPressed: () {
+                        PlatformAdaptiveNavigator().push(
+                          context,
+                          OrdersScreen(
+                            ordersList: [
+                              Order(
+                                  id: '#235399423',
+                                  createdAt: '13.03.2024',
+                                  totalPrice: 102.99,
+                                  products: [
+                                    Product(
+                                      title: 'QTT Crop-Fit Shirt',
+                                      price: 49.99,
+                                      imageUrl: 'assets/images/pose2.jpg',
+                                    ),
+                                    Product(
+                                      title: 'MOS Sale-Fit Shirt',
+                                      price: 19.99,
+                                      imageUrl: 'assets/images/pose3.jpg',
+                                    ),
+                                  ]),
+                              Order(
+                                id: '#847793203',
+                                createdAt: '19.05.2024',
+                                totalPrice: 293.03,
+                                products: [
+                                  Product(
+                                    title: 'QTT Crop-Fit ShirtShirtShirt',
+                                    price: 19.99,
+                                    imageUrl: 'assets/images/pose2.jpg',
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        );
+                      },
                     ),
                     const Divider(
                       thickness: 0.75,
@@ -110,7 +151,25 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     ButtonProfileScreenListile(
                       title: 'Shipping Addresses',
-                      onPressed: () {},
+                      onPressed: () {
+                        PlatformAdaptiveNavigator().push(
+                          context,
+                          ShippingAddressesScreen(
+                            addressList: [
+                              Address(
+                                addressTitle: 'Home Address',
+                                addressText:
+                                    '21st Greenday Street 100021\nNew York / Manhattan\nUnited States',
+                              ),
+                              Address(
+                                addressTitle: 'Work Address',
+                                addressText:
+                                    '28st Greenday Street 100021\nNew York / Manhattan\nUnited States',
+                              ),
+                            ],
+                          ),
+                        );
+                      },
                     ),
                     const Divider(
                       thickness: 0.75,
@@ -119,7 +178,27 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     ButtonProfileScreenListile(
                       title: 'Credit Cards',
-                      onPressed: () {},
+                      onPressed: () {
+                        PlatformAdaptiveNavigator().push(
+                          context,
+                          CreditCardsScreen(
+                            creditCardsList: [
+                              CreditCard(
+                                name: 'Jane Doe',
+                                number: '**** **** **** 2342',
+                                date: '',
+                                cvv: '',
+                              ),
+                              CreditCard(
+                                name: 'Marianne Smith',
+                                number: '**** **** **** 9984',
+                                date: '',
+                                cvv: '',
+                              ),
+                            ],
+                          ),
+                        );
+                      },
                     ),
                     const Divider(
                       thickness: 0.75,
@@ -170,41 +249,6 @@ class ProfileScreen extends StatelessWidget {
                       thickness: 0.75,
                       height: 0,
                       color: Colors.black26,
-                    ),
-                    TitlePaymentSummaryChange(
-                      title: 'Shipping Address',
-                      subtext:
-                          '21st Greenday Street 100021\nNew York / Manhattan\nUnited States',
-                      onPressed: () {
-                        showCupertinoModalPopup(
-                          barrierDismissible: true,
-                          barrierColor: Colors.black.withOpacity(0.4),
-                          context: context,
-                          builder: (context) {
-                            return BottomSheet(
-                              constraints: BoxConstraints.loose(
-                                Size.fromHeight(
-                                  size.height * 0.75,
-                                ),
-                              ),
-                              // constraints: BoxConstraints.tightForFinite(height: 100),
-                              enableDrag: false,
-                              backgroundColor: Colors.red,
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.vertical(
-                                    top: Radius.circular(0.0)),
-                              ),
-                              onClosing: () {},
-                              builder: (context) {
-                                return PaymentCreditCard(
-                                  onPressedOptional: () {},
-                                  onPressedMain: () {},
-                                );
-                              },
-                            );
-                          },
-                        );
-                      },
                     ),
                   ],
                 ),

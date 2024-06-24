@@ -346,6 +346,22 @@ const kUserProfileListItemsMainTextStyle = TextStyle(
   height: 1.5,
 );
 
+const kOrderItemTitleTextStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 15,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 0.4,
+  height: 1.2,
+);
+
+const kOrderItemSecondaryTextStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 11,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0.1,
+  height: 1.2,
+);
+
 /// Box Shadows
 ///
 var kBoxShadowLightText = BoxShadow(

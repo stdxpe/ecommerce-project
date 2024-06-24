@@ -21,6 +21,7 @@ class ButtonProfileScreenListile extends StatelessWidget {
       },
       child: Container(
           // color: Colors.red.withOpacity(0.5),
+          color: Colors.transparent,
           padding: const EdgeInsets.symmetric(vertical: 17.5, horizontal: 2.5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

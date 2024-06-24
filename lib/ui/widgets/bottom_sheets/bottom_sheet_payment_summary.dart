@@ -77,7 +77,7 @@ class BottomSheetPaymentSummary extends StatelessWidget {
                     ),
                     const Divider(
                       thickness: 0.75,
-                      height: Constants.kPaddingContentAndContent,
+                      height: 0,
                       color: Colors.black26,
                     ),
 
@@ -90,7 +90,7 @@ class BottomSheetPaymentSummary extends StatelessWidget {
                     ),
                     const Divider(
                       thickness: 0.75,
-                      height: Constants.kPaddingContentAndContent,
+                      height: 0,
                       color: Colors.black26,
                     ),
 
