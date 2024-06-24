@@ -55,19 +55,19 @@ class GridviewProductCardVertical extends StatelessWidget {
                 topText: 'MINX',
                 product: productList[index],
               ),
-              Positioned.fill(
-                child: Align(
-                  alignment: Alignment.topRight,
-                  child: Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: ButtonAddToWishlist(
-                      onPressed: () {},
-                      // buttonSize: 30,
-                      // iconSize: 20,
-                    ),
-                  ),
-                ),
-              ),
+              // Positioned.fill(
+              //   child: Align(
+              //     alignment: Alignment.topRight,
+              //     child: Padding(
+              //       padding: const EdgeInsets.all(5.0),
+              //       child: ButtonAddToWishlist(
+              //         onPressed: () {},
+              //         // buttonSize: 30,
+              //         // iconSize: 20,
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           );
         },

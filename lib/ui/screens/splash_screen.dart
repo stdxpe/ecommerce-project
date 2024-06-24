@@ -89,7 +89,7 @@ class SplashScreen extends StatelessWidget {
                           onPressed: () {
                             PlatformAdaptiveNavigator().pushAndRemoveUntil(
                               context,
-                              const MainScreenWithAppBarAndBottomNavBar(),
+                              const MainScreen(),
                             );
                           },
                           text: Strings.kStringFacebookButtonText,
@@ -112,7 +112,7 @@ class SplashScreen extends StatelessWidget {
                       onPressed: () {
                         PlatformAdaptiveNavigator().pushAndRemoveUntil(
                           context,
-                          const MainScreenWithAppBarAndBottomNavBar(),
+                          const MainScreen(),
                         );
                       },
                       buttonText: Strings.kStringSignIn,

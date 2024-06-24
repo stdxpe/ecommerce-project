@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_project/ui/screens/home_screen.dart';
+import 'package:ecommerce_project/ui/screens/main_screen.dart';
 import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_payment_summary.dart';
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_card_payment_result_screen.dart';
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_widget_main.dart';
@@ -45,7 +45,7 @@ class _PaymentResultState extends State<PaymentResult> {
               /// otherwise gotta need popUntil navigator.
               ? PlatformAdaptiveNavigator().pushAndRemoveUntil(
                   context,
-                  const HomeScreen(),
+                  MainScreen(),
                 )
               : Navigator.of(context).pop();
 

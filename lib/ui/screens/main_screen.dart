@@ -6,16 +6,14 @@ import 'package:ecommerce_project/ui/screens/profile_screen.dart';
 import 'package:ecommerce_project/ui/screens/wishlist_screen.dart';
 import 'package:ecommerce_project/ui/widgets/bottom_navigation_bar_custom.dart';
 
-class MainScreenWithAppBarAndBottomNavBar extends StatefulWidget {
-  const MainScreenWithAppBarAndBottomNavBar({super.key});
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<MainScreenWithAppBarAndBottomNavBar> createState() =>
-      _MainScreenWithAppBarAndBottomNavBarState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
-class _MainScreenWithAppBarAndBottomNavBarState
-    extends State<MainScreenWithAppBarAndBottomNavBar> {
+class _MainScreenState extends State<MainScreen> {
   int screenIndex = 0;
   final List<Widget> _screens = [
     const HomeScreen(),

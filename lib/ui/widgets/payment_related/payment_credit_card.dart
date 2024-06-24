@@ -5,14 +5,19 @@ import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_payment_
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_credit_cards.dart';
 import 'package:ecommerce_project/ui/widgets/textfields/textfield_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 
 class PaymentCreditCard extends StatelessWidget {
   final Function onPressedMain;
-  final Function onPressedOptional;
+  final Function? onPressedOptional;
+  final String? buttonText;
+  final bool? isPaymentScreen;
 
   const PaymentCreditCard({
     required this.onPressedMain,
-    required this.onPressedOptional,
+    this.onPressedOptional,
+    this.buttonText = Strings.kStringButtonContinue,
+    this.isPaymentScreen = true,
     super.key,
   });
 
@@ -53,42 +58,43 @@ class PaymentCreditCard extends StatelessWidget {
                             Flexible(flex: 1, child: TextfieldMain()),
                           ],
                         ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Flexible(
-                              flex: 1,
-                              child: Checkbox(
-                                activeColor: Colors.grey[900],
-                                checkColor: Colors.white,
-                                value: true,
-                                onChanged: (value) {},
-                              ),
-                            ),
-                            const Flexible(
-                              flex: 3,
-                              child: Text(
-                                'Save this credit card details',
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  letterSpacing: 0.3,
+                        if (isPaymentScreen!)
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Flexible(
+                                flex: 1,
+                                child: Checkbox(
+                                  activeColor: Colors.grey[900],
+                                  checkColor: Colors.white,
+                                  value: true,
+                                  onChanged: (value) {},
                                 ),
-                                textAlign: TextAlign.start,
                               ),
-                            ),
-                            Flexible(
-                              flex: 1,
-                              child: CupertinoSwitch(
-                                onChanged: (value) {},
-                                value: true,
+                              const Flexible(
+                                flex: 3,
+                                child: Text(
+                                  'Save this credit card details',
+                                  style: TextStyle(
+                                    color: Colors.black87,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                    letterSpacing: 0.3,
+                                  ),
+                                  textAlign: TextAlign.start,
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
+                              Flexible(
+                                flex: 1,
+                                child: CupertinoSwitch(
+                                  onChanged: (value) {},
+                                  value: true,
+                                ),
+                              ),
+                            ],
+                          ),
                       ],
                     ),
                   ),
@@ -101,12 +107,13 @@ class PaymentCreditCard extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: BottomSheetPaymentSummary(
+              mainButtonText: buttonText,
               onPressedMain: () {
                 onPressedMain();
               },
-              isOptionalButtonIncluded: true,
+              isOptionalButtonIncluded: isPaymentScreen! ? true : false,
               onPressedOptional: () {
-                onPressedOptional();
+                onPressedOptional!();
               },
             ),
           ),

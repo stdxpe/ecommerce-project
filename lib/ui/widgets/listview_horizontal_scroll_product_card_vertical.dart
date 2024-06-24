@@ -77,19 +77,19 @@ class ListviewHorizontalScrollProductCardVertical extends StatelessWidget {
                     topText: 'MINX',
                     product: productList[index],
                   ),
-                  Positioned.fill(
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: Padding(
-                        padding: const EdgeInsets.all(5.0),
-                        child: ButtonAddToWishlist(
-                          onPressed: () {},
-                          buttonSize: cardWidth! * 0.19,
-                          iconSize: cardWidth! * 0.12,
-                        ),
-                      ),
-                    ),
-                  ),
+                  // Positioned.fill(
+                  //   child: Align(
+                  //     alignment: Alignment.topRight,
+                  //     child: Padding(
+                  //       padding: const EdgeInsets.all(5.0),
+                  //       child: ButtonAddToWishlist(
+                  //         onPressed: () {},
+                  //         buttonSize: cardWidth! * 0.19,
+                  //         iconSize: cardWidth! * 0.12,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ),

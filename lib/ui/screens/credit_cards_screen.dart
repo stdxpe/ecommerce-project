@@ -52,6 +52,8 @@ class CreditCardsScreen extends StatelessWidget {
                       contextParam: context,
                       sizeParam: size,
                       screen: PaymentCreditCard(
+                        buttonText: Strings.kStringTitleCreditCardsButton,
+                        isPaymentScreen: false,
                         onPressedOptional: () {},
                         onPressedMain: () {},
                       ),

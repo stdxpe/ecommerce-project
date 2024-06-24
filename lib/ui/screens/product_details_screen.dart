@@ -4,6 +4,7 @@ import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/ui/screens/reviews_screen.dart';
 import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_add_to_shopping_cart.dart';
 import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_general_modal_sheet.dart';
+import 'package:ecommerce_project/ui/widgets/buttons/button_add_to_wishlist.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_static.dart';
 import 'package:ecommerce_project/ui/widgets/platform_adaptive_widgets/platform_adaptive_navigator.dart';
@@ -143,10 +144,8 @@ class ProductDetailsScreen extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  ButtonCircularMain(
+                                  ButtonAddToWishlist(
                                     onPressed: () {},
-                                    icon: Icons.favorite,
-                                    iconColor: Colors.red,
                                   ),
                                   const SizedBox(height: 15),
                                   ButtonCircularMain(

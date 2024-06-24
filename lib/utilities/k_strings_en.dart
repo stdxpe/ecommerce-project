@@ -75,4 +75,5 @@ class Strings {
   static const kStringTitleCreditCards = 'Credit Cards';
   static const kStringTitleOrders = 'Orders';
   static const kStringTitleTrackingOrder = 'Tracking Order';
+  static const kStringTitleCreditCardsButton = 'Save Credit Card';
 }

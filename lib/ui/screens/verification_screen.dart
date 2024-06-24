@@ -53,7 +53,7 @@ class VerificationScreen extends StatelessWidget {
                         onPressed: () {
                           PlatformAdaptiveNavigator().pushAndRemoveUntil(
                             context,
-                            const MainScreenWithAppBarAndBottomNavBar(),
+                            const MainScreen(),
                           );
                         },
                         buttonText: Strings.kStringButtonVerificationResendCode,
