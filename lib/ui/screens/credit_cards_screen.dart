@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 import 'package:ecommerce_project/models/credit_card.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_general_modal_sheet.dart';
 import 'package:ecommerce_project/ui/widgets/payment_related/payment_credit_card.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_main.dart';
@@ -48,33 +48,13 @@ class CreditCardsScreen extends StatelessWidget {
                   title: Strings.kStringTitleCreditCards,
                   optionalRightIcon: Icons.add,
                   onPressed: () {
-                    showCupertinoModalPopup(
-                      barrierDismissible: true,
-                      barrierColor: Colors.black.withOpacity(0.4),
-                      context: context,
-                      builder: (context) {
-                        return BottomSheet(
-                          constraints: BoxConstraints.loose(
-                            Size.fromHeight(
-                              size.height * 0.75,
-                            ),
-                          ),
-                          // constraints: BoxConstraints.tightForFinite(height: 100),
-                          enableDrag: false,
-                          backgroundColor: Colors.red,
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.vertical(
-                                top: Radius.circular(0.0)),
-                          ),
-                          onClosing: () {},
-                          builder: (context) {
-                            return PaymentCreditCard(
-                              onPressedOptional: () {},
-                              onPressedMain: () {},
-                            );
-                          },
-                        );
-                      },
+                    BottomSheetGeneralModalSheet().show(
+                      contextParam: context,
+                      sizeParam: size,
+                      screen: PaymentCreditCard(
+                        onPressedOptional: () {},
+                        onPressedMain: () {},
+                      ),
                     );
                   },
                 ),

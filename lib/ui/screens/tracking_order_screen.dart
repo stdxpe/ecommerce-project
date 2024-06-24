@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:collection/collection.dart';
 
 import 'package:ecommerce_project/models/order.dart';
 import 'package:ecommerce_project/models/product.dart';
@@ -85,29 +86,37 @@ class TrackingOrderScreen extends StatelessWidget {
                       clipBehavior: Clip.hardEdge,
                       children: [
                         ProductCardHorizontal(
+                          cardHeight: 65,
+                          cardWidth: size.width,
+                          isBorderElevated: false,
+                          bottomText: 'Size: M  |  Color: Yellow',
                           product: Product(
                             title: order.products[index].title,
                             price: order.products[index].price,
                             imageUrl: order.products[index].imageUrl,
                           ),
-                          cardHeight: 65,
-                          cardWidth: size.width,
-                          isBorderElevated: true,
-                          bottomText: 'Size: M  |  Color: Yellow',
                         ),
-                        Positioned.fill(
+                        const Positioned.fill(
                           child: Align(
                             alignment: Alignment.bottomRight,
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(
+                              padding: EdgeInsets.symmetric(
                                 horizontal: 5.0,
                                 vertical: 2.5,
                               ),
                               child: Text(
-                                'x${order.products.length}',
+                                '${1} x',
+
+                                /// TODO: There is a mess right here about grouping same items.
+                                // '${order.products.where((element) {
+                                //   // groupBy()
+                                //   // element.id==
+                                // },) x',
+                                // ${order.products.length},
+
                                 overflow: TextOverflow.ellipsis,
                                 maxLines: 1,
-                                style: kCardTextStylePrimary,
+                                style: kWishlistItemsTextStylePrimary,
                               ),
                             ),
                           ),

@@ -5,15 +5,24 @@ import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
-class ButtonShoppingCartItemCounter extends StatelessWidget {
-  final int itemCount;
-  const ButtonShoppingCartItemCounter({
-    required this.itemCount,
+class ButtonShoppingCartItemCounter extends StatefulWidget {
+  int itemCount;
+  ButtonShoppingCartItemCounter({
+    this.itemCount = 1,
     super.key,
   });
 
   @override
+  State<ButtonShoppingCartItemCounter> createState() =>
+      _ButtonShoppingCartItemCounterState();
+}
+
+class _ButtonShoppingCartItemCounterState
+    extends State<ButtonShoppingCartItemCounter> {
+  @override
   Widget build(BuildContext context) {
+    // print('First: ${widget.itemCount}');
+
     return Container(
       // width: 65,
       decoration: BoxDecoration(
@@ -35,7 +44,11 @@ class ButtonShoppingCartItemCounter extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           ButtonCircularMain(
-            onPressed: () {},
+            onPressed: () {
+              setState(() {
+                if (widget.itemCount > 1) widget.itemCount--;
+              });
+            },
             buttonColor: Colors.white,
             buttonSize: 30,
             iconSize: 15,
@@ -44,11 +57,15 @@ class ButtonShoppingCartItemCounter extends StatelessWidget {
             icon: CupertinoIcons.minus,
           ),
           Text(
-            itemCount.toString(),
+            widget.itemCount.toString(),
             style: kWishlistItemsTextStylePrimary,
           ),
           ButtonCircularMain(
-            onPressed: () {},
+            onPressed: () {
+              setState(() {
+                widget.itemCount++;
+              });
+            },
             buttonColor: Colors.white,
             buttonSize: 30,
             iconSize: 15,

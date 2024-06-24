@@ -135,7 +135,7 @@ class ProfileScreen extends StatelessWidget {
                                   Product(
                                     title: 'QTT Crop-Fit ShirtShirtShirt',
                                     price: 19.99,
-                                    imageUrl: 'assets/images/pose2.jpg',
+                                    imageUrl: 'assets/images/pose6.jpg',
                                   ),
                                 ],
                               ),

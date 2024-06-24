@@ -1,3 +1,4 @@
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_general_modal_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -47,34 +48,47 @@ class ShippingAddressesScreen extends StatelessWidget {
                   title: Strings.kStringTitleShippingAddresses,
                   optionalRightIcon: Icons.add,
                   onPressed: () {
-                    showCupertinoModalPopup(
-                      barrierDismissible: true,
-                      barrierColor: Colors.black.withOpacity(0.4),
-                      context: context,
-                      builder: (context) {
-                        return BottomSheet(
-                          constraints: BoxConstraints.loose(
-                            Size.fromHeight(
-                              size.height * 0.75,
-                            ),
-                          ),
-                          // constraints: BoxConstraints.tightForFinite(height: 100),
-                          enableDrag: false,
-                          backgroundColor: Colors.red,
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.vertical(
-                                top: Radius.circular(0.0)),
-                          ),
-                          onClosing: () {},
-                          builder: (context) {
-                            return PaymentShippingAddress(
-                              onPressedOptional: () {},
-                              onPressedMain: () {},
-                            );
-                          },
-                        );
-                      },
+                    BottomSheetGeneralModalSheet().show(
+                      contextParam: context,
+                      sizeParam: size,
+                      screen: PaymentShippingAddress(
+                        onPressedOptional: () {},
+                        onPressedMain: () {},
+                      ),
                     );
+                    // showCupertinoModalPopup(
+                    //   barrierDismissible: true,
+                    //   barrierColor: Colors.black.withOpacity(0.4),
+                    //   context: context,
+                    //   builder: (context) {
+                    //     return BottomSheet(
+                    //       constraints: BoxConstraints.loose(
+                    //         Size.fromHeight(
+                    //           size.height * 0.75,
+                    //         ),
+                    //       ),
+                    //       // constraints: BoxConstraints.tightForFinite(height: 100),
+                    //       enableDrag: false,
+                    //       // backgroundColor: Colors.red,
+                    //       backgroundColor: Colors.white,
+                    //       shape: const RoundedRectangleBorder(
+                    //         borderRadius: BorderRadius.vertical(
+                    //             top: Radius.circular(0.0)),
+                    //       ),
+                    //       onClosing: () {},
+                    //       builder: (context) {
+                    //         return Padding(
+                    //           padding: const EdgeInsets.only(top: 20.0),
+                    //           child:
+                    //             PaymentShippingAddress(
+                    //             onPressedOptional: () {},
+                    //             onPressedMain: () {},
+                    //           ),
+                    //         );
+                    //       },
+                    //     );
+                    //   },
+                    // );
                   },
                 ),
               ),

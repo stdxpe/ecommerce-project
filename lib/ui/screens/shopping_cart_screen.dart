@@ -43,7 +43,7 @@ class ShoppingCartScreen extends StatelessWidget {
                     bottomText: 'Size: M  |  Color: Grey',
                     cardWidth: size.width,
                     paddingBottom: 0,
-                    optionalBottomWidget: const Positioned.fill(
+                    optionalBottomWidget: Positioned.fill(
                       child: Align(
                         alignment: Alignment.bottomRight,
                         child: ButtonShoppingCartItemCounter(itemCount: 2),
