@@ -3,14 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_payment_summary.dart';
 import 'package:ecommerce_project/ui/widgets/textfields/textfield_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
+import 'package:ecommerce_project/utilities/k_strings_en.dart';
 
 class PaymentShippingAddress extends StatelessWidget {
+  final String? buttonText;
   final Function onPressedMain;
   final Function? onPressedOptional;
 
   const PaymentShippingAddress({
     required this.onPressedMain,
     this.onPressedOptional,
+    this.buttonText = Strings.kStringButtonContinue,
     super.key,
   });
 
@@ -47,6 +50,7 @@ class PaymentShippingAddress extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: BottomSheetPaymentSummary(
+              mainButtonText: buttonText,
               onPressedMain: () {
                 onPressedMain();
               },

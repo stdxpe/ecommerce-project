@@ -1,8 +1,7 @@
-import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_general_modal_sheet.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 import 'package:ecommerce_project/models/address.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_general_modal_sheet.dart';
 import 'package:ecommerce_project/ui/widgets/payment_related/payment_shipping_address.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_main.dart';
@@ -45,13 +44,14 @@ class ShippingAddressesScreen extends StatelessWidget {
                   bottom: Constants.kPaddingMainTitleAndContent,
                 ),
                 child: TitleMain(
-                  title: Strings.kStringTitleShippingAddresses,
+                  title: Strings.kStringTitleAddresses,
                   optionalRightIcon: Icons.add,
                   onPressed: () {
                     BottomSheetGeneralModalSheet().show(
                       contextParam: context,
                       sizeParam: size,
                       screen: PaymentShippingAddress(
+                        buttonText: Strings.kStringTitleAddressesButton,
                         onPressedOptional: () {},
                         onPressedMain: () {},
                       ),

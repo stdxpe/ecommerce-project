@@ -71,9 +71,10 @@ class Strings {
       'An error occured during the process. Please try again.';
 
   /// PROFILE SCREEN
-  static const kStringTitleShippingAddresses = 'Addresses';
+  static const kStringTitleAddresses = 'Addresses';
   static const kStringTitleCreditCards = 'Credit Cards';
   static const kStringTitleOrders = 'Orders';
   static const kStringTitleTrackingOrder = 'Tracking Order';
   static const kStringTitleCreditCardsButton = 'Save Credit Card';
+  static const kStringTitleAddressesButton = 'Save Address';
 }
