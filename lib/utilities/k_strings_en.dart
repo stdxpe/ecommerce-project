@@ -72,9 +72,10 @@ class Strings {
 
   /// PROFILE SCREEN
   static const kStringTitleAddresses = 'Addresses';
-  static const kStringTitleCreditCards = 'Credit Cards';
+  static const kStringTitleCreditCards = 'Cards';
   static const kStringTitleOrders = 'Orders';
   static const kStringTitleTrackingOrder = 'Tracking Order';
   static const kStringTitleCreditCardsButton = 'Save Credit Card';
   static const kStringTitleAddressesButton = 'Save Address';
+  static const kStringTitleProfileButton = 'Save Profile';
 }

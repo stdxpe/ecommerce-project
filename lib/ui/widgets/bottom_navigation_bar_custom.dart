@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
 import 'package:ecommerce_project/utilities/k_color_palette.dart';
+import 'package:ecommerce_project/utilities/k_constants.dart';
 
 class BottomNavigationBarCustom extends StatefulWidget {
   final Function(int index) onPressed;
@@ -81,7 +82,11 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
+            margin: const EdgeInsets.symmetric(
+              // horizontal: 15.0,
+              horizontal: Constants.kPaddingButtonHorizontalMain,
+              vertical: 30,
+            ),
             width: widget.width,
             height: widget.height,
             decoration: BoxDecoration(
@@ -89,10 +94,11 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
               color: ColorPalette.kColorDarkButton,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.white.withOpacity(0.5),
+                  blurStyle: BlurStyle.normal,
+                  color: Colors.black54.withOpacity(0.5),
                   spreadRadius: 5,
                   blurRadius: 10,
-                  offset: const Offset(0, 0),
+                  offset: const Offset(0, 3.5),
                 ),
               ],
             ),
@@ -102,19 +108,17 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
                 children: [
+                  const SizedBox(width: 15),
+
                   /// HOME ICON
                   Container(
-                    margin: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(0),
                     child: ButtonCircularMain(
                       onPressed: () {
                         setState(() {
                           currentIndex = 0;
                         });
                         widget.onPressed(currentIndex);
-                        // PlatformAdaptiveNavigator().push(
-                        //   context,
-                        //   const HomeScreen(),
-                        // );
                       },
                       alternativeWidgetContent: SvgPicture.asset(
                         'assets/icons/home-icon.svg',
@@ -122,23 +126,20 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
                         color: _colorSelector(0),
                       ),
                       buttonColor: ColorPalette.kColorDarkButton,
-                      // buttonSize: 30,
+                      elevation: 0,
+                      elevationColor: Colors.transparent,
                     ),
                   ),
 
                   /// SEARCH ICON
                   Container(
-                    margin: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(0),
                     child: ButtonCircularMain(
                       onPressed: () {
                         setState(() {
                           currentIndex = 1;
                         });
                         widget.onPressed(currentIndex);
-                        // PlatformAdaptiveNavigator().push(
-                        //   context,
-                        //   const DiscoverScreen(),
-                        // );
                       },
                       alternativeWidgetContent: SvgPicture.asset(
                         'assets/icons/loupe-icon.svg',
@@ -146,22 +147,20 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
                         color: _colorSelector(1),
                       ),
                       buttonColor: ColorPalette.kColorDarkButton,
+                      elevation: 0,
+                      elevationColor: Colors.transparent,
                     ),
                   ),
 
                   /// WISHLIST ICON
                   Container(
-                    margin: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(0),
                     child: ButtonCircularMain(
                       onPressed: () {
                         setState(() {
                           currentIndex = 2;
                         });
                         widget.onPressed(currentIndex);
-                        // PlatformAdaptiveNavigator().push(
-                        //   context,
-                        //   const WishlistScreen(),
-                        // );
                       },
                       alternativeWidgetContent: SvgPicture.asset(
                         'assets/icons/heart-icon.svg',
@@ -169,24 +168,21 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
                         color: _colorSelector(2),
                       ),
                       buttonColor: ColorPalette.kColorDarkButton,
-
+                      elevation: 0,
+                      elevationColor: Colors.transparent,
                       // isNotificationOn: true,
                     ),
                   ),
 
                   /// PROFILE ICON
                   Container(
-                    margin: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(0),
                     child: ButtonCircularMain(
                       onPressed: () {
                         setState(() {
                           currentIndex = 3;
                         });
                         widget.onPressed(currentIndex);
-                        // PlatformAdaptiveNavigator().push(
-                        //   context,
-                        //   const ProfileScreen(),
-                        // );
                       },
                       alternativeWidgetContent: SvgPicture.asset(
                         'assets/icons/user-icon.svg',
@@ -194,8 +190,11 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
                         color: _colorSelector(3),
                       ),
                       buttonColor: ColorPalette.kColorDarkButton,
+                      elevation: 0,
+                      elevationColor: Colors.transparent,
                     ),
                   ),
+                  const SizedBox(width: 15),
                 ],
               ),
             ),

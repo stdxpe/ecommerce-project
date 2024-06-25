@@ -1,3 +1,5 @@
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_general_modal_sheet.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_save_profile.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/address.dart';
@@ -69,11 +71,26 @@ class ProfileScreen extends StatelessWidget {
                     child: Align(
                       alignment: Alignment.bottomRight,
                       child: IconButton(
-                        onPressed: () {},
                         icon: const Icon(
                           Icons.edit_note,
                           color: Colors.black,
                         ),
+                        onPressed: () {
+                          BottomSheetGeneralModalSheet().show(
+                            contextParam: context,
+                            sizeParam: size,
+                            sizeHeightPercent: 0.7,
+                            screen: BottomSheetSaveProfile(
+                              onPressedMain: () {},
+                              userModel: UserModel(
+                                name: 'Jane Doe',
+                                email: 'verified@email.com',
+                                phone: '555 5432134',
+                                profilePhoto: 'assets/images/pose3.jpg',
+                              ),
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ),

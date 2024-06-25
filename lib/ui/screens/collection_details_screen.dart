@@ -78,40 +78,6 @@ class CollectionDetailsScreen extends StatelessWidget {
               ),
             ),
 
-            // /// COLLECTION NAME CARD LISTVIEW CONTENT
-            // Center(
-            //   child: Container(
-            //     color: Colors.black12,
-
-            //     margin: const EdgeInsets.only(bottom: 15, top: 0),
-            //     height: 60,
-            //     width: size.width,
-            //     padding: EdgeInsets.symmetric(
-            //         horizontal: Constants.kPaddingHorizontalMain),
-            //     // color: ColorPalette.kColorModalBottomSheet,
-            //     child: ListView.builder(
-            //       clipBehavior: Clip.none,
-            //       padding: const EdgeInsets.only(bottom: 10, top: 10),
-            //       itemCount: 7,
-            //       scrollDirection: Axis.horizontal,
-            //       itemBuilder: (context, index) {
-            //         return ButtonMain(
-            //           onPressed: () {},
-            //           width: 120,
-            //           height: 35,
-            //           paddingVertical: 0,
-            //           paddingHorizontal: 5,
-            //           textColor: Colors.white,
-            //           buttonColor: (index == 1)
-            //               ? ColorPalette.kColorDarkButton
-            //               : Colors.grey,
-            //           text: 'Collection ${index.toString()}',
-            //         );
-            //       },
-            //     ),
-            //   ),
-            // ),
-
             /// GRIDVIEW CONTENT
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -207,9 +173,3 @@ class CollectionDetailsScreen extends StatelessWidget {
     );
   }
 }
-
-/// TODO: Details Screen with longer flexible app bar.
-///
-/// Womens Top and Designer Collection content screens
-///
-/// Desktop SS : Longer flex app bar and description, recommended products.
