@@ -1,29 +1,24 @@
-import 'package:ecommerce_project/ui/widgets/switch_color_selector.dart';
-import 'package:ecommerce_project/ui/widgets/switch_size_selector.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/product.dart';
-import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_payment_summary.dart';
-import 'package:ecommerce_project/ui/widgets/buttons/button_shopping_cart_item_counter.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_button_add_to_shopping_cart.dart';
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_card_details_screen.dart';
 import 'package:ecommerce_project/ui/widgets/dialog_popups/dialog_popup_widget_main.dart';
-import 'package:ecommerce_project/ui/widgets/switch_color_selection.dart';
-import 'package:ecommerce_project/ui/widgets/switch_size_selection.dart';
+import 'package:ecommerce_project/ui/widgets/filter_related/switch_filter_color_selector.dart';
+import 'package:ecommerce_project/ui/widgets/filter_related/switch_filter_size_selector.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
-class BottomSheetAddToShoppingCart extends StatelessWidget {
+class BottomSheetSizeColorAndAmountPicker extends StatelessWidget {
   final Function onPressedMain;
   final Function? onPressedOptional;
-  final String productTitle;
   final Product product;
 
-  const BottomSheetAddToShoppingCart({
+  const BottomSheetSizeColorAndAmountPicker({
     required this.onPressedMain,
     this.onPressedOptional,
     super.key,
-    required this.productTitle,
     required this.product,
   });
 
@@ -40,42 +35,34 @@ class BottomSheetAddToShoppingCart extends StatelessWidget {
               physics: ClampingScrollPhysics(),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   /// CONTENT
-                  const SizedBox(height: 10),
                   Container(
-                    width: size.width,
-                    // color: Colors.amber.withOpacity(0.5),
-                    // padding: EdgeInsets.symmetric(horizontal: 0),
+                    // color: Colors.amber.withOpacity(0.5)
                     child: Padding(
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                         left: Constants.kPaddingHorizontalMain,
                         right: Constants.kPaddingHorizontalMain,
-                        // bottom: Constants.kPaddingAppBottom,
+                        bottom: Constants.kPaddingHorizontalMain * 1.5,
                         // top: Constants.kPaddingAppTop,
                       ),
                       child: Text(
                         product.title,
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.start,
                         maxLines: 2,
-                        // softWrap: true,
+                        softWrap: true,
                         overflow: TextOverflow.ellipsis,
                         style: kDetailsScreenTitleMainTextStyle,
                       ),
                     ),
                   ),
-                  const SizedBox(height: 10),
-
-                  ButtonShoppingCartItemCounter(),
-
-                  const SizedBox(height: 20),
 
                   Container(
                     // color: Colors.green.withOpacity(0.5),
-                    child: SwitchColorSelector(
-                      isMaxSized: false,
-                      itemPaddingHorizontal: 5,
+                    child: SwitchFilterColorSelector(
+                      itemSize: 45,
+                      itemPaddingHorizontal: 10,
                       selectedItem: Colors.red,
                       items: const [
                         Colors.red,
@@ -83,18 +70,16 @@ class BottomSheetAddToShoppingCart extends StatelessWidget {
                         Colors.blue,
                         Colors.pink,
                         Colors.orangeAccent,
+                        Colors.teal,
                       ],
                     ),
                   ),
-
-                  const SizedBox(height: 20),
-
                   Container(
                     // color: Colors.green.withOpacity(0.5),
-                    child: SwitchSizeSelector(
-                      isMaxSized: false,
-                      itemPaddingHorizontal: 5,
-                      selectedItem: 'S',
+                    child: SwitchFilterSizeSelector(
+                      itemSize: 45,
+                      itemPaddingHorizontal: 10,
+                      selectedItem: 'XS',
                       items: const [
                         'XS',
                         'S',
@@ -104,7 +89,6 @@ class BottomSheetAddToShoppingCart extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20),
                 ],
               ),
             ),
@@ -113,8 +97,7 @@ class BottomSheetAddToShoppingCart extends StatelessWidget {
           /// PAYMENT BOTTOM SHEET
           Align(
             alignment: Alignment.bottomCenter,
-            child: BottomSheetPaymentSummary(
-              mainButtonText: Strings.kStringButtonAddToShoppingCart,
+            child: BottomSheetButtonAddToShoppingCart(
               onPressedMain: () {
                 /// TODO: Adding to shopping cart operation here.
                 Navigator.of(context).pop();

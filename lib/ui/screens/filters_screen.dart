@@ -1,11 +1,10 @@
-import 'package:ecommerce_project/ui/widgets/switch_size_selector.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/product.dart';
-import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_filters_buttons.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_button_filters.dart';
 import 'package:ecommerce_project/ui/widgets/cards/product_card_horizontal_mini.dart';
 import 'package:ecommerce_project/ui/widgets/switch_price_filter_range_slider.dart';
-import 'package:ecommerce_project/ui/widgets/switch_size_selection.dart';
+import 'package:ecommerce_project/ui/widgets/switch_size_selector.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_main.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
@@ -56,7 +55,7 @@ class FiltersScreen extends StatelessWidget {
                       style: kFilterScreenMiniTitleTextStyle,
                     ),
                   ),
-                  SwitchPriceFilterRangeSlider(),
+                  const SwitchPriceFilterRangeSlider(),
 
                   // const SizedBox(height: 10),
                   const Padding(
@@ -86,28 +85,6 @@ class FiltersScreen extends StatelessWidget {
                     ),
                   ),
 
-                  // Container(
-                  //   height: 100,
-                  //   width: size.width,
-                  //   padding: EdgeInsets.only(
-                  //     left: Constants.kPaddingHorizontalMain,
-                  //     right: Constants.kPaddingHorizontalMain,
-                  //     // top: Constants.kPaddingHorizontalMain,
-                  //     top: 5,
-                  //     // bottom: 5,
-                  //   ),
-                  //   // color: Colors.green.withOpacity(0.5),
-                  //   child: SwitchSizeSelection(
-                  //     selectedItem: 'S',
-                  //     items: const [
-                  //       'XS',
-                  //       'S',
-                  //       'M',
-                  //       'L',
-                  //       'XL',
-                  //     ],
-                  //   ),
-                  // ),
                   const Padding(
                     padding: EdgeInsets.only(
                       left: Constants.kPaddingHorizontalMain,
@@ -163,7 +140,7 @@ class FiltersScreen extends StatelessWidget {
           /// PAYMENT BOTTOM SHEET
           Align(
             alignment: Alignment.bottomCenter,
-            child: BottomSheetFiltersButtons(
+            child: BottomSheetButtonFilters(
               onPressedMain: () {},
               onPressedOptional: () {},
             ),

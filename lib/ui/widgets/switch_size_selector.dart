@@ -39,6 +39,7 @@ class _SwitchSizeSelectorState extends State<SwitchSizeSelector> {
         padding: EdgeInsets.symmetric(
           horizontal: widget.paddingHorizontal!,
         ),
+
         constraints: BoxConstraints(
           minWidth: widget.isMaxSized! ? size.width : 0,
           maxHeight: widget.itemSize!,
@@ -48,41 +49,52 @@ class _SwitchSizeSelectorState extends State<SwitchSizeSelector> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: widget.items.map(
             (element) {
-              return InkWell(
-                onTap: () {
-                  setState(() {
-                    widget.selectedItem = element;
-                  });
-                },
-                borderRadius: BorderRadius.circular(50),
-                child: Container(
-                  margin: EdgeInsets.symmetric(
-                    horizontal: widget.itemPaddingHorizontal!,
-                  ),
-                  height: widget.itemSize,
-                  width: widget.itemSize,
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      if (element == widget.selectedItem)
-                        BoxShadow(
-                          color: Colors.black54.withOpacity(0.35),
-                          spreadRadius: 0.1,
-                          blurRadius: 10,
-                          offset: const Offset(0, 1),
+              return Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: widget.itemPaddingHorizontal!,
+                ),
+                child: InkWell(
+                  onTap: () {
+                    setState(() {
+                      widget.selectedItem = element;
+                    });
+                  },
+                  borderRadius: BorderRadius.circular(30),
+                  child: Container(
+                    height: widget.itemSize,
+                    width: widget.itemSize,
+                    decoration: BoxDecoration(
+                        boxShadow: [
+                          if (element == widget.selectedItem)
+                            BoxShadow(
+                              color: Colors.black54.withOpacity(0.35),
+                              spreadRadius: 0.1,
+                              blurRadius: 10,
+                              offset: const Offset(0, 1),
+                            ),
+                        ],
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          width: element == widget.selectedItem ? 4 : 0,
+                          color: Colors.white,
+                          style: BorderStyle.solid,
+                          strokeAlign: BorderSide.strokeAlignCenter,
                         ),
-                    ],
-                    shape: BoxShape.circle,
-                    color: element == widget.selectedItem
-                        ? ColorPalette.kColorDarkButton
-                        : Colors.transparent,
-                  ),
-                  child: Center(
-                    child: Text(
-                      element,
-                      style: TextStyle(
                         color: element == widget.selectedItem
-                            ? Colors.white
-                            : Colors.black,
+                            ? ColorPalette.kColorDarkButton
+                            : ColorPalette.kColorModalBottomSheet),
+                    child: Center(
+                      child: Text(
+                        element,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: element == widget.selectedItem
+                              ? FontWeight.w600
+                              : FontWeight.w500,
+                          color: element == widget.selectedItem
+                              ? Colors.white
+                              : Colors.black,
+                        ),
                       ),
                     ),
                   ),

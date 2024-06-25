@@ -365,8 +365,8 @@ const kOrderItemSecondaryTextStyle = TextStyle(
 const kFilterScreenMiniTitleTextStyle = TextStyle(
   color: Colors.black,
   fontSize: 14,
-  fontWeight: FontWeight.w600,
-  letterSpacing: 0.35,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0.5,
   height: 1.3,
 );
 

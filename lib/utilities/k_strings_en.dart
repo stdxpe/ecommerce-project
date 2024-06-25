@@ -1,6 +1,6 @@
 class Strings {
   /// APP WIDE STRINGS-EN
-  static var kStringAppTitle = 'FANCY';
+  static var kStringAppTitle = 'FSHX';
   static var kStringAppSubtitle = 'Best Fashion Shopping App';
   static var kStringEmailButtonText = 'Sign Up with Email';
   static var kStringFacebookButtonText = 'Continue with Facebook';

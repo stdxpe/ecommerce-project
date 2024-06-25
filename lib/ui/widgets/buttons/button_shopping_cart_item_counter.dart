@@ -7,8 +7,10 @@ import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
 class ButtonShoppingCartItemCounter extends StatefulWidget {
   int itemCount;
+  double? itemPaddingHorizontal;
   ButtonShoppingCartItemCounter({
     this.itemCount = 1,
+    this.itemPaddingHorizontal = 0,
     super.key,
   });
 
@@ -56,10 +58,12 @@ class _ButtonShoppingCartItemCounterState
             iconColor: Colors.black,
             icon: CupertinoIcons.minus,
           ),
+          SizedBox(width: widget.itemPaddingHorizontal),
           Text(
             widget.itemCount.toString(),
             style: kWishlistItemsTextStylePrimary,
           ),
+          SizedBox(width: widget.itemPaddingHorizontal),
           ButtonCircularMain(
             onPressed: () {
               setState(() {

@@ -5,7 +5,7 @@ import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 
-class BottomSheetFiltersButtons extends StatelessWidget {
+class BottomSheetButtonFilters extends StatelessWidget {
   final Function() onPressedMain;
   final Function() onPressedOptional;
 
@@ -17,7 +17,7 @@ class BottomSheetFiltersButtons extends StatelessWidget {
   final double? paddingBottom;
   final double? paddingButtonTop;
 
-  const BottomSheetFiltersButtons({
+  const BottomSheetButtonFilters({
     required this.onPressedMain,
     required this.onPressedOptional,
     this.mainButtonText = Strings.kStringFiltersButtonApply,
