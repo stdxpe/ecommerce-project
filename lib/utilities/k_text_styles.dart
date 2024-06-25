@@ -362,6 +362,14 @@ const kOrderItemSecondaryTextStyle = TextStyle(
   height: 1.2,
 );
 
+const kFilterScreenMiniTitleTextStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 0.35,
+  height: 1.3,
+);
+
 /// Box Shadows
 ///
 var kBoxShadowLightText = BoxShadow(

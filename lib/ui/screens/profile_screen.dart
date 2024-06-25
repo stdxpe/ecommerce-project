@@ -1,5 +1,3 @@
-import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_general_modal_sheet.dart';
-import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_save_profile.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/address.dart';
@@ -10,6 +8,8 @@ import 'package:ecommerce_project/models/user_model.dart';
 import 'package:ecommerce_project/ui/screens/credit_cards_screen.dart';
 import 'package:ecommerce_project/ui/screens/orders_screen.dart';
 import 'package:ecommerce_project/ui/screens/shipping_addresses_screen.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_general_modal_sheet.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_save_profile.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_profile_screen_listile.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_profile_screen_switch_tile.dart';
 import 'package:ecommerce_project/ui/widgets/cards/user_profile_card.dart';

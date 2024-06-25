@@ -78,4 +78,9 @@ class Strings {
   static const kStringTitleCreditCardsButton = 'Save Credit Card';
   static const kStringTitleAddressesButton = 'Save Address';
   static const kStringTitleProfileButton = 'Save Profile';
+
+  /// FILTERS SCREEN
+  static const kStringFiltersTitle = 'Filters';
+  static const kStringFiltersButtonClear = 'Clear';
+  static const kStringFiltersButtonApply = 'Apply';
 }

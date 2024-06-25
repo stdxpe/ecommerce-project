@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/collection.dart';
 import 'package:ecommerce_project/models/product.dart';
+import 'package:ecommerce_project/ui/screens/filters_screen.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_general_modal_sheet.dart';
 import 'package:ecommerce_project/ui/widgets/gridview_product_card_vertical_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_main.dart';
@@ -58,7 +60,14 @@ class CollectionDetailsScreen extends StatelessWidget {
                     title: collection.title,
                     optionalRightIcon: Icons.tune,
                     iconSize: 22.5,
-                    onPressed: () {},
+                    onPressed: () {
+                      BottomSheetGeneralModalSheet().show(
+                        contextParam: context,
+                        sizeParam: size,
+                        sizeHeightPercent: 0.75,
+                        screen: const FiltersScreen(),
+                      );
+                    },
                   ),
                   const TitleNumberOfItemsFound(
                     title: Strings.kStringItemsFound,

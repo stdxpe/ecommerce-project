@@ -153,7 +153,7 @@ class ProductDetailsScreen extends StatelessWidget {
                                       BottomSheetGeneralModalSheet().show(
                                         contextParam: context,
                                         sizeParam: size,
-                                        sizeHeightPercent: 0.37,
+                                        sizeHeightPercent: 0.425,
                                         screen: BottomSheetAddToShoppingCart(
                                           product: product,
                                           productTitle: product.title,

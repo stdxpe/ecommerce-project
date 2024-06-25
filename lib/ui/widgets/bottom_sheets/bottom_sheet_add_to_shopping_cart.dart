@@ -1,3 +1,5 @@
+import 'package:ecommerce_project/ui/widgets/switch_color_selector.dart';
+import 'package:ecommerce_project/ui/widgets/switch_size_selector.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_project/models/product.dart';
@@ -36,64 +38,74 @@ class BottomSheetAddToShoppingCart extends StatelessWidget {
           Expanded(
             child: SingleChildScrollView(
               physics: ClampingScrollPhysics(),
-              child: Padding(
-                padding: EdgeInsets.only(
-                  left: Constants.kPaddingHorizontalMain,
-                  right: Constants.kPaddingHorizontalMain,
-                  // bottom: Constants.kPaddingAppBottom,
-                  // top: Constants.kPaddingAppTop,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    /// CONTENT
-                    const SizedBox(height: 10),
-                    Container(
-                      width: size.width * 0.70,
-                      // color: Colors.amber.withOpacity(0.5),
-                      // padding: EdgeInsets.symmetric(horizontal: 0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  /// CONTENT
+                  const SizedBox(height: 10),
+                  Container(
+                    width: size.width,
+                    // color: Colors.amber.withOpacity(0.5),
+                    // padding: EdgeInsets.symmetric(horizontal: 0),
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        left: Constants.kPaddingHorizontalMain,
+                        right: Constants.kPaddingHorizontalMain,
+                        // bottom: Constants.kPaddingAppBottom,
+                        // top: Constants.kPaddingAppTop,
+                      ),
                       child: Text(
                         product.title,
-                        textAlign: TextAlign.start,
+                        textAlign: TextAlign.center,
                         maxLines: 2,
                         // softWrap: true,
                         overflow: TextOverflow.ellipsis,
                         style: kDetailsScreenTitleMainTextStyle,
                       ),
                     ),
-                    const SizedBox(height: 20),
-                    Container(
-                      // color: Colors.red.withOpacity(0.5),
-                      child: SwitchColorSelection(
-                        selectedItem: Colors.red,
-                        items: const [
-                          Colors.red,
-                          Colors.green,
-                          Colors.blue,
-                          Colors.pink,
-                          Colors.orangeAccent,
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 10),
+                  ),
+                  const SizedBox(height: 10),
 
-                    Container(
-                      // color: Colors.green.withOpacity(0.5),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SwitchSizeSelection(
-                            selectedItem: 'S',
-                            items: const ['S', 'M', 'L'],
-                          ),
-                          ButtonShoppingCartItemCounter(),
-                        ],
-                      ),
+                  ButtonShoppingCartItemCounter(),
+
+                  const SizedBox(height: 20),
+
+                  Container(
+                    // color: Colors.green.withOpacity(0.5),
+                    child: SwitchColorSelector(
+                      isMaxSized: false,
+                      itemPaddingHorizontal: 5,
+                      selectedItem: Colors.red,
+                      items: const [
+                        Colors.red,
+                        Colors.green,
+                        Colors.blue,
+                        Colors.pink,
+                        Colors.orangeAccent,
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  Container(
+                    // color: Colors.green.withOpacity(0.5),
+                    child: SwitchSizeSelector(
+                      isMaxSized: false,
+                      itemPaddingHorizontal: 5,
+                      selectedItem: 'S',
+                      items: const [
+                        'XS',
+                        'S',
+                        'M',
+                        'L',
+                        'XL',
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                ],
               ),
             ),
           ),
