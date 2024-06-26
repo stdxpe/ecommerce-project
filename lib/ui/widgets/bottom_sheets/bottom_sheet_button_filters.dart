@@ -71,7 +71,7 @@ class BottomSheetButtonFilters extends StatelessWidget {
                         buttonColor: ColorPalette.kColorModalBottomSheet,
                         borderWidth: 1.5,
                         onPressed: () {
-                          onPressedOptional!();
+                          onPressedOptional();
                         },
                       ),
                     ),

@@ -7,7 +7,8 @@ import 'package:ecommerce_project/ui/widgets/cards/collection_card_primary.dart'
 import 'package:ecommerce_project/ui/widgets/cards/collection_card_secondary.dart';
 import 'package:ecommerce_project/ui/widgets/cards/product_card_horizontal_mini.dart';
 import 'package:ecommerce_project/ui/widgets/slivers_and_appbars/app_bar_main_non_sliver.dart';
-import 'package:ecommerce_project/ui/widgets/staggered_grid_card_component2.dart';
+import 'package:ecommerce_project/ui/widgets/staggered_grid_card_component_left.dart';
+import 'package:ecommerce_project/ui/widgets/staggered_grid_card_component_right.dart';
 import 'package:ecommerce_project/ui/widgets/titles/title_main.dart';
 import 'package:ecommerce_project/utilities/k_color_palette.dart';
 import 'package:ecommerce_project/utilities/k_constants.dart';
@@ -66,46 +67,124 @@ class DiscoverScreen extends StatelessWidget {
                       ),
                     ),
 
-                    /// COLLECTION MINI CARD LISTVIEW CONTENT
+                    /// COLLECTION STAGGERED CARD CONTENT
                     Container(
-                      margin: const EdgeInsets.only(bottom: 50),
-                      height: size.height * 0.32,
-                      width: size.width,
-                      // padding: EdgeInsets.symmetric(horizontal: 35 / 2),
+                      margin: const EdgeInsets.only(
+                          top: Constants.kPaddingContentAndContent),
                       // color: Colors.red.withOpacity(0.5),
-                      child: ListView.builder(
-                          itemCount: 7,
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) {
-                            return Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 5.0),
-                              child: CollectionCardSecondary(
-                                isRadiusCorners: false,
-                                cardWidth: size.width * 0.4,
-                                cardHeight: size.height * 0.3,
-                                collection: Collection(
-                                  id: '1',
-                                  title: 'Designer Collection',
-                                  subtitle: '',
-                                  description:
-                                      '60+ Designer Brands\nStuff your shoes for \$20',
-                                  imageUrl: 'assets/images/pose$index.jpg',
-                                ),
-                              ),
-                            );
-                          }),
+                      child: StaggeredGridCardComponentLeft(
+                        collectionTitle: 'Spring Collection',
+                        onPressed: () {},
+                        paddingHorizontal: Constants.kPaddingHorizontalMain,
+                        productList: [
+                          Product(
+                            title: 'MOS Sale-Fit Shirtasdfasdfsdfgsdfg',
+                            price:
+                                69.992342345231115111452345234535234523345234,
+                            imageUrl: 'assets/images/pose1.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49,
+                            imageUrl: 'assets/images/pose2.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49.99,
+                            imageUrl: 'assets/images/pose4.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49.99,
+                            imageUrl: 'assets/images/pose5.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirtasdfasdfsdfgsdfg',
+                            price:
+                                69.992342345231115111452345234535234523345234,
+                            imageUrl: 'assets/images/pose1.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49,
+                            imageUrl: 'assets/images/pose2.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49.99,
+                            imageUrl: 'assets/images/pose3.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49.99,
+                            imageUrl: 'assets/images/pose4.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49.99,
+                            imageUrl: 'assets/images/pose5.jpg',
+                          ),
+                        ],
+                      ),
                     ),
 
                     /// COLLECTION STAGGERED CARD CONTENT
                     Container(
                       margin: const EdgeInsets.only(bottom: 20),
                       // color: Colors.red.withOpacity(0.5),
-                      child: StaggeredGridCardComponent2(
-                        width: size.width,
-                        height: size.width * (2 / 4),
-                        widthItemCount: 4,
-                        heightItemCount: 2,
+                      child: StaggeredGridCardComponentRight(
+                        collectionTitle: 'Spring Collection',
+                        onPressed: () {},
+                        paddingHorizontal: Constants.kPaddingHorizontalMain,
+                        productList: [
+                          Product(
+                            title: 'MOS Sale-Fit Shirtasdfasdfsdfgsdfg',
+                            price:
+                                69.992342345231115111452345234535234523345234,
+                            imageUrl: 'assets/images/pose1.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49,
+                            imageUrl: 'assets/images/pose2.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49.99,
+                            imageUrl: 'assets/images/pose4.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49.99,
+                            imageUrl: 'assets/images/pose5.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirtasdfasdfsdfgsdfg',
+                            price:
+                                69.992342345231115111452345234535234523345234,
+                            imageUrl: 'assets/images/pose1.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49,
+                            imageUrl: 'assets/images/pose2.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49.99,
+                            imageUrl: 'assets/images/pose3.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49.99,
+                            imageUrl: 'assets/images/pose4.jpg',
+                          ),
+                          Product(
+                            title: 'MOS Sale-Fit Shirt',
+                            price: 49.99,
+                            imageUrl: 'assets/images/pose5.jpg',
+                          ),
+                        ],
                       ),
                     ),
 
@@ -148,6 +227,38 @@ class DiscoverScreen extends StatelessWidget {
                         imageUrl: 'assets/images/pose0.jpg',
                       ),
                     ),
+
+                    /// COLLECTION MINI CARD LISTVIEW CONTENT
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 50),
+                      height: size.height * 0.32,
+                      width: size.width,
+                      // padding: EdgeInsets.symmetric(horizontal: 35 / 2),
+                      // color: Colors.red.withOpacity(0.5),
+                      child: ListView.builder(
+                          itemCount: 7,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 5.0),
+                              child: CollectionCardSecondary(
+                                isRadiusCorners: false,
+                                cardWidth: size.width * 0.4,
+                                cardHeight: size.height * 0.3,
+                                collection: Collection(
+                                  id: '1',
+                                  title: 'Designer Collection',
+                                  subtitle: '',
+                                  description:
+                                      '60+ Designer Brands\nStuff your shoes for \$20',
+                                  imageUrl: 'assets/images/pose$index.jpg',
+                                ),
+                              ),
+                            );
+                          }),
+                    ),
+
                     ListView.builder(
                       padding: EdgeInsets.zero,
                       shrinkWrap: true,
