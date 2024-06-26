@@ -71,7 +71,7 @@ class ProductCardVertical extends StatelessWidget {
                       child: Image.asset(
                         height: cardWidth,
                         width: cardWidth,
-                        product.imageUrl,
+                        product.mainPhoto,
                         fit: BoxFit.cover,
                       ),
                     ),

@@ -72,7 +72,7 @@ class ProductCardHorizontal extends StatelessWidget {
                       child: Image.asset(
                         height: cardHeight,
                         width: cardHeight,
-                        product.imageUrl,
+                        product.mainPhoto,
                         fit: BoxFit.cover,
                       ),
                     ),

@@ -93,7 +93,7 @@ class TrackingOrderScreen extends StatelessWidget {
                           product: Product(
                             title: order.products[index].title,
                             price: order.products[index].price,
-                            imageUrl: order.products[index].imageUrl,
+                            mainPhoto: order.products[index].mainPhoto,
                           ),
                         ),
                         const Positioned.fill(

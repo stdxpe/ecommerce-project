@@ -81,48 +81,48 @@ class DiscoverScreen extends StatelessWidget {
                             title: 'MOS Sale-Fit Shirtasdfasdfsdfgsdfg',
                             price:
                                 69.992342345231115111452345234535234523345234,
-                            imageUrl: 'assets/images/pose1.jpg',
+                            mainPhoto: 'assets/images/pose1.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49,
-                            imageUrl: 'assets/images/pose2.jpg',
+                            mainPhoto: 'assets/images/pose2.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49.99,
-                            imageUrl: 'assets/images/pose4.jpg',
+                            mainPhoto: 'assets/images/pose4.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49.99,
-                            imageUrl: 'assets/images/pose5.jpg',
+                            mainPhoto: 'assets/images/pose5.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirtasdfasdfsdfgsdfg',
                             price:
                                 69.992342345231115111452345234535234523345234,
-                            imageUrl: 'assets/images/pose1.jpg',
+                            mainPhoto: 'assets/images/pose1.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49,
-                            imageUrl: 'assets/images/pose2.jpg',
+                            mainPhoto: 'assets/images/pose2.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49.99,
-                            imageUrl: 'assets/images/pose3.jpg',
+                            mainPhoto: 'assets/images/pose3.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49.99,
-                            imageUrl: 'assets/images/pose4.jpg',
+                            mainPhoto: 'assets/images/pose4.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49.99,
-                            imageUrl: 'assets/images/pose5.jpg',
+                            mainPhoto: 'assets/images/pose5.jpg',
                           ),
                         ],
                       ),
@@ -133,7 +133,7 @@ class DiscoverScreen extends StatelessWidget {
                       margin: const EdgeInsets.only(bottom: 20),
                       // color: Colors.red.withOpacity(0.5),
                       child: StaggeredGridCardComponentRight(
-                        collectionTitle: 'Spring Collection',
+                        collectionTitle: 'Christmas Collection',
                         onPressed: () {},
                         paddingHorizontal: Constants.kPaddingHorizontalMain,
                         productList: [
@@ -141,48 +141,48 @@ class DiscoverScreen extends StatelessWidget {
                             title: 'MOS Sale-Fit Shirtasdfasdfsdfgsdfg',
                             price:
                                 69.992342345231115111452345234535234523345234,
-                            imageUrl: 'assets/images/pose1.jpg',
+                            mainPhoto: 'assets/images/pose1.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49,
-                            imageUrl: 'assets/images/pose2.jpg',
+                            mainPhoto: 'assets/images/pose2.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49.99,
-                            imageUrl: 'assets/images/pose4.jpg',
+                            mainPhoto: 'assets/images/pose4.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49.99,
-                            imageUrl: 'assets/images/pose5.jpg',
+                            mainPhoto: 'assets/images/pose5.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirtasdfasdfsdfgsdfg',
                             price:
                                 69.992342345231115111452345234535234523345234,
-                            imageUrl: 'assets/images/pose1.jpg',
+                            mainPhoto: 'assets/images/pose1.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49,
-                            imageUrl: 'assets/images/pose2.jpg',
+                            mainPhoto: 'assets/images/pose2.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49.99,
-                            imageUrl: 'assets/images/pose3.jpg',
+                            mainPhoto: 'assets/images/pose3.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49.99,
-                            imageUrl: 'assets/images/pose4.jpg',
+                            mainPhoto: 'assets/images/pose4.jpg',
                           ),
                           Product(
                             title: 'MOS Sale-Fit Shirt',
                             price: 49.99,
-                            imageUrl: 'assets/images/pose5.jpg',
+                            mainPhoto: 'assets/images/pose5.jpg',
                           ),
                         ],
                       ),
@@ -279,7 +279,7 @@ class DiscoverScreen extends StatelessWidget {
                             product: Product(
                               title: 'MOS Sale-Fit Shirt',
                               price: 49.99,
-                              imageUrl: 'assets/images/pose5.jpg',
+                              mainPhoto: 'assets/images/pose5.jpg',
                             ),
                           ),
                         );

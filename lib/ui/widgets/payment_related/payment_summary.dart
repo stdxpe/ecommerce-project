@@ -39,7 +39,7 @@ class PaymentSummary extends StatelessWidget {
                     product: Product(
                       title: '$index MOS Sale-Fit Shirt Shirtasdfasdfsdfgsdfg',
                       price: 133.99,
-                      imageUrl: 'assets/images/pose2.jpg',
+                      mainPhoto: 'assets/images/pose2.jpg',
                     ),
                     cardColor: Colors.white.withOpacity(0.9),
                     cardHeight: 60,

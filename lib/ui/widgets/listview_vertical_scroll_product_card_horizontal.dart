@@ -57,7 +57,7 @@ class ListviewVerticalScrollProductCardHorizontal extends StatelessWidget {
                 product: Product(
                   title: productList[index].title,
                   price: productList[index].price,
-                  imageUrl: productList[index].imageUrl,
+                  mainPhoto: productList[index].mainPhoto,
                 ),
                 cardHeight: cardHeight!,
                 cardWidth: cardWidth!,

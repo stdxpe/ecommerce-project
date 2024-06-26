@@ -105,7 +105,7 @@ class BottomSheetSizeAndColorPicker extends StatelessWidget {
                   context: context,
                   content: DialogPopupCardDetailsScreen(
                     title: Strings.kStringSuccess,
-                    imageUrl: product.imageUrl,
+                    imageUrl: product.mainPhoto,
                     buttonTextPrimary: Strings.kStringButtonCheckOut,
                     buttonTextSecondary: Strings.kStringButtonContinueShopping,
                     cardHeight: size.height * 0.5,

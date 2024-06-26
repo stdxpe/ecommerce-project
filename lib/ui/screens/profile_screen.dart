@@ -136,12 +136,12 @@ class ProfileScreen extends StatelessWidget {
                                     Product(
                                       title: 'QTT Crop-Fit Shirt',
                                       price: 49.99,
-                                      imageUrl: 'assets/images/pose2.jpg',
+                                      mainPhoto: 'assets/images/pose2.jpg',
                                     ),
                                     Product(
                                       title: 'MOS Sale-Fit Shirt',
                                       price: 19.99,
-                                      imageUrl: 'assets/images/pose3.jpg',
+                                      mainPhoto: 'assets/images/pose3.jpg',
                                     ),
                                   ]),
                               Order(
@@ -152,7 +152,7 @@ class ProfileScreen extends StatelessWidget {
                                   Product(
                                     title: 'QTT Crop-Fit ShirtShirtShirt',
                                     price: 19.99,
-                                    imageUrl: 'assets/images/pose6.jpg',
+                                    mainPhoto: 'assets/images/pose6.jpg',
                                   ),
                                 ],
                               ),

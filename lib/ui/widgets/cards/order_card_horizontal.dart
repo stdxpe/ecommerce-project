@@ -66,7 +66,7 @@ class OrderCardHorizontal extends StatelessWidget {
                       child: Image.asset(
                         height: cardHeight,
                         width: cardHeight,
-                        order.products[0].imageUrl,
+                        order.products[0].mainPhoto,
                         fit: BoxFit.cover,
                       ),
                     ),

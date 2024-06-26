@@ -47,7 +47,7 @@ class ProductDetailsScreen extends StatelessWidget {
                 contentList: [
                   InteractiveViewer(
                     child: Image.asset(
-                      product.imageUrl,
+                      product.mainPhoto,
                       width: size.width,
                       height: size.height,
                       fit: BoxFit.cover,

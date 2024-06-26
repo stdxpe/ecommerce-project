@@ -53,7 +53,7 @@ class ProductCardStack extends StatelessWidget {
                 child: Image.asset(
                   height: cardHeight,
                   width: cardWidth,
-                  product.imageUrl,
+                  product.mainPhoto,
                   fit: BoxFit.cover,
                 ),
               ),

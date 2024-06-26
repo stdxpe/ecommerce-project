@@ -50,7 +50,7 @@ class ReviewsScreen extends StatelessWidget {
                         product: Product(
                           title: product.title,
                           price: product.price,
-                          imageUrl: product.imageUrl,
+                          mainPhoto: product.mainPhoto,
                         ),
                         cardColor: Colors.white.withOpacity(0.9),
                         cardHeight: 65,
