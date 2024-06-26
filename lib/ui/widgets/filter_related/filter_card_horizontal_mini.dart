@@ -62,7 +62,8 @@ class FilterCardHorizontalMini extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                             softWrap: true,
                             maxLines: 1,
-                            style: kReviewScreenProductCardTextStyle,
+                            style: kFilterScreenMiniTitleTextStyle.copyWith(
+                                fontWeight: FontWeight.w500),
                           ),
                         ),
                       ),

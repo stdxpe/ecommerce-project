@@ -33,7 +33,7 @@ class _SwitchFilterListviewOfCollectionsState
       padding: const EdgeInsets.only(
         left: Constants.kPaddingHorizontalMain,
         right: Constants.kPaddingHorizontalMain,
-        top: 5,
+        // top: 5,
         // top: Constants.kPaddingHorizontalMain,
       ),
       itemCount: widget.list.length,
