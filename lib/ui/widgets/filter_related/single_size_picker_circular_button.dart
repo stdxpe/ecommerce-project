@@ -34,12 +34,6 @@ class SingleSizePickerCircularButton extends StatelessWidget {
         color: isSelected
             ? ColorPalette.kColorDarkButton
             : ColorPalette.kColorModalBottomSheet,
-        border: Border.all(
-          width: isSelected ? 4 : 0,
-          color: Colors.white,
-          style: BorderStyle.solid,
-          strokeAlign: BorderSide.strokeAlignInside,
-        ),
       ),
       child: Center(
         child: Text(

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_project/models/product.dart';
 import 'package:ecommerce_project/ui/screens/reviews_screen.dart';
 import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_general_modal_sheet.dart';
-import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_size_color_and_amount_picker.dart';
+import 'package:ecommerce_project/ui/widgets/bottom_sheets/bottom_sheet_size_and_color_picker.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_add_to_wishlist.dart';
 import 'package:ecommerce_project/ui/widgets/buttons/button_circular_main.dart';
 import 'package:ecommerce_project/ui/widgets/carousel_sliders/carousel_static.dart';
@@ -157,8 +157,7 @@ class ProductDetailsScreen extends StatelessWidget {
                                         contextParam: context,
                                         sizeParam: size,
                                         sizeHeightPercent: 0.475,
-                                        screen:
-                                            BottomSheetSizeColorAndAmountPicker(
+                                        screen: BottomSheetSizeAndColorPicker(
                                           product: product,
                                           onPressedMain: () {},
                                         ),

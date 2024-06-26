@@ -74,12 +74,6 @@ class _SwitchSizeSelectorState extends State<SwitchSizeSelector> {
                             ),
                         ],
                         shape: BoxShape.circle,
-                        border: Border.all(
-                          width: element == widget.selectedItem ? 4 : 0,
-                          color: Colors.white,
-                          style: BorderStyle.solid,
-                          strokeAlign: BorderSide.strokeAlignCenter,
-                        ),
                         color: element == widget.selectedItem
                             ? ColorPalette.kColorDarkButton
                             : ColorPalette.kColorModalBottomSheet),

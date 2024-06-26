@@ -10,12 +10,12 @@ import 'package:ecommerce_project/utilities/k_constants.dart';
 import 'package:ecommerce_project/utilities/k_strings_en.dart';
 import 'package:ecommerce_project/utilities/k_text_styles.dart';
 
-class BottomSheetSizeColorAndAmountPicker extends StatelessWidget {
+class BottomSheetSizeAndColorPicker extends StatelessWidget {
   final Function onPressedMain;
   final Function? onPressedOptional;
   final Product product;
 
-  const BottomSheetSizeColorAndAmountPicker({
+  const BottomSheetSizeAndColorPicker({
     required this.onPressedMain,
     this.onPressedOptional,
     super.key,
@@ -32,7 +32,7 @@ class BottomSheetSizeColorAndAmountPicker extends StatelessWidget {
         children: [
           Expanded(
             child: SingleChildScrollView(
-              physics: ClampingScrollPhysics(),
+              physics: const ClampingScrollPhysics(),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
