@@ -123,6 +123,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     ButtonProfileScreenListile(
                       title: 'Orders',
+                      iconData: Icons.shopping_bag_outlined,
                       onPressed: () {
                         PlatformAdaptiveNavigator().push(
                           context,
@@ -168,6 +169,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     ButtonProfileScreenListile(
                       title: 'Shipping Addresses',
+                      iconData: Icons.location_on,
                       onPressed: () {
                         PlatformAdaptiveNavigator().push(
                           context,
@@ -195,6 +197,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     ButtonProfileScreenListile(
                       title: 'Credit Cards',
+                      iconData: Icons.credit_card,
                       onPressed: () {
                         PlatformAdaptiveNavigator().push(
                           context,
@@ -242,6 +245,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     ButtonProfileScreenListile(
                       title: 'Change Password',
+                      iconData: Icons.password_outlined,
                       onPressed: () {},
                     ),
                     const Divider(
@@ -251,6 +255,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     ButtonProfileScreenListile(
                       title: 'About Us',
+                      iconData: Icons.question_mark,
                       onPressed: () {},
                     ),
                     const Divider(
@@ -260,6 +265,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     ButtonProfileScreenListile(
                       title: 'Sign Out',
+                      iconData: Icons.logout,
                       onPressed: () {},
                     ),
                     const Divider(

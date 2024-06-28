@@ -18,7 +18,7 @@ class DummyTopSlidingContent extends StatelessWidget {
         // fit: StackFit.passthrough,
         children: [
           Image.asset(
-            'assets/images/pose2.jpg',
+            'assets/images/pose5.jpg',
             fit: BoxFit.cover,
           ),
           Container(

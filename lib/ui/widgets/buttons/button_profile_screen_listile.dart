@@ -6,10 +6,12 @@ import 'package:ecommerce_project/utilities/k_text_styles.dart';
 class ButtonProfileScreenListile extends StatelessWidget {
   final String title;
   final Function() onPressed;
+  final IconData iconData;
 
   const ButtonProfileScreenListile({
     required this.title,
     required this.onPressed,
+    required this.iconData,
     super.key,
   });
 
@@ -27,9 +29,18 @@ class ButtonProfileScreenListile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
-                title,
-                style: kUserProfileListItemsMainTextStyle,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(iconData, size: 20),
+                  SizedBox(width: 10),
+                  Text(
+                    title,
+                    textAlign: TextAlign.center,
+                    style: kUserProfileListItemsMainTextStyle,
+                  ),
+                ],
               ),
               const Icon(
                 CupertinoIcons.forward,
